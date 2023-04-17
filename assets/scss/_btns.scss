@@ -1,0 +1,125 @@
+
+
+
+.btn_refresh {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 18px;
+    color: #777;
+    transition: all .2s ease-in-out;
+    &:hover {
+        color: #222;
+        transform: rotate(180deg);
+    }
+}
+.btn_set {
+    display: flex;
+    gap: 10px;
+    &.bg_box {
+        background-color: $c_bg_grey;
+        padding: 10px 15px;
+        border-radius: 10px;
+     }
+    &.ai_b {
+        align-items: flex-end;
+    }
+    &.ai_t {
+        align-items: flex-start;
+    }
+    &.taC {
+        justify-content: center;
+    }
+    &.taL {
+        justify-content: flex-start;
+    }
+    &.taR {
+        justify-content: flex-end;
+    }
+    .btn_set {
+        &.pos_left {
+            margin-right: auto;
+        }
+        &.pos_right {
+            margin-left: auto;
+        }
+    }
+}
+
+.f_btn {
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 500;
+    &.w100 {
+        width: 100%;
+    }
+    &.disable {
+        background-color: $c_lightGrey;
+        border-color: $c_lightGrey;
+        cursor: not-allowed;
+        &:hover {
+            background-color: $c_lightGrey;
+            border-color: $c_lightGrey;
+        }
+    }
+    &.ty_small {
+        min-width: 40px;
+        height: 26px;
+        padding: 0 5px;
+        font-size: 12px;
+        line-height: 24px;
+        border-radius: 4px;
+    }
+    &.ty_small2 {
+        min-width: 40px;
+        height: 30px;
+        padding: 0 5px;
+        font-size: 13px;
+        line-height: 28px;
+        border-radius: 4px;
+    }
+    &.ty_s_mid {
+        height: 34px;
+        padding: 0 10px;
+        font-size: 14px;
+        line-height: 32px;
+        border-radius: 4px;
+    }
+    &.ty_mid {
+        height: 40px;
+        padding: 0 10px;
+        font-size: 14px;
+        line-height: 38px;
+        border-radius: 4px;
+    }
+    &.ty_big {
+        height: 50px;
+        padding: 0 10px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 48px;
+        border-radius: 6px;
+        width: 200px;
+    }
+}
+
+.btn_delete {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/common/ico_x_w.svg);
+    background-position: center center;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: #222;
+    box-shadow: 1px 1px 2px rgba(#000, 0.3);
+}

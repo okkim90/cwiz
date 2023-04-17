@@ -1,0 +1,172 @@
+// Breakpoints
+$breakpoint-m: 768px;
+$breakpoint-t: 1024px;
+$breakpoint-pc_h: 1460px;
+$breakpoint-pc_bm: 1800px;
+
+
+//Color
+$CBrand: #1f2085;
+$CLine: #d9d9d9;
+
+
+
+
+/* colors */
+$colors: (
+    _key: #1f2085,
+    _key2: #6768d2,
+    _key3: #6b6c9e,
+    _key4: #2c2c46,
+    _key5: #565656, 
+    _key6: #dedede,
+    _line: #ccc,
+    _bg_grey: #efefef,
+    _blue: #007bff,
+    _sky: #acbdee,
+    _red: #d61c1c,
+    _lblue: #63c1fc,
+    _orange: #f8742e,
+    _green: #40b474,
+    _yellow: #ffc107,
+    _purple: #4f389a,
+    _lightGrey: #999,
+    _solidGrey: #414141
+);
+
+
+$fz: (
+    _normal: 14px, 
+    _big: 20px, 
+    _mid: 16px, 
+    _small: 12px, 
+);
+
+
+@mixin btn($bg, $bd){
+    transition: all .1s ease-in-out;
+    background-color: $bg;
+    border-color: $bd;
+    color: #fff;
+    &:hover {
+        background-color: darken( $bg, 8%);
+        border-color: darken($bd, 8%);
+        box-shadow: 0 2px 3px rgba(#000, 0.3);
+    }
+    &:active {
+        box-shadow: inset 0 0 4px rgba(#000, 0.3);
+        transform: scale(0.97);
+    }
+}
+
+@mixin btn_ol($bd ,$color){
+    transition: all .1s ease-in-out;
+    background-color: transparent;
+    border-color: $bd;
+    color: $color;
+    &:hover {
+        background-color: $color;
+        color: #fff;
+    }
+    &:active {
+        box-shadow: inset 0 0 4px rgba(#000, 0.3);
+        transform: scale(0.97);
+    }
+}
+
+
+// colors
+@each $key, $color in $colors {
+    .fc#{$key} {
+        color: $color;
+    }
+    .bg#{$key} {
+        background-color: $color;
+    }
+    .bd#{$key} {
+        border-color: $color;
+    }
+    .f_btn {
+        &.#{$key} {
+            @include btn($color, $color)
+        }
+        &.#{$key}_ol {
+            @include btn_ol($color ,$color)
+        }
+    }
+    
+}
+
+@each $key, $size in $fz {
+    .fz#{$key} {
+        font-size: $size;
+    }
+    
+}
+
+
+
+
+$c_key : map-get($colors, _key);
+$c_line : map-get($colors, _line);
+$c_bg_grey : map-get($colors, _bg_grey);
+$c_blue : map-get($colors, _blue);
+$c_red : map-get($colors, _red);
+$c_sky : map-get($colors, _sky);
+$c_lightGrey : map-get($colors, _lightGrey);
+$c_solidGrey : map-get($colors, _solidGrey);
+
+//Font
+$font: 'Noto Sans KR', sans-serif;
+$font_tit: 'Montserrat';
+
+//innerBox
+$inner: 1280px;
+
+
+
+
+@for $i from 1 through 100 {
+    $w : 10*$i;
+    .w_#{$w} {
+        width: #{$w}px
+    }
+}
+
+
+@for $i from 1 through 100 {
+    $w : 10*$i;
+    
+    .w_#{$w} {
+        width: #{$w}px
+    }
+}
+
+@for $i from 1 through 20 {
+    $z : 5*$i;
+    .mt#{$z} {
+        margin-top: #{$z}px;
+    }
+    .ml#{$z} {
+        margin-left: #{$z}px
+    }
+    .mr#{$z} {
+        margin-right: #{$z}px
+    }
+    .mb#{$z} {
+        margin-bottom: #{$z}px
+    }
+
+    .pt#{$z} {
+        padding-top: #{$z}px;
+    }
+    .pl#{$z} {
+        padding-left: #{$z}px
+    }
+    .pr#{$z} {
+        padding-right: #{$z}px
+    }
+    .pb#{$z} {
+        padding-bottom: #{$z}px
+    }
+}
