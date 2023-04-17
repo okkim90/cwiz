@@ -30,22 +30,30 @@ $breakpoint-pcrm: 1700px;
     white-space: nowrap;
 }
 @mixin text-hidden($line: 1, $lineHeight: 19, $auto: null) {
-    display: -webkit-box;
+    width: 100%;
+    display: -webkit-box !important;
     -webkit-line-clamp: $line;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: calc(($lineHeight * $line) / $line) + px;
-    //word-break: break-all;
-    white-space: initial;
+    line-height: calc(($lineHeight * $line) / $line);
+    
 
     @if $auto ==auto {
         //영역 자동
-        max-height: $lineHeight * $line + px;
+        max-height: $lineHeight * $line;
     }
 
     @else {
         //처음부터 영역잡히게
-        height: $lineHeight * $line + px;
+        height: $lineHeight * $line;
     }
 }
+
+
+@for $i from 2 through 10 {
+    .t_hidden_#{$i} {
+        $lh : 1.5em;
+        @include text-hidden($i, $lh)
+    }
+} 
