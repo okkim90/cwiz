@@ -6,37 +6,37 @@ $breakpoint-pc_bm: 1800px;
 
 
 //Color
-$CBrand: #1f2085;
-$CLine: #d9d9d9;
+$CBrand: #FF7A00;
+$CLine: #DDDDDD;
 
 
 
 
 /* colors */
 $colors: (
-    _key: #1f2085,
-    _key2: #6768d2,
-    _key3: #6b6c9e,
-    _key4: #2c2c46,
-    _key5: #565656, 
-    _key6: #dedede,
-    _line: #ccc,
-    _bg_grey: #efefef,
-    _blue: #007bff,
+    _key: #FF7A00,
+    _key2: #cd7a2c,
+    _key3: #ed994a,
+    _key4: #393939,
+    _key5: #aaa, 
+    _key6: #EFEFEF,
+    _line: #DDDDDD,
+    _bg_grey: #EFEFEF,
+    _blue: #0085FF,
     _sky: #acbdee,
-    _red: #d61c1c,
+    _red: #FF5C5C,
     _lblue: #63c1fc,
-    _orange: #f8742e,
-    _green: #40b474,
+    _orange: #FF7A00,
+    _green: #41908D,
     _yellow: #ffc107,
-    _purple: #4f389a,
-    _lightGrey: #999,
-    _solidGrey: #414141
+    _purple: #7636FF,
+    _lightGrey: #aaa,
+    _solidGrey: #393939
 );
 
 
 $fz: (
-    _normal: 14px, 
+    _normal: 13px, 
     _big: 20px, 
     _mid: 16px, 
     _small: 12px, 
@@ -52,6 +52,21 @@ $fz: (
         background-color: darken( $bg, 8%);
         border-color: darken($bd, 8%);
         box-shadow: 0 2px 3px rgba(#000, 0.3);
+    }
+    &:active {
+        box-shadow: inset 0 0 4px rgba(#000, 0.3);
+        transform: scale(0.97);
+    }
+}
+
+@mixin btn_op($bd ,$color){
+    transition: all .1s ease-in-out;
+    background-color: rgba($color, .15);
+    border-color: $bd;
+    color: $color;
+    &:hover {
+        background-color: rgba($color, .3); 
+        //color: #fff;
     }
     &:active {
         box-shadow: inset 0 0 4px rgba(#000, 0.3);
@@ -91,7 +106,11 @@ $fz: (
             @include btn($color, $color)
         }
         &.#{$key}_ol {
-            @include btn_ol($color ,$color)
+            @include btn_ol($color ,$color);
+
+        }
+        &.#{$key}_op {
+            @include btn_op($color ,$color);
         }
     }
     
@@ -182,3 +201,12 @@ $inner: 1280px;
     @include list_col($i ,20px, 40px);
 } 
 
+
+
+@mixin flex_box($gap:10px, $wrap:wrap, $align:null ,$justify:null){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+    flex-wrap: $wrap;
+}

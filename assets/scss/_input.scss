@@ -1,6 +1,6 @@
 .f_input {
     max-width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid $c_line;
     box-sizing: border-box;
     &.w100 {
         width: 100%;
@@ -50,13 +50,14 @@
     input { 
         display: none;
         &:checked + .slider {
-            background-color: #2196F3;
+            background: $c_key;
+            background: linear-gradient(90deg, rgba(255,122,0,1) 0%, rgba(255,163,80,1) 100%);
         }
         &:focus + .slider {
-            box-shadow: 0 0 1px #2196F3;
+            box-shadow: 0 0 1px $c_key;
         }
         &:checked + .slider:before {
-            left: calc(100% - 26px);
+            left: calc(100% - 19px);
         }
         &:checked + .slider {
             .slider_txt {
@@ -76,27 +77,28 @@
         position: relative;
         min-width: 50px;
         box-sizing: border-box;
-        height: 28px;
+        height: 22px;
         cursor: pointer;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #ccc;
+        background: $c_solidGrey;
+        background: linear-gradient(90deg, rgba(101,101,101,1) 0%, rgba(57,57,57,1) 100%);
         transition: all .2s ease-in-out;
-        border-radius: 28px;
+        border-radius: 22px;
         &_txt {
             color: #fff;
-            line-height: 28px;
+            line-height: 22px;
             transition: all .2s ease-in-out;
             &.true {
-                padding: 0 30px 0 8px;
+                padding: 0 22px 0 7px;
                 visibility: hidden;
                 opacity: 0;
                 transform: translateY(-100%);
             }
             &.false {
-                padding: 0 8px 0 30px;
+                padding: 0 7px 0 22px;
                 visibility: visible;
                 opacity: 1;
             }
@@ -104,9 +106,9 @@
         &:before {
             position: absolute;
             content: "";
-            height: 22px;
-            width: 22px;
-            left: 4px;
+            height: 16px;
+            width: 16px;
+            left: 3px;
             bottom: 3px;
             background-color: white;
             transition: all .2s ease-in-out;
@@ -127,7 +129,7 @@
 
 .f_select {
     max-width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid $c_line;
     box-sizing: border-box;
     &.w100 {
         width: 100%;
@@ -149,4 +151,13 @@
         padding: 0 15px;
         border-radius: 6px;
     }
+}
+
+.chk_list {
+    @include flex-box(10px)
+    
+}
+.chk_item {
+    cursor: pointer;
+    user-select: none;
 }

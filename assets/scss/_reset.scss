@@ -19,7 +19,7 @@ body {
 
     line-height: 1.5;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     font-family: $font;
     color: #000;
     letter-spacing: -0.5px;
@@ -189,8 +189,10 @@ input[type="radio"],
 input[type="checkbox"] {
     display: inline-block;
     vertical-align: middle;
-    width: 1em;
-    height: 1em;
+    width: 1.2em;
+    height: 1.2em;
+    accent-color: $c_solidGrey;
+ 
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -205,7 +207,7 @@ input[type="tel"]:focus,
 input[type="email"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-    border-color: $c_blue;
+    border-color: $c_key;
     background-color: #fff;
     outline: none;
 }
@@ -256,12 +258,12 @@ input::-webkit-search-results-decoration {
 }
 
 ::-moz-selection {
-    background: $CBrand;
+    background: $c_key;
     color: #fff;
 }
 
 ::selection {
-    background: $CBrand;
+    background: $c_key;
     color: #fff;
 }
 
@@ -275,3 +277,8 @@ input::-webkit-search-results-decoration {
 
 /* blind */
 .blind { border: 0; clip: rect(0 0 0 0); clip-path: inset(50%); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap; }
+
+
+.no_drag {
+    user-select: none;
+}
