@@ -3963,13 +3963,26 @@ input::-webkit-search-results-decoration {
 .card_item:active {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+.card_item_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #666;
+}
+.card_item_info i {
+  margin-right: 4px;
+  color: #222;
+  font-size: 12px;
+}
 .card_item .txt_box {
   padding: 15px 20px 20px;
   background-color: #fff;
 }
 .card_item .txt_box .tit {
   display: block;
-  font-size: 16px;
+  font-size: 14px;
 }
 .card_item .txt_box .desc {
   display: block;
