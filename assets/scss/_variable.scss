@@ -21,6 +21,7 @@ $colors: (
     _key5: #aaa, 
     _key6: #EFEFEF,
     _line: #DDDDDD,
+    _bg: #F9F9F9,
     _bg_grey: #EFEFEF,
     _blue: #0085FF,
     _sky: #acbdee,
@@ -128,6 +129,7 @@ $fz: (
 
 $c_key : map-get($colors, _key);
 $c_line : map-get($colors, _line);
+$c_bg : map-get($colors, _bg);
 $c_bg_grey : map-get($colors, _bg_grey);
 $c_blue : map-get($colors, _blue);
 $c_red : map-get($colors, _red);

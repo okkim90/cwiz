@@ -14,8 +14,10 @@
     
     <script src="../assets/js/jquery-3.1.1.min.js"></script>
     <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
     <script src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/css/datepicker.css">
     <link rel="stylesheet" href="../assets/css/common.min.css">
 
@@ -387,129 +389,185 @@
         <!--탭 네비게이션-->
         <!-- [D] tab_nav_toggle 클릭시 tab_nav 토글 -->
         <div id="tab_nav" class="tab_nav">
-            <ul class="tab_nav_list">
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">메인</a>
-                </li>
-                <!--[D] 활성화 "on" class -->
-                <li class="tab_nav_item on">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">전체 조회</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">교정</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">교정접수 처리 수량</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">기준정보</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">업체별 금액&수량 비교</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">사외</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">현장교정 일일 중복</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">교정</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">교정접수 처리 수량</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">기준정보</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">업체별 금액&수량 비교</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">사외</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">현장교정 일일 중복</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">교정</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">교정접수 처리 수량</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">기준정보</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">업체별 금액&수량 비교</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">사외</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">현장교정 일일 중복</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">교정</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">교정접수 처리 수량</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">기준정보</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">업체별 금액&수량 비교</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">사외</a>
-                </li>
-                <li class="tab_nav_item">
-                    <button class="del_item"></button>
-                    <a href="" class="tab_nav_link">현장교정 일일 중복</a>
-                </li>
-                
-            </ul>
-            <button type="button" class="tab_nav_toggle">
-                <i class="fa-solid fa-square-caret-up"></i>
-            </button>
+            
+            <div class="tab_nav_list">
+                <div class="swiper-wrapper">
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link ty_main" onclick="tab_load(this)">메인</button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">전체 조회</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide ">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정접수 처리 수량</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">기준정보</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">업체별 금액&수량 비교</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">전체 조회</a>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정접수 처리 수량</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">기준정보</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">업체별 금액&수량 비교</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">전체 조회</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정접수 처리 수량</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">기준정보</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">업체별 금액&수량 비교</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">전체 조회</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정접수 처리 수량</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">기준정보</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">업체별 금액&수량 비교</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">전체 조회</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide on">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정접수 처리 수량</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">기준정보</button>
+                        <button class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                    <div class="tab_nav_item swiper-slide">
+                        <button type="button" class="tab_nav_link" onclick="tab_load(this)">업체별 금액&수량 비교</button>
+                        <button type="button" class="del_item" onclick="del_tap(this)"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_nav_ctrl">
+                <button type="button" class="tab_nav_ctrl_btn tab_nav_prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button type="button" class="tab_nav_ctrl_btn tab_nav_next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
         </div>
         <script>
-            let tab_nav = document.querySelector('#tab_nav');
-            let tab_nav_toggle = document.querySelector('.tab_nav_toggle');
+            let initial_slide = $('.tab_nav_item.on').index();
 
-            tab_nav_toggle.addEventListener('click', function(){
-                if(tab_nav.classList.contains('off')){
-                    tab_nav.classList.remove('off');
-                }else{
-                    tab_nav.classList.add('off');
+            
+            let ac_slide_main = new Swiper('.tab_nav_list',{   
+                slidesPerView: "auto",
+                freeMode: true,
+                initialSlide:initial_slide,
+                //spaceBetween: 10,
+                navigation: {
+                    nextEl: ".tab_nav_next",
+                    prevEl: ".tab_nav_prev",
                 }
-            }); 
+            });
+          
+
+            // [D] 탭 삭제
+            function del_tap(target){
+                let $this = $(target);
+                let $this_tab = $this.parents('.tab_nav_item');
+                let $tab_length = $('.tab_nav_item').length;
+                
+                if($this_tab.hasClass('on')){
+                    if($this_tab.index() + 1 < $tab_length){
+                        $this_tab.next('.tab_nav_item').addClass('on');
+                        //[D] 다음 페이지 불러오기
+
+                        //
+                    }else{
+                        $('.tab_nav_item').eq(0).addClass('on');
+                        //[D] 첫 페이지 불러오기
+
+                        //
+                    }
+                    
+                }
+                $this.parents('.tab_nav_item').remove();
+
+                //슬라이드 reload
+                tab_slide_reload()
+            }
+
+            // [D] 탭 클릭 (페이지로드)
+            function tab_load(target){
+                let $this = $(target);
+                let $this_tab = $this.parents('.tab_nav_item');
+                $this_tab.addClass('on').siblings().removeClass('on');
+
+                //[D] 선택된 페이지 불러오기
+
+                //
+                tab_slide_reload()
+            }
+
+            //슬라이드 reload
+            function tab_slide_reload(){
+                initial_slide = $('.tab_nav_item.on').index();
+                ac_slide_main.update();
+                ac_slide_main.slideTo(initial_slide,400,false)
+            }
+
+            $(window).on('load',function(){
+                tab_slide_reload()
+            });
+        
+            
         </script>
         <!--//탭 네비게이션-->
 
@@ -1896,116 +1954,7 @@
                 <div class="sec_tit">
                     <h2 class="tit">History tab navigation</h2>
                 </div>
-                <div id="tab_nav" class="tab_nav">
-                    <ul class="tab_nav_list">
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">메인</a>
-                        </li>
-                        <!--[D] 활성화 "on" class -->
-                        <li class="tab_nav_item on">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">전체 조회</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">교정</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">교정접수 처리 수량</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">기준정보</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">업체별 금액&amp;수량 비교</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">사외</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">현장교정 일일 중복</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">교정</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">교정접수 처리 수량</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">기준정보</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">업체별 금액&amp;수량 비교</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">사외</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">현장교정 일일 중복</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">교정</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">교정접수 처리 수량</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">기준정보</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">업체별 금액&amp;수량 비교</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">사외</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">현장교정 일일 중복</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">교정</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">교정접수 처리 수량</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">기준정보</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">업체별 금액&amp;수량 비교</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">사외</a>
-                        </li>
-                        <li class="tab_nav_item">
-                            <button class="del_item"></button>
-                            <a href="" class="tab_nav_link">현장교정 일일 중복</a>
-                        </li>
-                        
-                    </ul> 
-                </div>
+                
             </section>
         </div>
     </main>

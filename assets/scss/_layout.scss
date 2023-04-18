@@ -387,73 +387,114 @@
 
 .tab_nav {
     position: relative;
-     &_toggle {
-         position: absolute;
-         right: 30px;
-         top: 10px;
-         font-size: 24px;
-         line-height: 0;
-         color: #333;
-     }
+    overflow: hidden;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_toggle {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+        font-size: 24px;
+        line-height: 0;
+        color: #333;
+    }
 
-     &.off {
-         .tab_nav_list {
-             display: none;
-         }
-         .tab_nav_toggle {
-             transform: rotate(180deg);
-         }
-     }
+    &.off {
+        .tab_nav_list {
+            display: none;
+        }
+        .tab_nav_toggle {
+            transform: rotate(180deg);
+        }
+    }
 
-     &_list {
-         display: flex;
-         gap: 10px;
-         flex-wrap: wrap;
-         background-color: #f2f2f6;
-         padding: 10px 30px;
-         padding-right: 70px;
-         border-bottom: 1px solid #ddd;
-     }
-     
-     &_item {
-         position: relative;
-         .del_item {
-             position: absolute;
-             right: -4px;
-             top: -4px;
-             width: 16px;
-             height: 16px;
-             background-image: url(../images/common/ico_x_w.svg);
-             background-position: center center;
-             background-size: 12px;
-             background-repeat: no-repeat;
-             border-radius: 50%;
-             background-color: $c_solidGrey;
-             box-shadow: 1px 1px 2px rgba(#000, 0.3);
+    &_ctrl {
 
-         }
-         &.on {
-             .tab_nav_link {
-                 background-color: rgba($c_key, 1);
-             }
-         }
-     }
-     &_link {
-         display: block;
-         border-radius: 4px;
-         background-color: rgba($c_key, .5);
-         color: #fff;
-         font-size: 12px;
-         line-height: 26px;
-         white-space: nowrap;
-         padding: 0 10px;
-         padding-right: 16px;
-         box-shadow: 1px 1px 2px rgba(#000, 0.3);
-         transition: background-color .1s ease-in-out;
-         &:hover {
-            background-color: rgba($c_key, .5);
-         }
-     }
+        display: flex;
+        padding: 10px 0;
+        padding-left: 30px;
+        background-color: $c_bg;
+        flex-shrink: 0;
+        gap: 10px;
+        position: relative;
+        z-index: 10;
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     width: 30px;
+        //     height: 100%;
+        //     top: 0;
+        //     right: 100%;
+        //     background: linear-gradient(90deg, rgba(249,249,249,0) 0%, rgba(249,249,249,1) 100%);
+        // }
+        &_btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(#000, .3);
+            font-size: 14px;
+            color: #666;
+        }
+    }
+
+    &_list {
+        overflow: hidden;
+        min-width: 0;
+        flex: 1;
+        padding: 10px 0;
+    }
+    
+    &_item {
+        position: relative;
+        width: fit-content;
+        background-color: rgba($c_solidGrey, .5);
+        transition: background-color .1s ease-in-out;
+        height: 34px;
+        border-radius: 17px;
+        box-shadow: 1px 1px 2px rgba(#000, 0.3);
+        margin-right: 10px;
+        .del_item {
+            position: absolute;
+            right: 2px;
+            top: 50%;
+            width: 26px;
+            height: 26px;
+            margin-top: -13px;
+            background-image: url(../images/common/ico_x_w.svg);
+            background-position: center center;
+            background-size: 15px;
+            background-repeat: no-repeat;
+        }
+        &.on { 
+            background-color: rgba($c_solidGrey, 1);
+            &:hover {
+                background-color: rgba($c_solidGrey, 1);
+            }
+        }
+        
+        &:hover {
+            background-color: rgba($c_solidGrey, .7);
+        }
+    }
+    &_link {
+        display: block;
+        
+        
+        color: #fff;
+        height: 34px;
+        font-size: 13px;
+        white-space: nowrap;
+        padding: 0 12px;
+        padding-right: 26px;
+        
+        &.ty_main {
+            padding-right: 12px;
+        }
+        
+    }
 
  }
 

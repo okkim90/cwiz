@@ -386,6 +386,61 @@
   transform: scale(0.97);
 }
 
+.fc_bg {
+  color: #F9F9F9;
+}
+
+.bg_bg {
+  background-color: #F9F9F9;
+}
+
+.bd_bg {
+  border-color: #F9F9F9;
+}
+
+.f_btn._bg {
+  transition: all 0.1s ease-in-out;
+  background-color: #F9F9F9;
+  border-color: #F9F9F9;
+  color: #fff;
+}
+.f_btn._bg:hover {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+.f_btn._bg:active {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+  transform: scale(0.97);
+}
+.f_btn._bg_ol {
+  transition: all 0.1s ease-in-out;
+  background-color: transparent;
+  border-color: #F9F9F9;
+  color: #F9F9F9;
+}
+.f_btn._bg_ol:hover {
+  background-color: #F9F9F9;
+  color: #fff;
+}
+.f_btn._bg_ol:active {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+  transform: scale(0.97);
+}
+.f_btn._bg_op {
+  transition: all 0.1s ease-in-out;
+  background-color: rgba(249, 249, 249, 0.15);
+  border-color: #F9F9F9;
+  color: #F9F9F9;
+}
+.f_btn._bg_op:hover {
+  background-color: rgba(249, 249, 249, 0.3);
+}
+.f_btn._bg_op:active {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+  transform: scale(0.97);
+}
+
 .fc_bg_grey {
   color: #EFEFEF;
 }
@@ -2685,7 +2740,8 @@ body {
   font-weight: 400;
   font-size: 13px;
   font-family: "Noto Sans KR", sans-serif;
-  color: #000;
+  background-color: #F9F9F9;
+  color: #222;
   letter-spacing: -0.5px;
   overflow-x: auto;
 }
@@ -3282,6 +3338,11 @@ input::-webkit-search-results-decoration {
 
 .tab_nav {
   position: relative;
+  overflow: hidden;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .tab_nav_toggle {
   position: absolute;
@@ -3297,50 +3358,74 @@ input::-webkit-search-results-decoration {
 .tab_nav.off .tab_nav_toggle {
   transform: rotate(180deg);
 }
-.tab_nav_list {
+.tab_nav_ctrl {
   display: flex;
+  padding: 10px 0;
+  padding-left: 30px;
+  background-color: #F9F9F9;
+  flex-shrink: 0;
   gap: 10px;
-  flex-wrap: wrap;
-  background-color: #f2f2f6;
-  padding: 10px 30px;
-  padding-right: 70px;
-  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 10;
+}
+.tab_nav_ctrl_btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  color: #666;
+}
+.tab_nav_list {
+  overflow: hidden;
+  min-width: 0;
+  flex: 1;
+  padding: 10px 0;
 }
 .tab_nav_item {
   position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgba(57, 57, 57, 0.5);
+  transition: background-color 0.1s ease-in-out;
+  height: 34px;
+  border-radius: 17px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-right: 10px;
 }
 .tab_nav_item .del_item {
   position: absolute;
-  right: -4px;
-  top: -4px;
-  width: 16px;
-  height: 16px;
+  right: 2px;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
   background-image: url(../images/common/ico_x_w.svg);
   background-position: center center;
-  background-size: 12px;
+  background-size: 15px;
   background-repeat: no-repeat;
-  border-radius: 50%;
-  background-color: #393939;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-.tab_nav_item.on .tab_nav_link {
-  background-color: #ff7a00;
+.tab_nav_item.on {
+  background-color: #393939;
+}
+.tab_nav_item.on:hover {
+  background-color: #393939;
+}
+.tab_nav_item:hover {
+  background-color: rgba(57, 57, 57, 0.7);
 }
 .tab_nav_link {
   display: block;
-  border-radius: 4px;
-  background-color: rgba(255, 122, 0, 0.5);
   color: #fff;
-  font-size: 12px;
-  line-height: 26px;
+  height: 34px;
+  font-size: 13px;
   white-space: nowrap;
-  padding: 0 10px;
-  padding-right: 16px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.1s ease-in-out;
+  padding: 0 12px;
+  padding-right: 26px;
 }
-.tab_nav_link:hover {
-  background-color: rgba(255, 122, 0, 0.5);
+.tab_nav_link.ty_main {
+  padding-right: 12px;
 }
 
 .container .contents {
@@ -4064,6 +4149,7 @@ input::-webkit-search-results-decoration {
   width: 100%;
   border-top: 1px solid #000;
   table-layout: fixed;
+  background-color: #fff;
 }
 .v_tbl tr.hidden_tr {
   display: none;
@@ -4105,6 +4191,7 @@ input::-webkit-search-results-decoration {
   font-size: 12px;
   border-left: none;
   border-collapse: collapse;
+  background-color: #fff;
 }
 .h_tbl_wrap {
   border: 1px solid #DDDDDD;

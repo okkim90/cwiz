@@ -21,7 +21,8 @@ body {
     font-weight: 400;
     font-size: 13px;
     font-family: $font;
-    color: #000;
+    background-color: $c_bg;
+    color: #222;
     letter-spacing: -0.5px;
     overflow-x: auto;
 }
@@ -212,9 +213,7 @@ textarea:focus {
     outline: none;
 }
 
-input[readonly] {
-    //pointer-events: none;
-}
+
 
 ::-webkit-input-placeholder {
     font-size: inherit;
