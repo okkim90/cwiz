@@ -120,7 +120,7 @@
                 <div class="tab_nav_list">
                     <div class="swiper-wrapper">
                         <div class="tab_nav_item swiper-slide">
-                            <button type="button" class="tab_nav_link ty_main" onclick="tab_load(this)">메인</button>
+                            <button type="button" class="tab_nav_link ty_main" onclick="tab_load(this)"><i class="fa-solid fa-house"></i></button>
                         </div>
                         <div class="tab_nav_item swiper-slide">
                             <button type="button" class="tab_nav_link" onclick="tab_load(this)">전체 조회</button>
@@ -235,7 +235,7 @@
                 
                 let ac_slide_main = new Swiper('.tab_nav_list',{   
                     slidesPerView: "auto",
-                    freeMode: true,
+                    //freeMode: true,
                     initialSlide:initial_slide,
                     //spaceBetween: 10,
                     navigation: {
@@ -308,15 +308,14 @@
                 </div>
                 <section class="sec">
                     <div class="sec_tit">
-                        <h2 class="tit">Colors</h2>
+                        <h2 class="tit">Key Colors</h2>
                     </div>
-                    <div style="display: flex; height: 200px;">
-                        <div style="display: flex; justify-content: center; align-items: center; flex: 1; color: #fff;" class="bg_key">Key color1</div>                    
-                        <div style="display: flex; justify-content: center; align-items: center; flex: 1; color: #fff;" class="bg_key2">Key color2</div>                    
-                        <div style="display: flex; justify-content: center; align-items: center; flex: 1; color: #fff;" class="bg_key3">Key color3</div>                    
-                        <div style="display: flex; justify-content: center; align-items: center; flex: 1; color: #fff;" class="bg_key4">Key color4</div>                    
-                        <div style="display: flex; justify-content: center; align-items: center; flex: 1; color: #fff;" class="bg_key5">Key color5</div>                    
-                        <div style="display: flex; justify-content: center; align-items: center; flex: 1; color: #fff;" class="bg_key6">Key color6</div>                    
+                    <div style="display: flex; flex-wrap: wrap; border-radius: 10px; overflow: hidden;">
+                        <div style="height: 200px; width: calc((100%/3)*2); display: flex; justify-content: center; align-items: center; color: #fff;" class="bg_key">#FF7A00</div>                    
+                        <div style="width: calc((100%/3)); display: flex; justify-content: center; align-items: center; color: #fff;" class="bg_solidGrey">#393939</div>                    
+                        <div style="height: 100px; display: flex; justify-content: center; align-items: center; flex: 1; color: #fff;" class="bg_lightGrey">#AAAAAA</div>                    
+                        <div style=" display: flex; justify-content: center; align-items: center; flex: 1; color: #000;" class="bg_bg_grey">#EFEFEF</div>                    
+                        <div style=" display: flex; justify-content: center; align-items: center; flex: 1; color: #000;" class="bg_bg">#F9F9F9</div>                                      
                     </div>
                 </section>
                 <section class="sec">
