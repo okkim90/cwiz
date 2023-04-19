@@ -3465,7 +3465,7 @@ input::-webkit-search-results-decoration {
   font-size: 12px;
 }
 .f_input.ty_mid {
-  height: 40px;
+  height: 36px;
   padding: 0 10px;
   border-radius: 4px;
   font-size: 14px;
@@ -3587,7 +3587,7 @@ input::-webkit-search-results-decoration {
   font-size: 12px;
 }
 .f_select.ty_mid {
-  height: 40px;
+  height: 36px;
   padding: 0 10px;
   border-radius: 4px;
   font-size: 14px;
@@ -3718,20 +3718,20 @@ input::-webkit-search-results-decoration {
   border-radius: 30px;
 }
 .f_btn.ty_s_mid {
-  height: 34px;
+  height: 32px;
   padding: 0 10px;
   font-size: 14px;
-  line-height: 32px;
+  line-height: 30px;
   border-radius: 4px;
 }
 .f_btn.ty_s_mid._round {
   border-radius: 34px;
 }
 .f_btn.ty_mid {
-  height: 40px;
+  height: 36px;
   padding: 0 10px;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 34px;
   border-radius: 4px;
 }
 .f_btn.ty_mid._round {
