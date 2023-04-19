@@ -91,14 +91,15 @@
             color: #fff;
             line-height: 22px;
             transition: all .2s ease-in-out;
+            text-align: center;
             &.true {
-                padding: 0 22px 0 7px;
+                padding: 0 23px 0 8px;
                 visibility: hidden;
                 opacity: 0;
                 transform: translateY(-100%);
             }
             &.false {
-                padding: 0 7px 0 22px;
+                padding: 0 8px 0 23px;
                 visibility: visible;
                 opacity: 1;
             }

@@ -19,6 +19,7 @@
 }
 .btn_set {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     &.bg_box {
         background-color: $c_bg_grey;
