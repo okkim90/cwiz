@@ -63,13 +63,10 @@
             background-color: $c_bg_grey;
             text-align: center;
             padding: 5px;
-            height: 32px;
+            height: 3em;
             cursor: pointer;
             border: 1px solid $c_line;
             border-top: none;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
             &:first-child {
                 border-left: none;
             }
@@ -92,8 +89,8 @@
         td {
             padding: 5px;
             border: 1px solid $c_line;
-            max-width: 0;
             text-align: center;
+            height: 3em;
             &.taL {
                 text-align: left;
             }

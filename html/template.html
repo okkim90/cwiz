@@ -387,6 +387,7 @@
                         <button class="f_btn ty_xsmall _round _key">BUTTON</button>
                         <button class="f_btn ty_xsmall _round _key_ol">BUTTON</button>
                         <button class="f_btn ty_xsmall _round _key_op">BUTTON</button>
+                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
                     </div>
                 </section>
                 <section class="sec">
@@ -954,375 +955,260 @@
                     </div>  
                     <div class="h_tbl_wrap">
                         <table class="h_tbl">
-                            <colgroup>
-                                <col style="width: 100px;">
-                                <col style="width: 100px;">
+                            <!-- <colgroup>
+                                <col style="width: 50px;">
                                 <col style="width: 80px;">
-                                <col style="width: 160px;">
-                                <col style="width: 80px;">
-                                <col style="width: 80px;">
-                                <col style="width: 120px;">
                                 <col style="width: 50px;">
                                 <col style="width: 50px;">
-                                <col style="width: 50px;">
-                                <col style="width: 50px;">
-                                <col style="width: 50px;">
-                                <col style="width: 50px;">
-                                <col style="width: 100px;">
+                                <col style="width: 60px;">
                                 <col>
-                                <col style="width: 60px">
-                            </colgroup>
+                                <col>
+                                <col>
+                                <col style="width: 90px;">
+                                <col style="width: 90px;">
+                                <col style="width: 70px;">
+                                <col style="width: 80px;">
+                                <col style="width: 90px;">
+                                <col style="width: 70px;">
+                                <col style="width: 70px;">
+                                <col style="width: 100px;">
+                            </colgroup> -->
                             <thead>
                                 <tr>
-                                    <th class="th_fixed">접수번호 
-                                        
-                                        <div class="col_sort">
-                                            <!--[D] .btn_sort 활성화 on class -->
-                                            <button type="button" class="btn_sort ty_up on"><span class="blind">up</span></button>
-                                            <button type="button" class="btn_sort ty_down"><span class="blind">down</span></button>
-                                        </div>
-                                    </th>
-                                    <th class="th_fixed">
-                                        접수일자
-                                        <div class="col_sort">
-                                            <button type="button" class="btn_sort ty_up"><span class="blind">up</span></button>
-                                            <button type="button" class="btn_sort ty_down"><span class="blind">down</span></button>
-                                        </div>
-                                    </th>
-                                    <th class="th_fixed">입고구분</th>
-                                    <th class="th_fixed">업체명</th>
-                                    <th class="th_fixed">접수자</th>
+                                    <th class="th_fixed"><input type="checkbox"></th>
+                                    <th class="th_fixed">교정번호</th>
+                                    <th class="th_fixed">국문</th>
+                                    <th class="th_fixed">영문</th>
+                                    <th class="th_fixed">회원구분</th>
+                                    <th class="th_fixed">계측기명</th>
+                                    <th class="th_fixed">제조사</th>
+                                    <th class="th_fixed">형식</th>
+                                    <th class="th_fixed">기기번호</th>
+                                    <th class="th_fixed">접수일</th>
                                     <th class="th_fixed">신청자</th>
-                                    <th class="th_fixed">성적서 업체명</th>
-                                    <th class="th_fixed">총수량</th>
-                                    <th class="th_fixed">교정완료</th>
-                                    <th class="th_fixed">명세서</th>
-                                    <th class="th_fixed">계산서</th>
-                                    <th class="th_fixed">수납</th>
-                                    <th class="th_fixed">출고</th>
-                                    <th class="th_fixed">저장위치</th>
-                                    <th class="th_fixed">요구사항</th>
-                                    <th class="th_fixed">상세보기</th>
+                                    <th class="th_fixed">현재상태</th>
+                                    <th class="th_fixed">완료일</th>
+                                    <th class="th_fixed">교정결과</th>
+                                    <th class="th_fixed">교정담당</th>
+                                    <th class="th_fixed">교정수수료</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td><input type="checkbox"></td>
                                     <td>
-                                        <!--[D] 접수번호, 교정번호 -->
-                                        <div class="c_num">
-                                            <i class="fa-solid fa-bolt c_num_ico fc_red"></i>
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div> 
-                                        <!--// [D] 접수번호, 교정번호 -->
+                                        <a class="btn_t_link" href="">2300001</a> 
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
                                     </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
                                 </tr>
                                 <tr>
+                                    <td><input type="checkbox"></td>
                                     <td>
-                                        <div class="c_num">
-                                            <i class="fa-solid fa-bolt c_num_ico fc_red"></i>
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div> 
+                                        <a class="btn_t_link" href="">2300001</a> 
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
                                     </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
                                 </tr>
                                 <tr>
+                                    <td><input type="checkbox"></td>
                                     <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <a class="btn_t_link" href="">2300001</a> 
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
                                     </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
                                 </tr>
                                 <tr>
+                                    <td><input type="checkbox"></td>
                                     <td>
-                                        <div class="c_num">
-                                            <i class="fa-solid fa-bolt c_num_ico fc_red"></i>
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <a class="btn_t_link" href="">2300001</a> 
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
                                     </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
                                 </tr>
                                 <tr>
+                                    <td><input type="checkbox"></td>
                                     <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <a class="btn_t_link" href="">2300001</a> 
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
                                     </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
                                 </tr>
                                 <tr>
+                                    <td><input type="checkbox"></td>
                                     <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <a class="btn_t_link" href="">2300001</a> 
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
                                     </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
                                 </tr>
                                 <tr>
+                                    <td><input type="checkbox"></td>
                                     <td>
-                                        <div class="c_num">
-                                            <i class="fa-solid fa-bolt c_num_ico fc_red"></i>
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div> 
+                                        <a class="btn_t_link" href="">2300001</a> 
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
                                     </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
                                 </tr>
                                 <tr>
+                                    <td><input type="checkbox"></td>
                                     <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <a class="btn_t_link" href="">2300001</a> 
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
                                     </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
                                 </tr>
                                 <tr>
+                                    <td><input type="checkbox"></td>
                                     <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <a class="btn_t_link" href="">2300001</a> 
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
                                     </td>
-                                </tr>
-                                <tr>
                                     <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
-                                    <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
-                                    </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
-                                    <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
-                                    </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
-                                    <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
-                                    </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
-                                    <td>
-                                        <a href="" class="f_btn ty_small _blue">상세</a>
-                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1335,373 +1221,228 @@
                     <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
                         <table class="h_tbl">
                             <colgroup>
-                                <col style="width: 100px;">
-                                <col style="width: 100px;">
-                                <col style="width: 80px;">
-                                <col style="width: 160px;">
-                                <col style="width: 80px;">
-                                <col style="width: 80px;">
-                                <col style="width: 120px;">
-                                <col style="width: 50px;">
-                                <col style="width: 50px;">
-                                <col style="width: 50px;">
-                                <col style="width: 50px;">
-                                <col style="width: 50px;">
-                                <col style="width: 50px;">
-                                <col style="width: 100px;">
                                 <col>
-                                <col style="width: 60px">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>   
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th class="th_fixed">접수번호 
-                                        
-                                        <div class="col_sort">
-                                            <!--[D] .btn_sort 활성화 on class -->
-                                            <button type="button" class="btn_sort ty_up on"><span class="blind">up</span></button>
-                                            <button type="button" class="btn_sort ty_down"><span class="blind">down</span></button>
-                                        </div>
-                                    </th>
-                                    <th class="th_fixed">
-                                        접수일자
-                                        <div class="col_sort">
-                                            <button type="button" class="btn_sort ty_up"><span class="blind">up</span></button>
-                                            <button type="button" class="btn_sort ty_down"><span class="blind">down</span></button>
-                                        </div>
-                                    </th>
-                                    <th class="th_fixed">입고구분</th>
-                                    <th class="th_fixed">업체명</th>
-                                    <th class="th_fixed">접수자</th>
-                                    <th class="th_fixed">신청자</th>
-                                    <th class="th_fixed">성적서 업체명</th>
-                                    <th class="th_fixed">총수량</th>
-                                    <th class="th_fixed">교정완료</th>
-                                    <th class="th_fixed">명세서</th>
-                                    <th class="th_fixed">계산서</th>
-                                    <th class="th_fixed">수납</th>
-                                    <th class="th_fixed">출고</th>
-                                    <th class="th_fixed">저장위치</th>
-                                    <th class="th_fixed">요구사항</th>
+                                    <th class="th_fixed">아이디 </th>
+                                    <th class="th_fixed">담당자명</th>
+                                    <th class="th_fixed">핸드폰</th>
+                                    <th class="th_fixed">회사명</th>
+                                    <th class="th_fixed">사업자번호</th>
+                                    <th class="th_fixed">신청일</th>
+                                    <th class="th_fixed">승인</th>
+                                    <th class="th_fixed">권한</th>
+                                    <th class="th_fixed">회원상태</th>
                                     <th class="th_fixed">상세보기</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
                                     <td>
-                                        <!--[D] 접수번호, 교정번호 -->
-                                        <div class="c_num">
-                                            <i class="fa-solid fa-bolt c_num_ico fc_red"></i>
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div> 
-                                        <!--// [D] 접수번호, 교정번호 -->
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
                                     <td>
-                                        <div class="c_num">
-                                            <i class="fa-solid fa-bolt c_num_ico fc_red"></i>
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div> 
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
                                     <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
                                     <td>
-                                        <div class="c_num">
-                                            <i class="fa-solid fa-bolt c_num_ico fc_red"></i>
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
                                     <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
                                     <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
                                     <td>
-                                        <div class="c_num">
-                                            <i class="fa-solid fa-bolt c_num_ico fc_red"></i>
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div> 
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
                                     <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
                                     <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
                                     </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
                                     <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
-                                    </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
-                                    <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
-                                    </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
-                                    <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
-                                    </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
-                                    <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="c_num">
-                                            <a class="c_num_link" href="">2300001</a> 
-                                        </div>
-                                    </td>
-                                    <td>2023-03-10</td>
-                                    <td>택배</td>
-                                    <td>미래공구주식회사 평택지점</td>
-                                    <td>유재현</td>
-                                    <td>이준성</td>
-                                    <td>(주)삼성물산</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>5</td>
-                                    <td>4</td>
-                                    <td>12</td>
-                                    <td>234</td>
-                                    <td>124</td>
-                                    <td class="taL ">요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 요구사항 </td>
-                                    <td>
-                                        <a href="" class="f_btn ty_small _key">상세</a>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1736,11 +1477,11 @@
                                                 </select>
                                                 <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
                                                 <input type="text" class="f_input ty_small inp_date date_end" readonly>
-                                                <button type="button" onclick="set_today(this);" class="f_btn ty_small _round _red_op w_50">오늘</button>
-                                                <button type="button" onclick="set_7d(this)" class="f_btn ty_small _round _key_op w_50">7일</button>
-                                                <button type="button" onclick="set_1m(this)" class="f_btn ty_small _round _green_op w_50">1개월</button>
-                                                <button type="button" onclick="set_3m(this)" class="f_btn ty_small _round _blue_op w_50">3개월</button>
-                                                <button type="button" onclick="set_1y(this)" class="f_btn ty_small _round _purple_op w_50">1년</button>
+                                                <button type="button" onclick="set_today(this);" class="f_btn ty_xsmall _round _red_op w_50">오늘</button>
+                                                <button type="button" onclick="set_7d(this)" class="f_btn ty_xsmall _round _key_op w_50">7일</button>
+                                                <button type="button" onclick="set_1m(this)" class="f_btn ty_xsmall _round _green_op w_50">1개월</button>
+                                                <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _blue_op w_50">3개월</button>
+                                                <button type="button" onclick="set_1y(this)" class="f_btn ty_xsmall _round _purple_op w_50">1년</button>
                                             </div>
                                         </td>
                                     </tr>
