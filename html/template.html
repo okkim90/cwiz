@@ -10,88 +10,19 @@
     <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
     <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
     <title>코리아인스트루먼트(주) 교정관리 시스템</title>
-
+    <script src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous" ></script>
     
     <script src="../assets/js/jquery-3.1.1.min.js"></script>
     <script src="../assets/js/jquery-ui.min.js"></script>
     <script src="../assets/js/swiper.min.js"></script>
-    <script src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous"></script>
+    
+    <script src="../assets/js/main.js" defer></script>
+    
+    
     <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
     <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/css/datepicker.css">
     <link rel="stylesheet" href="../assets/css/common.min.css">
-
-
-    <!-- datepicker js -->
-    <script>
-        $(function(){
-            $.datepicker.regional['ko'] = {
-            closeText: '닫기',
-            prevText: '이전달',
-            nextText: '다음달',
-            currentText: '오늘',
-            monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-            monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-            dayNames: ['일','월','화','수','목','금','토'],
-            dayNamesShort: ['일','월','화','수','목','금','토'],
-            dayNamesMin: ['일','월','화','수','목','금','토'],
-            weekHeader: 'Wk',
-            dateFormat: 'yy-mm-dd',
-            firstDay: 0,
-            isRTL: false,
-            showMonthAfterYear: true,
-            changeMonth: true,
-            changeYear: true
-            };
-            $.datepicker.setDefaults($.datepicker.regional['ko']);
-            
-            $(".inp_date").datepicker({
-                //showOn: "button",
-                //buttonImage: "../img/ico_calendar1.svg",
-                //buttonImageOnly: true,
-                //showButtonPanel: true
-            });
-            
-
-            
-        });
-        function set_today(target){
-            let date_set = $(target).parents('.date_set');
-            let date_start = date_set.find('.date_start');
-            let date_end = date_set.find('.date_end');
-            date_start.datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-            date_end.datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-        }
-        function set_7d(target){
-            let date_set = $(target).parents('.date_set');
-            let date_start = date_set.find('.date_start');
-            let date_end = date_set.find('.date_end');
-            date_start.datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-            date_end.datepicker('setDate', '-7D'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-        }
-        function set_1m(target){
-            let date_set = $(target).parents('.date_set');
-            let date_start = date_set.find('.date_start');
-            let date_end = date_set.find('.date_end');
-            date_start.datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-            date_end.datepicker('setDate', '-1M'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-        }
-        function set_3m(target){
-            let date_set = $(target).parents('.date_set');
-            let date_start = date_set.find('.date_start');
-            let date_end = date_set.find('.date_end');
-            date_start.datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-            date_end.datepicker('setDate', '-3M'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-        }
-        function set_1y(target){
-            let date_set = $(target).parents('.date_set');
-            let date_start = date_set.find('.date_start');
-            let date_end = date_set.find('.date_end');
-            date_start.datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-            date_end.datepicker('setDate', '-1Y'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-        }
-    </script>
-    <!--// datepicker js -->
 </head>
 <body>
     <div id="skip-nav">
@@ -101,13 +32,87 @@
     <div id="wrap" class="grid-container">
         <!-- header -->
         <header class="header">
-            
+            <div class="h_util">
+                <div class="h_util_sec h_user">
+                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
+                </div>
+                <div class="h_util_sec h_branch">
+                    <span class="h_branch_current"><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 서울본사<i class="fa-solid fa-circle-chevron-down ico_arrow"></i></span>
+                    <ul class="h_branch_list">
+                        <li class="h_branch_item"><a href=""><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 부산지사</a></li>
+                        <li class="h_branch_item"><a href=""><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 대전지사</a></li>
+                    </ul>
+                </div>
+                <div class="h_util_sec h_btns">
+                    
+                    <!--[D] 알림(종) 활성화  'on' class 추가-->
+                    <a href="" class="h_btn ty_notice on">
+                        <i class="fa-regular fa-bell"></i>
+                    </a>
+                    <a href="" class="h_btn ty_logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+            </div>
         </header>
         <!--// header -->
         <!-- nav -->
         <aside class="sidenav">
-            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
-            
+            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.png" alt=""></a></h1>
+            <ul class="nav">
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>교정이력</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2 on">교정 접수 내역</a></li>
+                            <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>교정 단가 조회</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">교정 단가 조회</a></li>
+                        </ul>
+                    </div>       
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>견적 요청</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">견적 요청 조회</a></li>
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>마이 페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>고객 지원</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">공지사항</a></li>
+                            <li><a href="" class="btn_dep2">자료실</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>관리자</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
+                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                        </ul>
+                    </div>                 
+                </li>
+            </ul>
         </aside>
         <!-- // nav -->
 
@@ -119,7 +124,7 @@
                 
                 <div class="tab_nav_list">
                     <div class="swiper-wrapper">
-                        <div class="tab_nav_item swiper-slide">
+                        <div class="tab_nav_item swiper-slide on">
                             <button type="button" class="tab_nav_link ty_main" onclick="tab_load(this)"><i class="fa-solid fa-house"></i></button>
                         </div>
                         <div class="tab_nav_item swiper-slide">
@@ -210,7 +215,7 @@
                             <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정</button>
                             <button class="del_item" onclick="del_tap(this)"></button>
                         </div>
-                        <div class="tab_nav_item swiper-slide on">
+                        <div class="tab_nav_item swiper-slide ">
                             <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정접수 처리 수량</button>
                             <button class="del_item" onclick="del_tap(this)"></button>
                         </div>
@@ -229,73 +234,6 @@
                     <button type="button" class="tab_nav_ctrl_btn tab_nav_next"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </div>
-            <script>
-                let initial_slide = $('.tab_nav_item.on').index();
-
-                
-                let ac_slide_main = new Swiper('.tab_nav_list',{   
-                    slidesPerView: "auto",
-                    //freeMode: true,
-                    initialSlide:initial_slide,
-                    //spaceBetween: 10,
-                    navigation: {
-                        nextEl: ".tab_nav_next",
-                        prevEl: ".tab_nav_prev",
-                    }
-                });
-            
-
-                // [D] 탭 삭제
-                function del_tap(target){
-                    let $this = $(target);
-                    let $this_tab = $this.parents('.tab_nav_item');
-                    let $tab_length = $('.tab_nav_item').length;
-                    
-                    if($this_tab.hasClass('on')){
-                        if($this_tab.index() + 1 < $tab_length){
-                            $this_tab.next('.tab_nav_item').addClass('on');
-                            //[D] 다음 페이지 불러오기
-
-                            //
-                        }else{
-                            $('.tab_nav_item').eq(0).addClass('on');
-                            //[D] 첫 페이지 불러오기
-
-                            //
-                        }
-                        
-                    }
-                    $this.parents('.tab_nav_item').remove();
-
-                    //슬라이드 reload
-                    tab_slide_reload()
-                }
-
-                // [D] 탭 클릭 (페이지로드)
-                function tab_load(target){
-                    let $this = $(target);
-                    let $this_tab = $this.parents('.tab_nav_item');
-                    $this_tab.addClass('on').siblings().removeClass('on');
-
-                    //[D] 선택된 페이지 불러오기
-
-                    //
-                    //tab_slide_reload()
-                }
-
-                //슬라이드 reload
-                function tab_slide_reload(){
-                    initial_slide = $('.tab_nav_item.on').index();
-                    ac_slide_main.update();
-                    ac_slide_main.slideTo(initial_slide,400,false)
-                }
-
-                $(window).on('load',function(){
-                    tab_slide_reload()
-                });
-            
-                
-            </script>
             <!--//탭 네비게이션-->
 
             <div id="contents" class="contents">

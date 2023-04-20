@@ -140,6 +140,11 @@ $c_solidGrey : map-get($colors, _solidGrey);
 //Font
 $font: 'Noto Sans KR', sans-serif;
 $font_tit: 'Montserrat';
+@mixin fa {
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+}
+
 
 //innerBox
 $inner: 1280px;
