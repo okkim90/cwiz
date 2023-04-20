@@ -4005,6 +4005,19 @@ input::-webkit-search-results-decoration {
   justify-content: center;
 }
 
+.tit1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.tit2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.tit3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .container .contents {
   padding: 30px;
   background-color: #fff;
