@@ -3648,7 +3648,7 @@ input::-webkit-search-results-decoration {
   box-sizing: border-box;
   z-index: 999;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   padding: 0 30px;
@@ -3779,9 +3779,18 @@ input::-webkit-search-results-decoration {
   height: 100vh;
   width: 260px;
   z-index: 9999;
-  border-right: 1px solid #DDDDDD;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   padding: 30px 10px;
   box-sizing: border-box;
+}
+.sidenav::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 60px;
+  background-color: #fff;
+  left: 245px;
+  top: 0;
 }
 .sidenav .logo {
   padding: 0 20px;
@@ -4000,7 +4009,7 @@ input::-webkit-search-results-decoration {
   padding: 30px;
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .container .top_tit {
   margin-bottom: 30px;
