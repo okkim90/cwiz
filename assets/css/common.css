@@ -3662,6 +3662,7 @@ input::-webkit-search-results-decoration {
 }
 .header .h_util .h_user .fa-user {
   margin-right: 5px;
+  color: #393939;
 }
 .header .h_util .h_user .user_name {
   font-weight: 500;
@@ -3684,6 +3685,7 @@ input::-webkit-search-results-decoration {
 }
 .header .h_util .h_branch .fa-building {
   margin-right: 6px;
+  color: #393939;
 }
 .header .h_util .h_branch_current {
   cursor: pointer;
@@ -3751,7 +3753,7 @@ input::-webkit-search-results-decoration {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #222;
+  color: #393939;
   transition: background-color 0.2s ease-in-out;
 }
 .header .h_util .h_btns .h_btn.ty_notice {
@@ -3827,6 +3829,9 @@ input::-webkit-search-results-decoration {
   top: 0;
   bottom: 0;
 }
+.sidenav .nav_item.on .btn_dep1 .ico_dep1 {
+  color: #FF7A00;
+}
 .sidenav .nav_item.on .btn_dep1::after {
   color: #FF7A00;
   transform: rotate(180deg);
@@ -3857,6 +3862,8 @@ input::-webkit-search-results-decoration {
   font-size: 20px;
   width: 20px;
   height: 20px;
+  color: #393939;
+  transition: all 0.25s ease;
 }
 .sidenav .nav .btn_dep1 .ico_dep1::after {
   content: "\f013";
@@ -4500,6 +4507,7 @@ input::-webkit-search-results-decoration {
   font-size: 16px;
   line-height: 1;
   display: inline-block;
+  color: #393939;
 }
 .btn_down::after {
   content: "\f56d";
