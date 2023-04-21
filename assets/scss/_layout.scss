@@ -8,6 +8,14 @@
       "sidenav header"
       "sidenav main"
       "sidenav footer"
+      ;
+    transition: all .3s ease-in-out;
+    &.nav_off {
+        grid-template-columns: 0 1fr ;
+        .sidenav {
+            transform: translateX(-260px);
+        }
+    }
 }
 .header {
     grid-area: header;
@@ -23,9 +31,23 @@
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0 30px;
+    .logo {
+        
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                height: 34px;
+            }
+        }
+    }
     .h_util {
-        margin-left: auto;
+        position: absolute;
+        right: 30px;
+        
         display: flex;
         align-items: center;
         font-size: 16px;
@@ -168,30 +190,89 @@
     z-index: 9999;
     box-shadow: 0 0 10px rgba(#000, .15);
     //border-right: 1px solid $c_line;
-    padding: 30px 10px;
+    padding: 20px 10px 30px;
     box-sizing: border-box;
-    &::after {
-        content: '';
+    transition: transform .3s ease-in-out;
+
+
+    .btn_nav_toggle {
         position: absolute;
-        width: 30px;
-        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 0 5px 5px 0;
         background-color: #fff;
-        left: 245px;
-        top: 0;
-    }
-    .logo {
-        padding: 0 20px;
-        line-height: 0;
-        a {
-            display: block;
-            img {
-                height: 47px;
+        left: 100%;
+        
+        z-index: 99;
+        top: 14px;
+        box-shadow: 0 0 6px rgba(#000, .15);
+        font-size: 16px;
+        transition: all .2s ease-in-out;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 100%;
+            right: 100%;
+            top: 0;
+            background-color: #fff;
+        }
+        i {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @at-root .grid-container.nav_off & {
+            i {
+                transform: rotate(180deg);
             }
-        } 
+            
+            background-color: $c_key;
+            color: #fff;
+            
+        }
+
+    }
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     width: 30px;
+    //     height: 60px;
+    //     background-color: #fff;
+    //     left: 245px;
+    //     top: 0;
+    // }
+    .c_info {
+        padding: 10px 10px;
+        flex-direction: column;
+        box-sizing: content-box;
+        background-color: $c_bg;
+        text-align: center;
+        .logo {
+            height: 40px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+               //object-position: left center;
+            }
+        }
+        .name {
+            font-weight: 500;
+            color: #222;
+            font-size: 14px;
+            margin-top: 4px;
+            line-height: 1;
+        }
     }
 
     .nav {
-        margin-top: 30px;
+        margin-top: 20px;
         &_dep2 {
             //visibility: hidden;
             &_box {

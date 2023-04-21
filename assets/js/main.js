@@ -1,5 +1,16 @@
 
 
+let grid_container = document.querySelector('.grid-container');
+let btn_nav_toggle = document.querySelector('.btn_nav_toggle');
+btn_nav_toggle.addEventListener('click',()=>{
+    if(grid_container.classList.contains('nav_off')){
+        grid_container.classList.remove('nav_off');
+    }else{
+        grid_container.classList.add('nav_off');
+    }
+})
+
+
 
 
 let nav_item = document.querySelectorAll('.nav_item');
@@ -87,6 +98,9 @@ function set_1y(target){
     date_start.datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
     date_end.datepicker('setDate', '-1Y'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
 }
+
+
+
 
 
 
