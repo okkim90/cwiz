@@ -5648,6 +5648,11 @@ input::-webkit-search-results-decoration {
   margin-top: 2px;
   color: #FF7A00;
 }
+.join_box_result .ico_box {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: -20px;
+}
 .join_btns {
   display: flex;
   align-items: center;
