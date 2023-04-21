@@ -217,12 +217,12 @@ textarea:focus {
 
 ::-webkit-input-placeholder {
     font-size: inherit;
-    color: #bcbcbc;
+    color: rgba(#000,.4);
 }
 
 ::placeholder {
     font-size: inherit;
-    color: #bcbcbc;
+    color: rgba(#000,.4);
 }
 
 textarea {

@@ -384,12 +384,14 @@
         }
     }
 }
-
-  .container {
-    padding: 0 30px 60px;
-    grid-area: main;
-    min-width: 0;
-  }
+.grid-container {
+    .container {
+        padding: 30px 30px 60px;
+        grid-area: main;
+        min-width: 0;
+      }
+}
+  
 
   .footer {
     grid-area: footer;
@@ -621,6 +623,8 @@
 .footer {
     background-color: #313131;
     color: #fff;
+    position: relative;
+    z-index: 10;
     .inner {
         width: auto;
         max-width: 1300px;

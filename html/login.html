@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta http-equiv="Content-Script-Type" content="text/javascript">
-		<meta http-equiv="Content-Style-Type" content="text/css">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="Generator" content="KIC">
-		<meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
-		<meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
-		<meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
-		<title>코리아인스트루먼트(주) 교정관리 시스템</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
 
-        <!-- 기존 cms css -->
-		<link rel="stylesheet" type="text/css" href="../skin/basic/css/jquery.mCustomScrollbar.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="../skin/basic/css/jquery-ui.css">
-		<link rel="stylesheet" type="text/css" href="../skin/basic/css/admin.css?v=64336ec212b71">
-		<link rel="stylesheet" type="text/css" href="../skin/basic/css/jquery.treeview.css">
-		<link rel="stylesheet" type="text/css" href="../skin/basic/css/style.css">
-		<link rel="stylesheet" type="text/css" href="../skin/basic/css/fonts.css">
-		<link rel="stylesheet" type="text/css" href="../skin/basic/css/fullcalendar.css">
-        <!--// 기존 cms css -->
-
-        <!-- 신규 css -->
-        <script src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="../assets/css/common.css">
-        <!--// 신규 css -->
-	</head>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
 <body>
     <div id="skip-nav">
         <a href="#container"></a>
     </div>
     <main class="container">
 		<div class="login_wrap">
-			
+			<div class="vid_bg">
+                <video class="vid_box" autoplay muted loop>
+                    <source src="../assets/images/common/sample_vid3.mp4" type="video/mp4" />
+                    Your browser is not supported!
+                </video>
+            </div>
 			<div class="login_box">
                 <div class="login_box_top">
                     <div class="img_box">
-                        <img src="../assets/images/common/logo.svg" alt="코리아인스투르먼트(주)">
+                        <img src="../assets/images/common/logo.png" alt="코리아인스투르먼트(주)">
                     </div>
                 </div>
                 <form method="post" id="frm" action="" class="login_form">
-					<label for="member_email" class="login_form_label">아이디</label>
-                    <input type="email" name="member_email" id="member_email" placeholder="예) kic@kic21.co.kr" class="f_input w100" value="">
+					<label for="member_id" class="login_form_label">아이디</label>
+                    <input type="text" name="member_id" id="member_id" placeholder="아이디를 입력해주세요." class="f_input w100" value="">
 					<label for="member_pw" class="login_form_label">비밀번호</label>
                     <input type="password" name="member_pw" id="member_pw" placeholder="비밀번호를 입력하세요." class="f_input w100" value="">
                     <input type="submit" value="로그인" class="f_btn ty_big _key w100">
@@ -52,7 +51,7 @@
 					<li><a href="login_pw.html">비밀번호 재설정</a></li>
 				</ul>
 				<div class="login_bot">
-					<a href="join.html" class="f_btn ty_big _blue_ol w100">교정관리 시스템 서비스 신청</a>
+					<a href="join.html" class="f_btn ty_big _key_op w100">C-WIZ 신청하기</a>
 					<p class="msg_tel">시스템 이용 문의 : 1600-4245</p>
 				</div>
             </div>

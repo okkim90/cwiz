@@ -43,6 +43,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    &.ty_nowrap {
+        flex-wrap: nowrap;
+    }
     &.bg_box {
         background-color: $c_bg_grey;
         padding: 10px 15px;
@@ -84,9 +87,7 @@
     box-sizing: border-box;
     cursor: pointer;
     font-weight: 500;
-    &.w100 {
-        width: 100%;
-    }
+    
     &.disable {
         background-color: $c_lightGrey;
         border-color: $c_lightGrey;
@@ -160,6 +161,10 @@
         &._round {
             border-radius: 50px;
         }
+    }
+
+    &.w100 {
+        width: 100%;
     }
 }
 
