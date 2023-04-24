@@ -24,6 +24,7 @@ $colors: (
     _bg: #F9F9F9,
     _bg_grey: #EFEFEF,
     _blue: #0085FF,
+    _navy: #005AAD,
     _sky: #acbdee,
     _red: #FF5C5C,
     _lblue: #63c1fc,
@@ -242,4 +243,39 @@ $inner: 1280px;
     justify-content: $justify;
     gap: $gap;
     flex-wrap: $wrap;
+}
+
+
+.d_flex {
+    display: flex;
+    @for $i from 1 through 30 {
+        &._gap#{$i} {
+            gap : #{$i}px
+        } 
+    } 
+    &.al_t {
+        align-items: flex-start;
+    }
+    &.al_c {
+        align-items: center;
+    }
+    &.al_b {
+        align-items: flex-end;
+    }
+    &.jc_l {
+        justify-content: flex-start;
+    }
+    &.jc_c {
+        justify-content: center;
+    }
+    &.jc_r {
+        justify-content: flex-end;
+    }
+}
+
+.ml_auto {
+    margin-left: auto;
+}
+.mr_auto {
+    margin-right: auto;
 }

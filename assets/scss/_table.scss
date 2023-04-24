@@ -12,7 +12,7 @@
 
     th, td {
         padding: 6px 10px;
-        font-size: 12px;
+        font-size: 13px;
         line-height: 1.6;
         height: 39px;
     }
@@ -58,6 +58,9 @@
     border-collapse: collapse;
     background-color: #fff;
     
+    &.tl_fixed {
+        table-layout: fixed;
+    }
     thead {
         th {
             background-color: $c_bg_grey;
@@ -140,6 +143,22 @@
                     border-top-color: #000;
                 }
             }
+        }
+    }
+}
+
+.tbl_area {
+    &.col2 {
+        display: flex;
+        gap: 20px;
+        .tbl_wrap {
+            &._left {
+                width: 39%;
+            }
+            &._right {
+                width: 61%;
+            }
+            
         }
     }
 }

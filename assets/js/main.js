@@ -91,6 +91,13 @@ function set_3m(target){
     date_start.datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
     date_end.datepicker('setDate', '-3M'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
 }
+function set_6m(target){
+    let date_set = $(target).parents('.date_set');
+    let date_start = date_set.find('.date_start');
+    let date_end = date_set.find('.date_end');
+    date_start.datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+    date_end.datepicker('setDate', '-6M'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+}
 function set_1y(target){
     let date_set = $(target).parents('.date_set');
     let date_start = date_set.find('.date_start');
@@ -258,4 +265,23 @@ function del_form(target){
 
     $file_set.remove();
     
+}
+
+
+function close_popup(target){
+    let layer_popup = target.closest('.layer_popup');
+    
+    layer_popup.classList.remove('on')
+    
+}
+
+function open_popup(target){
+    let layer_popup = document.querySelector(`.layer_popup.${target}`);
+    //console.log(layer_popup);
+    layer_popup.classList.add('on');
+}
+
+function reset(target){
+   let this_form  = target.closest('form');
+   this_form.reset();
 }

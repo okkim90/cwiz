@@ -531,7 +531,7 @@
     align-items: center;
     font-size: 12px;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     color: #aaa;
     a {
         display: block;
@@ -552,7 +552,7 @@
     }
 }
  
- .tit {
+.tit {
     &1 {
         font-size: 22px;
         font-weight: bold;
@@ -564,6 +564,18 @@
     &3 {
         font-size: 16px;
         font-weight: bold;
+    }
+    &4 {
+        font-size: 14px;
+    }
+}
+
+ .sub_tit {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    &_btns {
+        margin-left: auto;
     }
  }
 
@@ -648,6 +660,7 @@
 .y_scroll_area {
     overflow-y: auto;
     border: 1px solid $c_line;
+    //@include scrollY;
 }
 
 .t_ellipsis1 {
@@ -814,6 +827,22 @@
 } 
 
 
+.no_result_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    color: #222;
+    height: 260px;
+
+    i {
+        font-size: 50px;
+        color: #bebebe;
+    }
+}
+
 
 /* layout */
 .container {
@@ -825,4 +854,15 @@
 .inner {
 
     padding: 0 30px;
+}
+
+
+.bar {
+    display: inline-block;
+    width: 1px;
+    &.ty_small {
+        height: 14px;
+        //margin: 0 6px;
+        background-color: $c_line;
+    }
 }
