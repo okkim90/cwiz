@@ -131,16 +131,13 @@
                             <a href="#">교정이력</a>
                         </li>
                         <li class="breadcrumb_item">
-                            교정 접수 내역
+                            교정 결과 조회
                         </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
                     <h1 class="tit1">교정 접수 내역</h1>
-                    <div class="sub_tit_btns btn_set">
-                        <button type="button" class="f_btn ty_mid _lightGrey">+ 견적요청</button>
-                    </div>
                 </div>
                 <form action="">
                     <div class="v_tbl_wrap">
@@ -156,6 +153,12 @@
                                     <th>접수일</th>
                                     <td colspan="3">
                                         <div class="date_set">
+                                            <select name="" id="" class="f_select ty_small">
+                                                <option value="">접수일</option>
+                                                <option value="">기간 선택 2</option>
+                                                <option value="">기간 선택 3</option>
+                                                <option value="">기간 선택 4</option>
+                                            </select>
                                             <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
                                             <input type="text" class="f_input ty_small inp_date date_end" readonly>
                                             <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _blue_op w_50">3개월</button>
@@ -165,10 +168,28 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>접수번호</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>
-                                    <th>신청자</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>       
+                                    <th>성적서 발행 여부</th>
+                                    <td>
+                                        <div class="chk_list">
+                                            <label class="chk_item"><input type="checkbox"> 성적서 발행 완료</label>
+                                            <label class="chk_item"><input type="checkbox"> 성적서 미발행</label>
+                                        </div>
+                                    </td>
+                                    <th>교정번호</th>
+                                    <td>
+                                        <input type="text" class="f_input ty_small w_100 taC"> - <input type="text" class="f_input ty_small w_50 taC"> 
+                                        <label class="chk_item ml10"><input type="checkbox"> 시험교정</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>계측기명</th>
+                                    <td><input type="text" class="f_input ty_small w_300"></td>       
+                                    <th>제조사</th>
+                                    <td><input type="text" class="f_input ty_small w_300"></td>       
+                                </tr>
+                                <tr>
+                                    <th>형식</th>
+                                    <td colspan="3"><input type="text" class="f_input ty_small w_300"></td>             
                                 </tr>
                             </tbody>
                         </table> 
@@ -178,330 +199,443 @@
                         <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
                     </div>
                 </form>
-                <div class="tbl_area col2 mt50">
-                    <div class="tbl_wrap _left">
-                        <div class="sub_tit2 mb10 d_flex al_b">
-                            <h2 class="tit4"><b>접수 내역 :</b> 1,000건</h2>
+                <section class="sec mt50">
+                    <div class="sub_tit2 mb10 d_flex al_b">
+                        <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                        <div class="sub_tit_btns btn_set">
+                            <button type="button" class="f_btn ty_mid _blue btn_down2">국문 다운</button>
+                            <button type="button" class="f_btn ty_mid _red btn_down2">영문 다운</button>
                         </div>
-                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                            <table class="h_tbl">
-                                <colgroup>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>   
-                                </colgroup>
-                                <thead>
+                    </div>
+                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
+                        <table class="h_tbl">
+                            <thead>
+                                <tr>
+                                    <th class="th_fixed"><input type="checkbox"></th>
+                                    <th class="th_fixed">교정번호</th>
+                                    <th class="th_fixed">국문</th>
+                                    <th class="th_fixed">영문</th>
+                                    <th class="th_fixed">의뢰구분</th>
+                                    <th class="th_fixed">계측기명</th>
+                                    <th class="th_fixed">제조사</th>
+                                    <th class="th_fixed">형식</th>
+                                    <th class="th_fixed">기기번호</th>
+                                    <th class="th_fixed">접수일</th>
+                                    <th class="th_fixed">신청자</th>
+                                    <th class="th_fixed">현재상태</th>
+                                    <th class="th_fixed">완료일</th>
+                                    <th class="th_fixed">교정결과</th>
+                                    <th class="th_fixed">교정담당</th>
+                                    <th class="th_fixed">교정수수료</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
                                     <tr>
-                                        <th class="th_fixed">접수번호</th>
-                                        <th class="th_fixed">접수일자</th>
-                                        <th class="th_fixed">입고구분</th>
-                                        <th class="th_fixed">신청자</th>
-                                        <th class="th_fixed">총수량</th>
-                                        <th class="th_fixed">교정완료</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="6">
+                                        <td colspan="16">
                                             <div class="no_result_box">
                                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                                <p class="mt10">접수 내역을 검색 해주세요.</p>
+                                                <p class="mt10">검색 결과가 없습니다.</p>
                                             </div>
                                         </td>
                                     </tr>
-                                    <!--[D] 체크된 상태-->
-                                    <tr class="on">
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23000100</td>
-                                        <td>2023-03-30</td>
-                                        <td>택배</td>
-                                        <td>이윤기</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="tbl_wrap _right ">
-                        <div class="sub_tit2 mb10 d_flex al_b">
-                            <h2 class="tit4"><b>교정 내역 :</b> 1,000건</h2>
-                        </div>
-                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                            <table class="h_tbl">
-                                <colgroup>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>  
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="th_fixed">교정번호</th>
-                                        <th class="th_fixed">계측기명</th>
-                                        <th class="th_fixed">제조사</th>
-                                        <th class="th_fixed">형식</th>
-                                        <th class="th_fixed">기기번호</th>
-                                        <th class="th_fixed">현재상태</th>
-                                        <th class="th_fixed">교정결과</th>
-                                        <th class="th_fixed">완료일</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="8">
-                                            <div class="no_result_box">
-                                                <i class="fa-solid fa-magnifying-glass"></i>
-                                                <p class="mt10">접수 내역을 선택 해주세요.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button> 
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                             <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                             <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                             <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                             <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                             <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                             <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                             <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                             <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                             <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                        </td>
-                                        <td>내·외측 캘리퍼</td>
-                                        <td>TECHNICAL&TRY</td>
-                                        <td>ATMOCHECK</td>
-                                        <td>200 (0.01) mm</td>
-                                        <td>승인대기</td>
-                                        <td>정상</td>
-                                        <td>2023-03-30</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
         </main>
-
+        <div class="layer_popup pop_cal_view">
+            <div class="layer_popup_inner">
+                <div class="layer_popup_cont">
+                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                        <span class="blind">팝업 닫기</span>
+                    </button>
+                    <div class="sub_tit">
+                        <h1 class="tit1">교정 이력 상세보기</h1>
+                    </div>
+                    <section class="sec">
+                        <h2 class="tit4 mb10">1. 기본 정보</h2>
+                        <div class="v_tbl_wrap">
+                            <table class="v_tbl">
+                                <tbody>
+                                    <colgroup>
+                                        <col style="width: 160px;">
+                                        <col>
+                                        <col style="width: 160px;">
+                                        <col>
+                                        <col style="width: 160px;">
+                                        <col>
+                                    </colgroup>
+                                    <tr>
+                                        <th>교정번호</th>
+                                        <td>2300078-45</td>
+                                        <th>입고구분</th>
+                                        <td>택배</td>
+                                        <th>입고일</th>
+                                        <td>2023-03-02</td>
+                                    </tr>
+                                    <tr>
+                                        <th>계측기명</th>
+                                        <td>전자식 지시 저울</td>
+                                        <th>제조사</th>
+                                        <td>SARTORIUS</td>
+                                        <th>형식</th>
+                                        <td>320g (0.001g)</td>
+                                    </tr>
+                                    <tr >
+                                        <th>기기번호</th>
+                                        <td>19591958</td>
+                                        <th>의뢰구분</th>
+                                        <td>교정</td>
+                                        <th>출고일</th>
+                                        <td>2023-04-02</td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                    </section>
+                    <section class="sec mt20">
+                        <h2 class="tit4 mb10">2. 교정 정보</h2>
+                        <div class="v_tbl_wrap">
+                            <table class="v_tbl">
+                                <tbody>
+                                    <colgroup>
+                                        <col style="width: 160px;">
+                                        <col>
+                                        <col style="width: 160px;">
+                                        <col>
+                                        <col style="width: 160px;">
+                                        <col>
+                                    </colgroup>
+                                    <tr>
+                                        <th>현재상태</th>
+                                        <td><strong class="fc_key">교정완료</strong></td>
+                                        <th>교정 기관</th>
+                                        <td>코리아인스트루먼트(주) 서울본사</td>
+                                        <th>교정 분야</th>
+                                        <td>102 - 선형지수</td>
+                                    </tr>
+                                    <tr>
+                                        <th>교정일</th>
+                                        <td>2300078-45</td>
+                                        <th>교정 주기</th>
+                                        <td>12개월</td>
+                                        <th>차기 교정일</th>
+                                        <td>2024-03-26</td>
+                                    </tr>
+                                    <tr >
+                                        <th>교정 처리자</th>
+                                        <td>김남석</td>
+                                        <th>교정 담당자</th>
+                                        <td>김남석</td>
+                                        <th>기술 책임자</th>
+                                        <td>김선규</td>
+                                    </tr>
+                                    <tr >
+                                        <th>교정 결과</th>
+                                        <td>정상</td>
+                                        <th>교정 금액</th>
+                                        <td>100,000</td>
+                                        <th>교정 성적서</th>
+                                        <td>
+                                            <div class="btn_set ai_c">
+                                                <a href="" class="btn_down"><span class="txt mr4">국문</span></a>
+                                                <span class="bar ty_small"></span> 
+                                                <a href="" class="btn_down"><span class="txt mr4">영문</span></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                    </section>
+                    <section class="sec mt20">
+                        <h2 class="tit4 mb10">3. 진행 사항</h2>
+                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 170px;">
+                            <table class="h_tbl tl_fixed">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="th_fixed">등록일 </th>
+                                        <th class="th_fixed">상태</th>
+                                        <th class="th_fixed">담당자</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d_flex al_c jc_c _gap6">
+                                                2023-04-07 <span class="bar ty_small"></span> 12:12:12
+                                            </div>
+                                        </td>
+                                        <td>청구대기</td>
+                                        <td>김남석</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d_flex al_c jc_c _gap6">
+                                                2023-04-07 <span class="bar ty_small"></span> 12:12:12
+                                            </div>
+                                        </td>
+                                        <td>청구대기</td>
+                                        <td>김남석</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d_flex al_c jc_c _gap6">
+                                                2023-04-07 <span class="bar ty_small"></span> 12:12:12
+                                            </div>
+                                        </td>
+                                        <td>청구대기</td>
+                                        <td>김남석</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d_flex al_c jc_c _gap6">
+                                                2023-04-07 <span class="bar ty_small"></span> 12:12:12
+                                            </div>
+                                        </td>
+                                        <td>청구대기</td>
+                                        <td>김남석</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d_flex al_c jc_c _gap6">
+                                                2023-04-07 <span class="bar ty_small"></span> 12:12:12
+                                            </div>
+                                        </td>
+                                        <td>청구대기</td>
+                                        <td>김남석</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
         <div class="layer_popup pop_cal_view">
             <div class="layer_popup_inner">
                 <div class="layer_popup_cont">

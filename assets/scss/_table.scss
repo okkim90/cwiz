@@ -89,6 +89,10 @@
             background-color: rgba(rgb(249, 246, 61), .1);
             cursor: pointer;
         }
+
+        tr.on {
+            background-color: rgba(rgb(249, 246, 61), .1);
+        }
         td {
             padding: 5px;
             border: 1px solid $c_line;

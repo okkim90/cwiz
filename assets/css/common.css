@@ -3934,7 +3934,7 @@ input::-webkit-search-results-decoration {
   margin-top: -7px;
 }
 .header .h_util .h_btns {
-  margin-left: 30px;
+  margin-left: 20px;
   font-size: 18px;
   display: flex;
   gap: 10px;
@@ -4331,7 +4331,7 @@ input::-webkit-search-results-decoration {
   margin-top: 0;
 }
 .container .sec {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 .container .sec_tit {
   display: flex;
@@ -4691,6 +4691,9 @@ input::-webkit-search-results-decoration {
 .f_input:read-only {
   background-color: rgba(0, 0, 0, 0.03) !important;
 }
+.f_input.taC {
+  text-align: center;
+}
 .f_input.w100 {
   width: 100%;
 }
@@ -4698,7 +4701,7 @@ input::-webkit-search-results-decoration {
   height: 28px;
   padding: 0 5px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .f_input.ty_mid {
   height: 36px;
@@ -4821,7 +4824,7 @@ input::-webkit-search-results-decoration {
   height: 28px;
   padding: 0 5px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .f_select.ty_mid {
   height: 36px;
@@ -4837,7 +4840,7 @@ input::-webkit-search-results-decoration {
 
 .chk_list {
   display: flex;
-  gap: 10px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -4917,6 +4920,7 @@ input::-webkit-search-results-decoration {
   font-weight: 500;
   text-decoration: underline;
   color: #0085FF;
+  font-size: 12px;
 }
 
 .btn_pdf {
@@ -4943,6 +4947,13 @@ input::-webkit-search-results-decoration {
   font-family: "Font Awesome 6 Free";
   font-weight: bold;
   color: #393939;
+}
+
+.btn_down2::after {
+  content: "\f56d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+  margin-left: 4px;
 }
 
 .btn_refresh {
@@ -5317,6 +5328,9 @@ input::-webkit-search-results-decoration {
 .h_tbl tbody tr:hover {
   background-color: rgba(249, 246, 61, 0.1);
   cursor: pointer;
+}
+.h_tbl tbody tr.on {
+  background-color: rgba(249, 246, 61, 0.1);
 }
 .h_tbl tbody td {
   padding: 5px;
