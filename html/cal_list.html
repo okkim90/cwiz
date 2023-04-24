@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    
+    <div id="wrap" class="grid-container">
+        <!-- header -->
+        <header class="header">
+            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.png" alt=""></a></h1>
+            <div class="h_util">
+                <div class="h_util_sec h_user">
+                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
+                </div>
+                <div class="h_util_sec h_branch">
+                    <a href="" class="h_branch_current"><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 서울본사</a> 
+                </div>
+                <div class="h_util_sec h_btns">
+                    
+                    <!--[D] 알림(종) 활성화  'on' class 추가-->
+                    <a href="" class="h_btn ty_notice on">
+                        <i class="fa-regular fa-bell"></i>
+                    </a>
+                    <a href="" class="h_btn ty_logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+            </div>
+        </header>
+        <!--// header -->
+        <!-- nav -->
+        <aside class="sidenav">
+
+            <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="c_info">
+                <h1 class="logo"><img src="../assets/images/common/logo_test.webp" alt=""></h1>
+                <p class="name">(주)누누티비</p>
+            </div>
+            
+            <ul class="nav">
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>교정이력</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2 on">교정 접수 내역</a></li>
+                            <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>교정 단가 조회</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">교정 단가 조회</a></li>
+                        </ul>
+                    </div>       
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>견적 요청</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">견적 요청 조회</a></li>
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>마이 페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>고객 지원</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">공지사항</a></li>
+                            <li><a href="" class="btn_dep2">자료실</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1"></i>관리자</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
+                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                        </ul>
+                    </div>                 
+                </li>
+            </ul>
+        </aside>
+        <!-- // nav -->
+
+        <!--container-->
+        <main id="container" class="container">
+            <div id="contents" class="contents">
+                <form action="">
+                    <div class="v_tbl_wrap">
+                        <table class="v_tbl">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 160px;">
+                                    <col>
+                                    <col style="width: 160px;">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>기간 조회</th>
+                                    <td colspan="3">
+                                        <div class="date_set">
+                                            <select name="" id="" class="f_select ty_small">
+                                                <option value="">접수일</option>
+                                                <option value="">기간 선택 2</option>
+                                                <option value="">기간 선택 3</option>
+                                                <option value="">기간 선택 4</option>
+                                            </select>
+                                            <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
+                                            <input type="text" class="f_input ty_small inp_date date_end" readonly>
+                                            <button type="button" onclick="set_today(this);" class="f_btn ty_xsmall _round _red_op w_50">오늘</button>
+                                            <button type="button" onclick="set_7d(this)" class="f_btn ty_xsmall _round _key_op w_50">7일</button>
+                                            <button type="button" onclick="set_1m(this)" class="f_btn ty_xsmall _round _green_op w_50">1개월</button>
+                                            <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _blue_op w_50">3개월</button>
+                                            <button type="button" onclick="set_1y(this)" class="f_btn ty_xsmall _round _purple_op w_50">1년</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>업체명</th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                    <th>신청자</th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                    <div class="btn_set taC mt30">
+                        <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                        <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                        <button type="button" class="f_btn ty_mid _lightGrey w_100">상세검색 <i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                        <button type="button" class="f_btn ty_mid _lightGrey w_100">상세검색 <i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                    </div>
+                </form>
+                
+            </div>
+        </main>
+        <!--//container-->
+        <!--footer-->
+        <footer class="footer">
+            <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_bot">
+                <div class="inner">
+                    <div class="footer_logo">
+                        <a href=""><img src="../assets/images/common/logo_footer.svg" alt=""></a>
+                    </div>
+                    <div class="footer_cont">
+                        <div class="footer_branch">
+                            <div class="footer_branch_sec">
+                                <h2 class="footer_branch_tit">[서울본사]</h2>
+                                <ul class="footer_branch_list">
+                                    <li>
+                                        <strong>주소</strong>
+                                        <span>서울 구로구 남부순환로 1303 KIC빌딩</span>
+                                    </li>
+                                    <li>
+                                        <strong>전화번호</strong>
+                                        <a href="tel:1600-4245">1600-4245</a>
+                                    </li>
+                                    <li>
+                                        <strong>팩스</strong>
+                                        <span>02-863-1905</span>
+                                    </li>
+                                    <li>
+                                        <strong>이메일</strong>
+                                        <a href="mailto:k8631901@kic21.co.kr">k8631901@kic21.co.kr</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer_branch_sec">
+                                <h2 class="footer_branch_tit">[부산지사]</h2>
+                                <ul class="footer_branch_list">
+                                    <li>
+                                        <strong>주소</strong>
+                                        <span>부산 사상구 광장로 56번길 45</span>
+                                    </li>
+                                    <li>
+                                        <strong>전화번호</strong>
+                                        <a href="tel:051-322-0880">051-322-0880</a>
+                                    </li>
+                                    <li>
+                                        <strong>팩스</strong>
+                                        <span>051-322-4066</span>
+                                    </li>
+                                    <li>
+                                        <strong>이메일</strong>
+                                        <a href="mailto:calworld@kic21.co.kr">calworld@kic21.co.kr</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer_branch_sec">
+                                <h2 class="footer_branch_tit">[대전지사]</h2>
+                                <ul class="footer_branch_list">
+                                    <li>
+                                        <strong>주소</strong>
+                                        <span>대전 유성구 테크노11로 32</span>
+                                    </li>
+                                    <li>
+                                        <strong>전화번호</strong>
+                                        <a href="tel:042-931-1901">042-931-1901</a>
+                                    </li>
+                                    <li>
+                                        <strong>팩스</strong>
+                                        <span>042-931-1902</span>
+                                    </li>
+                                    <li>
+                                        <strong>이메일</strong>
+                                        <a href="mailto:grand1901@kic21.co.kr">grand1901@kic21.co.kr</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer_branch_sec">
+                                <h2 class="footer_branch_tit">[지안지사]</h2>
+                                <ul class="footer_branch_list">
+                                    <li>
+                                        <strong>주소</strong>
+                                        <span>경기 가평군 설악면 유명산길 37</span>
+                                    </li>
+                                    <li>
+                                        <strong>전화번호</strong>
+                                        <a href="tel:031-585-8511">031-585-8511</a>
+                                    </li>
+                                    <li>
+                                        <strong>이메일</strong>
+                                        <a href="mailto:grand1901@kic21.co.kr">gongrong@empal.com</a>
+                                    </li>
+                                    <li>
+                                        <strong>홈페이지</strong>
+                                        <a href="www.ji-an.co.kr" target="_blank">www.ji-an.co.kr</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_info">
+                            <span>코리아인스트루먼트(주)</span>
+                            <span>사업자등록번호 : 101-81-45861</span>
+                            <span>대표이사 : 정재호</span>
+                        </div>
+                        <p class="copyright">
+                            Copyright@KIC, Korea Instrument All Rights Reserved.
+                        </p>
+                        <div class="footer_contact">
+                            <span class="tit"><i></i> CONTACT US</span>
+                            <span class="num">1600 - 4245</span>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </footer>
+        <!--//footer-->
+    </div>
+    
+</body>
+</html>
