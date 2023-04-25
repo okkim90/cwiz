@@ -3360,6 +3360,9 @@
 .d_flex._gap30 {
   gap: 30px;
 }
+.d_flex.fw_w {
+  flex-wrap: wrap;
+}
 .d_flex.al_t {
   align-items: flex-start;
 }
@@ -4304,6 +4307,14 @@ input::-webkit-search-results-decoration {
 .sub_tit_btns {
   margin-left: auto;
 }
+.sub_tit + .sec {
+  margin-top: 0;
+}
+.sub_tit2 {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
 
 .container .contents {
   padding: 30px;
@@ -4331,7 +4342,10 @@ input::-webkit-search-results-decoration {
   margin-top: 0;
 }
 .container .sec {
-  margin-top: 50px;
+  margin-top: 40px;
+}
+.container .sec.mt0 {
+  margin-top: 0;
 }
 .container .sec_tit {
   display: flex;
@@ -4362,6 +4376,19 @@ input::-webkit-search-results-decoration {
 }
 .c_num_link:hover {
   text-decoration: underline;
+}
+
+.ico_required {
+  color: rgb(249, 59, 59);
+  font-size: 10px;
+  font-style: normal;
+  display: inline-block;
+  transform: translateY(-2px) scale(0.9);
+}
+.ico_required::after {
+  content: "\f621";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
 }
 
 .date_set {
@@ -5934,18 +5961,6 @@ input::-webkit-search-results-decoration {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.join_wrap .ico_required {
-  color: rgb(249, 59, 59);
-  font-size: 10px;
-  font-style: normal;
-  display: inline-block;
-  transform: translateY(-2px) scale(0.9);
-}
-.join_wrap .ico_required::after {
-  content: "\f621";
-  font-family: "Font Awesome 6 Free";
-  font-weight: bold;
 }
 .join_box {
   position: relative;

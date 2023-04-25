@@ -253,6 +253,9 @@ $inner: 1280px;
             gap : #{$i}px
         } 
     } 
+    &.fw_w {
+        flex-wrap: wrap;
+    }
     &.al_t {
         align-items: flex-start;
     }

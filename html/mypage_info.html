@@ -13,11 +13,9 @@
     <script src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous" ></script>
     <script src="../assets/js/jquery-3.1.1.min.js"></script>
     <script src="../assets/js/jquery-ui.min.js"></script>
-    <script src="../assets/js/swiper.min.js"></script>
     <script src="../assets/js/main.js" defer></script>
 
     <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/css/datepicker.css">
     <link rel="stylesheet" href="../assets/css/common.min.css">
 </head>
@@ -49,7 +47,6 @@
         <!--// header -->
         <!-- nav -->
         <aside class="sidenav">
-
             <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
             <div class="msg_box">
                 환영합니다. <br>
@@ -114,7 +111,6 @@
             </ul>
         </aside>
         <!-- // nav -->
-
         <!--container-->
         <main id="container" class="container">
             <div id="contents" class="contents">
@@ -128,379 +124,114 @@
                             </a>
                         </li>
                         <li class="breadcrumb_item" >
-                            <a href="#">교정이력</a>
+                            <a href="#">마이페이지</a>
                         </li>
                         <li class="breadcrumb_item">
-                            교정 접수 내역
+                            내 정보
                         </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">교정 접수 내역</h1>
-                    <div class="sub_tit_btns btn_set">
-                        <button type="button" class="f_btn ty_mid _lightGrey">+ 견적요청</button>
-                    </div>
+                    <h1 class="tit1">내 정보</h1>
                 </div>
                 <form action="">
-                    <div class="v_tbl_wrap">
-                        <table class="v_tbl">
-                            <tbody>
-                                <colgroup>
-                                    <col style="width: 160px;">
-                                    <col>
-                                    <col style="width: 160px;">
-                                    <col>
-                                </colgroup>
-                                <tr>
-                                    <th>접수일</th>
-                                    <td colspan="3">
-                                        <div class="date_set">
-                                            <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
-                                            <input type="text" class="f_input ty_small inp_date date_end" readonly>
-                                            <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _blue_op w_50">3개월</button>
-                                            <button type="button" onclick="set_6m(this)" class="f_btn ty_xsmall _round _navy_op w_50">6개월</button>
-                                            <button type="button" onclick="set_1y(this)" class="f_btn ty_xsmall _round _purple_op w_50">1년</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>접수번호</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>
-                                    <th>신청자</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>       
-                                </tr>
-                            </tbody>
-                        </table> 
+                    <div class="sec mt0">
+                        <div class="sub_tit2">
+                            <h2 class="tit4"><b>사업자 정보</b></h2>
+                            <p class="tip ml_auto"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
+                        </div>
+                        <div class="v_tbl_wrap">
+                            <table class="v_tbl">
+                                <tbody>
+                                    <colgroup>
+                                        <col style="width: 160px;">
+                                        <col>
+                                        <col style="width: 160px;">
+                                        <col>
+                                    </colgroup>
+                                    <tr>
+                                        <th><i class="ico_required"></i> 사업자번호</th>
+                                        <td>101 - 81 - 12345</td>
+                                        <th><i class="ico_required"></i> 회사명</th>
+                                        <td>주식회사 동양엘리베이터</td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="ico_required"></i> 대표자명</th>
+                                        <td>홍길동</td>
+                                        <th><i class="ico_required"></i> 회사 전화번호</th>
+                                        <td><input type="text" class="f_input ty_small w_200" placeholder='"-" 제외하고 숫자만 입력해주세요' value="02-865-2124"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="ico_required"></i> 회사 주소</th>
+                                        <td colspan="3">    
+                                            <div class="address_set d_flex _gap5">
+                                                <input type="text" name="" placeholder="우편번호" class="f_input ty_small ty_address_num" value="123012" readonly="" required>
+                                                <button type="button" onclick="" class="f_btn ty_small _key">우편번호 찾기</button>
+                                            </div>
+                                            <div class="address_set mt5">
+                                                <input type="text" name="" class="f_input ty_small w_500" value="서울 구로구 남부순환로 1303 KIC빌딩" readonly=""  required>
+                                            </div>
+                                            <div class="address_set mt5">
+                                                <input type="text" name="" placeholder="나머지 주소를 입력해주세요." class="f_input ty_small w_500" value="7층 서비스개발실" required>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                    </div>
+                    <div class="sec">
+                        <div class="sub_tit2 mb10 d_flex al_b">
+                            <h2 class="tit4"><b>담당자 정보</b></h2>
+                            <p class="tip ml_auto"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
+                        </div>
+                        <div class="v_tbl_wrap">
+                            <table class="v_tbl">
+                                <tbody>
+                                    <colgroup>
+                                        <col style="width: 160px;">
+                                        <col>
+                                        <col style="width: 160px;">
+                                        <col>
+                                    </colgroup>
+                                    <tr>
+                                        <th><i class="ico_required"></i> 아이디</th>
+                                        <td colspan="3">abcid1871</td>  
+                                    </tr>
+                                    <tr>
+                                        <th><i class="ico_required"></i> 비밀번호</th>
+                                        <td><input type="password" class="f_input ty_small w_300" placeholder="비밀번호 변경을 원하시면 입력해 주세요."></td>
+                                        <th><i class="ico_required"></i> 비밀번호 확인</th>
+                                        <td><input type="password" class="f_input ty_small w_300" placeholder="비밀번호를 한 번 더 입력해 주세요."></td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="ico_required"></i> 담당자명</th>
+                                        <td>설현</td>
+                                        <th><i class="ico_required"></i> 핸드폰</th>
+                                        <td><input type="text" class="f_input ty_small w_200" placeholder='"-" 제외하고 숫자만 입력해주세요' value="010-1234-5678"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="ico_required"></i> 이메일</th>
+                                        <td colspan="3">
+                                            <div class="d_flex _gap5 al_c">
+                                                <input type="email" class="f_input ty_small w_300" placeholder="이메일을 입력해주세요." value="aadqwer123@gmail.com">
+                                                <button type="button" class="f_btn ty_small _key">중복확인</button>
+                                                <p class="msg_feedback fc_blue ml10">이용 가능한 이메일입니다.</p>
+                                                <p class="msg_feedback fc_red ml10">사용 중인 이메일이 있습니다. 다시 입력해 주세요.</p>
+                                            </div>  
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
                     </div>
                     <div class="btn_set taC mt30">
-                        <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
-                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                        <input type="submit" value="수정" class="f_btn ty_mid _key w_100">
+                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">취소</button>
+                        <a href="" class="f_btn ty_mid _lightGrey w_100">회원탈퇴</a>
                     </div>
                 </form>
-                <section class="sec">
-                    <div class="tbl_area col2">
-                        <div class="tbl_wrap _left">
-                            <div class="sub_tit2 mb10 d_flex al_b">
-                                <h2 class="tit4"><b>접수 내역 :</b> 1,000건</h2>
-                            </div>
-                            <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                                <table class="h_tbl">
-                                    <colgroup>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>   
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th class="th_fixed">접수번호</th>
-                                            <th class="th_fixed">접수일자</th>
-                                            <th class="th_fixed">입고구분</th>
-                                            <th class="th_fixed">신청자</th>
-                                            <th class="th_fixed">총수량</th>
-                                            <th class="th_fixed">교정완료</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="6">
-                                                <div class="no_result_box">
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                                    <p class="mt10">접수 내역을 검색 해주세요.</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <!--[D] 체크된 상태-->
-                                        <tr class="on">
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>23000100</td>
-                                            <td>2023-03-30</td>
-                                            <td>택배</td>
-                                            <td>이윤기</td>
-                                            <td>7</td>
-                                            <td>5</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="tbl_wrap _right ">
-                            <div class="sub_tit2 mb10 d_flex al_b">
-                                <h2 class="tit4"><b>교정 내역 :</b> 1,000건</h2>
-                            </div>
-                            <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                                <table class="h_tbl">
-                                    <colgroup>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>  
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th class="th_fixed">교정번호</th>
-                                            <th class="th_fixed">계측기명</th>
-                                            <th class="th_fixed">제조사</th>
-                                            <th class="th_fixed">형식</th>
-                                            <th class="th_fixed">기기번호</th>
-                                            <th class="th_fixed">현재상태</th>
-                                            <th class="th_fixed">교정결과</th>
-                                            <th class="th_fixed">완료일</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="8">
-                                                <div class="no_result_box">
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                                    <p class="mt10">접수 내역을 선택 해주세요.</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button> 
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                            </td>
-                                            <td>내·외측 캘리퍼</td>
-                                            <td>TECHNICAL&TRY</td>
-                                            <td>ATMOCHECK</td>
-                                            <td>200 (0.01) mm</td>
-                                            <td>승인대기</td>
-                                            <td>정상</td>
-                                            <td>2023-03-30</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </div>
         </main>
 
