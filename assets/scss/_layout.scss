@@ -593,6 +593,7 @@
         background-color: #fff;
         border-radius: 20px;
         box-shadow: 0 4px 10px rgba(#000, .15);
+        position: relative;
     }
     .top_tit {
         margin-bottom: 30px;
@@ -969,8 +970,8 @@
     display: flex;
     align-items: center;
     .img_box {
-        width: 260px;
-        height: 180px;
+        width: 262px;
+        height: 182px;
         flex-shrink: 0;
         .input_file {
             position: absolute;

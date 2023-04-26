@@ -3,7 +3,10 @@
     border: 1px solid $c_line;
     box-sizing: border-box;
     &:read-only {
-        background-color: rgba(0,0,0,.03) !important;
+        background-color: rgba(0,0,0,.02);
+        &:focus {
+            background-color: rgba(0,0,0,.02);
+        }
     }
     &.taC {
         text-align: center;
@@ -22,12 +25,21 @@
         padding: 0 5px;
         border-radius: 4px;
         font-size: 13px;
+        &.inp_date {
+            width: 110px;
+            padding-right: 24px;
+            background-position: calc(100% - 4px) center;
+        }
     }
     &.ty_mid {
         height: 36px;
         padding: 0 10px;
         border-radius: 4px;
         font-size: 14px;
+        &.inp_date {
+            padding-right: 30px;
+            background-position: calc(100% - 8px) center;
+        }
     }
     &.ty_big {
         height: 50px;
@@ -35,12 +47,13 @@
         border-radius: 6px;
     }
     &.inp_date {
-        width: 110px;
-        padding-right: 24px;
+        &:read-only {
+            background-color: #fff;
+        }
         background-repeat: no-repeat;
         background-image: url(../images/common/ico_cal.svg);
         background-size: 14px;
-        background-position: calc(100% - 4px) center;
+        
         cursor: pointer;
     }
 }
@@ -134,11 +147,23 @@
 
 .f_ta {
     width: 100%;
-    height: 100px;
-    padding: 10px 5px;
-    font-size: 12px;
+    height: 80px;
+    
+    
     line-height: 1.5;
-    border-radius: 6px;
+    border-radius: 4px;
+    &.ty_small {
+        font-size: 12px;
+        padding: 5px;
+    }
+    &.ty_mid {
+        font-size: 14px;
+        padding: 10px;
+    }
+    &.ty_big {
+        font-size: 16px;
+        padding: 15px;
+    }
 }
 
 .f_select {

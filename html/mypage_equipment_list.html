@@ -118,6 +118,7 @@
         <!--container-->
         <main id="container" class="container">
             <div id="contents" class="contents">
+                <a href="javascript:history.back()" class="btn_back"><span class="blind">뒤로가기</span></a>
                 <!-- [D] breadcrumb -->
                 <nav class="breadcrumb_area">
                     <ol class="breadcrumb">
@@ -139,7 +140,7 @@
                 <div class="sub_tit">
                     <h1 class="tit1">우리 장비 현황</h1>
                     <div class="sub_tit_btns btn_set">
-                        <a href="" class="f_btn ty_mid _lightGrey">+ 장비 등록</a>
+                        <a href="mypage_equipment_add.html" class="f_btn ty_mid _lightGrey">+ 장비 등록</a>
                     </div>
                 </div>
                 <form action="">
@@ -244,7 +245,7 @@
                                     <td>3P7900141</td>
                                     <td>자체교정</td>
                                     <td>2022-10-11</td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
+                                    <td><button type="button" class="f_btn ty_xsmall _round _key_op"  onclick="open_popup('pop_equipment_detail')"><i class="fa-solid fa-magnifying-glass"></i> 보기</button></td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -255,7 +256,7 @@
                                     <td>3P7900141</td>
                                     <td>자체교정</td>
                                     <td>2022-10-11</td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
+                                    <td><button type="button" class="f_btn ty_xsmall _round _key_op"  onclick="open_popup('pop_equipment_detail')"><i class="fa-solid fa-magnifying-glass"></i> 보기</button></td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -266,7 +267,7 @@
                                     <td>3P7900141</td>
                                     <td>자체교정</td>
                                     <td>2022-10-11</td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
+                                    <td><button type="button" class="f_btn ty_xsmall _round _key_op"  onclick="open_popup('pop_equipment_detail')"><i class="fa-solid fa-magnifying-glass"></i> 보기</button></td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -277,7 +278,7 @@
                                     <td>3P7900141</td>
                                     <td>자체교정</td>
                                     <td>2022-10-11</td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
+                                    <td><button type="button" class="f_btn ty_xsmall _round _key_op"  onclick="open_popup('pop_equipment_detail')"><i class="fa-solid fa-magnifying-glass"></i> 보기</button></td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -288,7 +289,7 @@
                                     <td>3P7900141</td>
                                     <td>자체교정</td>
                                     <td>2022-10-11</td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
+                                    <td><button type="button" class="f_btn ty_xsmall _round _key_op"  onclick="open_popup('pop_equipment_detail')"><i class="fa-solid fa-magnifying-glass"></i> 보기</button></td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -299,7 +300,7 @@
                                     <td>3P7900141</td>
                                     <td>자체교정</td>
                                     <td>2022-10-11</td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
+                                    <td><button type="button" class="f_btn ty_xsmall _round _key_op"  onclick="open_popup('pop_equipment_detail')"><i class="fa-solid fa-magnifying-glass"></i> 보기</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -307,177 +308,157 @@
                 </section>
             </div>
         </main>
-        <div class="layer_popup pop_cal_view">
+        <div class="layer_popup pop_equipment_detail">
             <div class="layer_popup_inner">
                 <div class="layer_popup_cont">
-                    <button type="button" class="close_popup" onclick="close_popup(this)">
-                        <span class="blind">팝업 닫기</span>
-                    </button>
-                    <div class="sub_tit">
-                        <h1 class="tit1">교정 이력 상세보기</h1>
-                    </div>
-                    <section class="sec">
-                        <h2 class="tit4 mb10">1. 기본 정보</h2>
-                        <div class="v_tbl_wrap">
-                            <table class="v_tbl">
-                                <tbody>
-                                    <colgroup>
-                                        <col style="width: 160px;">
-                                        <col>
-                                        <col style="width: 160px;">
-                                        <col>
-                                        <col style="width: 160px;">
-                                        <col>
-                                    </colgroup>
-                                    <tr>
-                                        <th>교정번호</th>
-                                        <td>2300078-45</td>
-                                        <th>입고구분</th>
-                                        <td>택배</td>
-                                        <th>입고일</th>
-                                        <td>2023-03-02</td>
-                                    </tr>
-                                    <tr>
-                                        <th>계측기명</th>
-                                        <td>전자식 지시 저울</td>
-                                        <th>제조사</th>
-                                        <td>SARTORIUS</td>
-                                        <th>형식</th>
-                                        <td>320g (0.001g)</td>
-                                    </tr>
-                                    <tr >
-                                        <th>기기번호</th>
-                                        <td>19591958</td>
-                                        <th>의뢰구분</th>
-                                        <td>교정</td>
-                                        <th>출고일</th>
-                                        <td>2023-04-02</td>
-                                    </tr>
-                                </tbody>
-                            </table> 
+                    <form action="">
+                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                        <div class="sub_tit">
+                            <h1 class="tit1">우리 장비 상세 내역</h1>
+                            <span class="ml15 fc_lightGrey fz_mid">등록일자: 2023-12-23</span>
                         </div>
-                    </section>
-                    <section class="sec mt20">
-                        <h2 class="tit4 mb10">2. 교정 정보</h2>
-                        <div class="v_tbl_wrap">
-                            <table class="v_tbl">
-                                <tbody>
-                                    <colgroup>
-                                        <col style="width: 160px;">
-                                        <col>
-                                        <col style="width: 160px;">
-                                        <col>
-                                        <col style="width: 160px;">
-                                        <col>
-                                    </colgroup>
-                                    <tr>
-                                        <th>현재상태</th>
-                                        <td><strong class="fc_key">교정완료</strong></td>
-                                        <th>교정 기관</th>
-                                        <td>코리아인스트루먼트(주) 서울본사</td>
-                                        <th>교정 분야</th>
-                                        <td>102 - 선형지수</td>
-                                    </tr>
-                                    <tr>
-                                        <th>교정일</th>
-                                        <td>2300078-45</td>
-                                        <th>교정 주기</th>
-                                        <td>12개월</td>
-                                        <th>차기 교정일</th>
-                                        <td>2024-03-26</td>
-                                    </tr>
-                                    <tr >
-                                        <th>교정 처리자</th>
-                                        <td>김남석</td>
-                                        <th>교정 담당자</th>
-                                        <td>김남석</td>
-                                        <th>기술 책임자</th>
-                                        <td>김선규</td>
-                                    </tr>
-                                    <tr >
-                                        <th>교정 결과</th>
-                                        <td>정상</td>
-                                        <th>교정 금액</th>
-                                        <td>100,000</td>
-                                        <th>교정 성적서</th>
-                                        <td>
-                                            <div class="btn_set ai_c">
-                                                <a href="" class="btn_down"><span class="txt mr4">국문</span></a>
-                                                <span class="bar ty_small"></span> 
-                                                <a href="" class="btn_down"><span class="txt mr4">영문</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table> 
+                    
+                        <section class="sec mt20">
+                            <div class="eq_detail_top">
+                                <div class="img_box ty_eq">
+                                    <input type="file" id="upload_eq_img" class="input_file" accept="image/*">
+                                    <div class="img_box_edit">
+                                        <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
+                                        <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
+                                    </div>
+                                    <img src="https://picsum.photos/260/180" alt="">
+                                </div>
+                                <div class="v_tbl_wrap  ml10">
+                                    <table class="v_tbl ty_big">
+                                        <colgroup>
+                                            <col style="width: 160px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>계측기명</th>
+                                                <td>
+                                                    <input type="text" class="f_input ty_mid w_300" value="비금속 열전대" readonly>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>제조사</th>
+                                                <td>
+                                                    <input type="text" class="f_input ty_mid w_300" value="커먼센스컨스트럭트(주)" readonly>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>형식</th>
+                                                <td>
+                                                    <input type="text" class="f_input ty_mid w_300" value="~~형식박형식" readonly>
+                                                </td>
+                                            </tr>  
+                                        </tbody>
+                                    </table> 
+                                </div>
+                            </div>
+                        </section>
+                        <section class="sec mt20">
+                            <div class="v_tbl_wrap ">
+                                <table class="v_tbl ty_big">
+                                    <tbody>
+                                        <colgroup>
+                                            <col style="width: 160px;">
+                                            <col>
+                                            <col style="width: 160px;">
+                                            <col>                          
+                                        </colgroup>
+                                        <tr>
+                                            <th>기기번호</th>
+                                            <td><input type="text" class="f_input ty_mid w_200" placeholder="기기번호를 입력해주세요." value="123452352"></td>
+                                            <th>관리번호</th>
+                                            <td><input type="text" class="f_input ty_mid w_200" placeholder="관리번호를 입력해주세요." value="12322345sdf"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>구매일자</th>
+                                            <td><input type="text" class="f_input ty_mid inp_date w_200" value="2022-12-23" readonly></td>
+                                            <th>구매금액</th>
+                                            <td><input type="number" class="f_input ty_mid w_200" placeholder="숫자만 입력해주세요." value="990000"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>교정대상</th>
+                                            <td>
+                                                <select name="" id="" class="f_select ty_mid w_200">
+                                                    <option value="">선택</option>
+                                                    <option value="" selected>교정대상</option>
+                                                    <option value="">교정제외</option>
+                                                    <option value="">자체교정</option>
+                                                </select>
+                                            </td>
+                                            <th>교정대상</th>
+                                            <td>
+                                                <select name="" id="" class="f_select ty_mid w_200">
+                                                    <option value="">선택</option>
+                                                    <option value="">6개월</option>
+                                                    <option value="" selected>1년</option>
+                                                    <option value="">1년 6개월</option>
+                                                    <option value="">2년</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>교정일자 및 결과</th>
+                                            <td colspan="3">
+                                                <div class="cal_history_item d_flex _gap10">
+                                                    <input type="text" class="f_input ty_mid inp_date w_200" value="2022-12-23" readonly>
+                                                    <select name="" id="" class="f_select ty_mid w_200">
+                                                        <option value="">선택</option>
+                                                        <option value="" selected>정상</option>
+                                                        <option value="">불량</option>
+                                                        <option value="">불가</option>
+                                                        <option value="">수리</option>
+                                                        <option value="">기타</option>
+                                                    </select>
+                                                    <button type="button" class="btn_add"><span class="blind">추가</span></button>
+                                                </div>
+                                                <div class="cal_history_item d_flex _gap10">
+                                                    <input type="text" class="f_input ty_mid inp_date w_200" value="2022-12-23" readonly>
+                                                    <select name="" id="" class="f_select ty_mid w_200">
+                                                        <option value="">선택</option>
+                                                        <option value="" selected>정상</option>
+                                                        <option value="">불량</option>
+                                                        <option value="">불가</option>
+                                                        <option value="">수리</option>
+                                                        <option value="">기타</option>
+                                                    </select>
+                                                    <button type="button" class="btn_del"><span class="blind">추가</span></button>
+                                                </div>
+                                                <div class="cal_history_item d_flex _gap10">
+                                                    <input type="text" class="f_input ty_mid inp_date w_200" value="2022-12-23" readonly>
+                                                    <select name="" id="" class="f_select ty_mid w_200">
+                                                        <option value="">선택</option>
+                                                        <option value="" selected>정상</option>
+                                                        <option value="">불량</option>
+                                                        <option value="">불가</option>
+                                                        <option value="">수리</option>
+                                                        <option value="">기타</option>
+                                                    </select>
+                                                    <button type="button" class="btn_del"><span class="blind">추가</span></button>
+                                                </div>
+                                            </td>
+                                        </tr>    
+                                        <tr>
+                                            <th>메모</th>
+                                            <td colspan="3">
+                                                <textarea name="" id="" class="f_ta ty_mid">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta atque neque laboriosam eum delectus. Quia aliquam dolorem, maiores quidem nostrum illo facere quae saepe optio, doloremque ipsa. Quasi perspiciatis cupiditate obcaecati tenetur ipsam temporibus placeat a sed at id, veniam cum fugit pariatur asperiores laudantium perferendis, optio sequi harum in quibusdam sint laboriosam officia delectus quidem! Magnam in voluptas voluptatibus ea recusandae! Error blanditiis magni hic ea, earum non ipsum.</textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
+                        </section>
+                        <div class="btn_set taC mt30">
+                            <input type="submit" value="수정" class="f_btn ty_mid _key w_100">
+                            <button type="button" class="f_btn ty_mid _solidGrey w_100">삭제</button>
                         </div>
-                    </section>
-                    <section class="sec mt20">
-                        <h2 class="tit4 mb10">3. 진행 사항</h2>
-                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 170px;">
-                            <table class="h_tbl tl_fixed">
-                                <colgroup>
-                                    <col>
-                                    <col>
-                                    <col>
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="th_fixed">등록일 </th>
-                                        <th class="th_fixed">상태</th>
-                                        <th class="th_fixed">담당자</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="d_flex al_c jc_c _gap6">
-                                                2023-04-07 <span class="bar ty_small"></span> 12:12:12
-                                            </div>
-                                        </td>
-                                        <td>청구대기</td>
-                                        <td>김남석</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d_flex al_c jc_c _gap6">
-                                                2023-04-07 <span class="bar ty_small"></span> 12:12:12
-                                            </div>
-                                        </td>
-                                        <td>청구대기</td>
-                                        <td>김남석</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d_flex al_c jc_c _gap6">
-                                                2023-04-07 <span class="bar ty_small"></span> 12:12:12
-                                            </div>
-                                        </td>
-                                        <td>청구대기</td>
-                                        <td>김남석</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d_flex al_c jc_c _gap6">
-                                                2023-04-07 <span class="bar ty_small"></span> 12:12:12
-                                            </div>
-                                        </td>
-                                        <td>청구대기</td>
-                                        <td>김남석</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d_flex al_c jc_c _gap6">
-                                                2023-04-07 <span class="bar ty_small"></span> 12:12:12
-                                            </div>
-                                        </td>
-                                        <td>청구대기</td>
-                                        <td>김남석</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
+                    </form>
                 </div>
             </div>
         </div>

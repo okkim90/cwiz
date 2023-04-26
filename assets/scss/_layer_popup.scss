@@ -48,4 +48,10 @@
             opacity: 1;
         }
     }
+
+    .cal_history_item {
+        & + .cal_history_item {
+            margin-top: 10px;
+        }
+    }
 }

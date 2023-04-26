@@ -290,3 +290,7 @@ function reset(target){
    this_form.reset();
 }
 
+
+if ( !document.referrer ) { 
+    document.querySelector('.btn_back').style.display = 'none';
+}
