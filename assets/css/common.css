@@ -3845,6 +3845,9 @@ input::-webkit-search-results-decoration {
   align-items: center;
   justify-content: center;
 }
+.header .logo a img {
+  height: 47px;
+}
 .header .h_util {
   position: absolute;
   right: 30px;
