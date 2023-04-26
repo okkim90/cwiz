@@ -3845,9 +3845,6 @@ input::-webkit-search-results-decoration {
   align-items: center;
   justify-content: center;
 }
-.header .logo a img {
-  height: 40px;
-}
 .header .h_util {
   position: absolute;
   right: 30px;
@@ -4078,8 +4075,23 @@ input::-webkit-search-results-decoration {
   top: 0;
   bottom: 0;
 }
-.sidenav .nav_item.on .btn_dep1 .ico_dep1 {
-  color: #FF7A00;
+.sidenav .nav_item.on .btn_dep1 .ico_dep1.ty_menu1 {
+  background-image: url(../images/common/ico_menu1_on.svg);
+}
+.sidenav .nav_item.on .btn_dep1 .ico_dep1.ty_menu2 {
+  background-image: url(../images/common/ico_menu2_on.svg);
+}
+.sidenav .nav_item.on .btn_dep1 .ico_dep1.ty_menu3 {
+  background-image: url(../images/common/ico_menu3_on.svg);
+}
+.sidenav .nav_item.on .btn_dep1 .ico_dep1.ty_menu4 {
+  background-image: url(../images/common/ico_menu4_on.svg);
+}
+.sidenav .nav_item.on .btn_dep1 .ico_dep1.ty_menu5 {
+  background-image: url(../images/common/ico_menu5_on.svg);
+}
+.sidenav .nav_item.on .btn_dep1 .ico_dep1.ty_menu6 {
+  background-image: url(../images/common/ico_menu6_on.svg);
 }
 .sidenav .nav_item.on .btn_dep1::after {
   color: #FF7A00;
@@ -4111,14 +4123,27 @@ input::-webkit-search-results-decoration {
   font-size: 20px;
   width: 20px;
   height: 20px;
-  color: #393939;
+  background-repeat: no-repeat;
+  background-position: center center;
   transition: all 0.25s ease;
 }
-.sidenav .nav .btn_dep1 .ico_dep1::after {
-  content: "\f013";
-  font-family: "Font Awesome 6 Free";
-  font-weight: bold;
-  vertical-align: top;
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu1 {
+  background-image: url(../images/common/ico_menu1.svg);
+}
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu2 {
+  background-image: url(../images/common/ico_menu2.svg);
+}
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu3 {
+  background-image: url(../images/common/ico_menu3.svg);
+}
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu4 {
+  background-image: url(../images/common/ico_menu4.svg);
+}
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu5 {
+  background-image: url(../images/common/ico_menu5.svg);
+}
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu6 {
+  background-image: url(../images/common/ico_menu6.svg);
 }
 .sidenav .nav .btn_dep1::after {
   transition: all 0.25s ease;

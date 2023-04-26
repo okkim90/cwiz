@@ -129,19 +129,13 @@
                             </a>
                         </li>
                         <li class="breadcrumb_item" >
-                            <a href="#">마이페이지</a>
-                        </li>
-                        <li class="breadcrumb_item">
-                            우리 장비
+                            교정 단가 조회
                         </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">우리 장비 등록</h1>
-                    <div class="sub_tit_btns btn_set">
-                        <button type="button" class="f_btn ty_mid _lightGrey" onclick="open_popup('pop_equipment_add')">+ 건별 등록</button>
-                    </div>
+                    <h1 class="tit1">교정 단가 조회</h1>
                 </div>
                 <form action="">
                     <div class="v_tbl_wrap">
@@ -409,370 +403,87 @@
                     </script>
                 </form>
                 <section class="sec">
-                    <form action="">
-                        <div class="tbl_area col2">
-                            <div class="tbl_wrap _left">
-                                <div class="sub_tit2">
-                                    <h2 class="tit4"><b>1. 계측기 목록 :</b> 1,000건</h2>
-                                </div>
-                                <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                                    <table class="h_tbl">
-                                        <colgroup>
-                                            <col>
-                                            <col>
-                                            <col>
-                                            <col style="width: 60px;">  
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th class="th_fixed">계측기명</th>
-                                                <th class="th_fixed">제조사</th>
-                                                <th class="th_fixed">형식</th>
-                                                <th class="th_fixed">선택</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="4">
-                                                    <div class="no_result_box">
-                                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                                        <p class="mt10">계측기를 검색 해주세요.</p>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><button type="button" class="f_btn ty_xsmall _round _key_op">선택</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><button type="button" class="f_btn ty_xsmall _round _key_op">선택</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><button type="button" class="f_btn ty_xsmall _round _key_op">선택</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><button type="button" class="f_btn ty_xsmall _round _key_op">선택</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><button type="button" class="f_btn ty_xsmall _round _key_op">선택</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><button type="button" class="f_btn ty_xsmall _round _key_op">선택</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><button type="button" class="f_btn ty_xsmall _round _key_op">선택</button></td>
-                                            </tr>
-                                            
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="tbl_wrap _right ">
-                                <div class="sub_tit2">
-                                    <h2 class="tit4"><b>2. 선택 계측기 :</b> 1,000건</h2>
-                                    <div class="btn_set ml_auto">
-                                        <input type="submit" class="f_btn ty_mid _solidGrey" value="계측기 등록">
-                                    </div>
-                                </div>
-                                <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                                    <table class="h_tbl">
-                                        <colgroup>
-                                            <col>
-                                            <col>
-                                            <col>
-                                            <col>
-                                            <col>
-                                            <col>
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th class="th_fixed">계측기명</th>
-                                                <th class="th_fixed">제조사</th>
-                                                <th class="th_fixed">형식</th>
-                                                <th class="th_fixed">기기번호</th>
-                                                <th class="th_fixed">관리번호</th>
-                                                <th class="th_fixed">삭제</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="6">
-                                                    <div class="no_result_box">
-                                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                                        <p class="mt10">계측기를 선택 해주세요.</p>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>내·외측 캘리퍼</td>
-                                                <td>TECHNICAL&TR</td>
-                                                <td>200 (0.01) mm</td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><input type="text" class="f_input ty_xsmall w_100"></td>
-                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>  
+                    <form action="">    
+                        <div class="sub_tit2">
+                            <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                            <p class="ml_auto"><i class="fa-solid fa-circle-info fc_key"></i> 교정단가는 시점, 교정분야, 형식에 따라 다소 차이가 있을 수 있으니 자세한 사항은 문의하시기 바랍니다. (표준소급료(10%) 및 부가세(10%) 별도)</p>    
+                        </div>
+                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
+                            <table class="h_tbl">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="th_fixed">교정분야</th>
+                                        <th class="th_fixed">제조사</th>
+                                        <th class="th_fixed">제조사</th>
+                                        <th class="th_fixed">형식</th>
+                                        <th class="th_fixed">교정 단가 (원)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5">
+                                            <div class="no_result_box">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <p class="mt10">계측기를 검색 해주세요.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>화학분석</td>
+                                        <td>피스톤식 부피계 &TR</td>
+                                        <td>TECHNICAL&TRY</td>
+                                        <td>200 (0.01) mm</td>
+                                        <td>9,900,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>화학분석</td>
+                                        <td>피스톤식 부피계 &TR</td>
+                                        <td>TECHNICAL&TRY</td>
+                                        <td>200 (0.01) mm</td>
+                                        <td>9,900,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>화학분석</td>
+                                        <td>피스톤식 부피계 &TR</td>
+                                        <td>TECHNICAL&TRY</td>
+                                        <td>200 (0.01) mm</td>
+                                        <td>9,900,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>화학분석</td>
+                                        <td>피스톤식 부피계 &TR</td>
+                                        <td>TECHNICAL&TRY</td>
+                                        <td>200 (0.01) mm</td>
+                                        <td>9,900,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>화학분석</td>
+                                        <td>피스톤식 부피계 &TR</td>
+                                        <td>TECHNICAL&TRY</td>
+                                        <td>200 (0.01) mm</td>
+                                        <td>9,900,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>화학분석</td>
+                                        <td>피스톤식 부피계 &TR</td>
+                                        <td>TECHNICAL&TRY</td>
+                                        <td>200 (0.01) mm</td>
+                                        <td>9,900,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>       
                     </form>
                 </section>
             </div>
         </main>
-        <div class="layer_popup pop_equipment_add">
-            <div class="layer_popup_inner">
-                <div class="layer_popup_cont">
-                    <form action="">
-                        <button type="button" class="close_popup" onclick="close_popup(this)">
-                            <span class="blind">팝업 닫기</span>
-                        </button>
-                        <div class="sub_tit">
-                            <h1 class="tit1">우리 장비 등록</h1>
-                        </div>
-                        <section class="sec">
-                            <div class="eq_detail_top">
-                                <div class="img_box ty_eq">
-                                    <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
-                                    <!--[D] 이미지 첨부 전 -->
-                                    <label for="upload_eq_img" class="btn_img_upluad">
-                                        <i class="fa-solid fa-camera"></i>
-                                        <p>사진 첨부하기 (260 x 180)</p>
-                                    </label>
-                                    <!--// [D] 이미지 첨부 전 -->
-                                </div>
-                                <div class="v_tbl_wrap  ml10">
-                                    <table class="v_tbl ty_big">
-                                        <colgroup>
-                                            <col style="width: 160px;">
-                                            <col>
-                                        </colgroup>
-                                        <tbody>
-                                            <tr>
-                                                <th>계측기명</th>
-                                                <td>
-                                                    <input type="text" class="f_input ty_mid w_300" placeholder="계측기명을 입력해주세요.">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>제조사</th>
-                                                <td>
-                                                    <input type="text" class="f_input ty_mid w_300" placeholder="제조사를 입력해주세요.">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>형식</th>
-                                                <td>
-                                                    <input type="text" class="f_input ty_mid w_300" placeholder="형식 입력해주세요.">
-                                                </td>
-                                            </tr>  
-                                        </tbody>
-                                    </table> 
-                                </div>
-                            </div>
-                        </section>
-                        <section class="sec mt20">
-                            <div class="eq_detail_top">
-                                <div class="img_box ty_eq">
-                                    <input type="file" id="upload_eq_img" class="input_file" accept="image/*">
-                                    <div class="img_box_edit">
-                                        <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
-                                        <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
-                                    </div>
-                                    <img src="https://picsum.photos/260/180" alt="">
-                                </div>
-                                <div class="v_tbl_wrap  ml10">
-                                    <table class="v_tbl ty_big">
-                                        <colgroup>
-                                            <col style="width: 160px;">
-                                            <col>
-                                        </colgroup>
-                                        <tbody>
-                                            <tr>
-                                                <th>계측기명</th>
-                                                <td>
-                                                    <input type="text" class="f_input ty_mid w_300" placeholder="계측기명을 입력해주세요.">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>제조사</th>
-                                                <td>
-                                                    <input type="text" class="f_input ty_mid w_300" placeholder="제조사를 입력해주세요.">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>형식</th>
-                                                <td>
-                                                    <input type="text" class="f_input ty_mid w_300" placeholder="형식 입력해주세요.">
-                                                </td>
-                                            </tr>  
-                                        </tbody>
-                                    </table> 
-                                </div>
-                            </div>
-                        </section>
-                        <section class="sec mt20">
-                            <div class="v_tbl_wrap ">
-                                <table class="v_tbl ty_big">
-                                    <tbody>
-                                        <colgroup>
-                                            <col style="width: 160px;">
-                                            <col>
-                                            <col style="width: 160px;">
-                                            <col>                          
-                                        </colgroup>
-                                        <tr>
-                                            <th>기기번호</th>
-                                            <td><input type="text" class="f_input ty_mid w_200" placeholder="기기번호를 입력해주세요."></td>
-                                            <th>관리번호</th>
-                                            <td><input type="text" class="f_input ty_mid w_200" placeholder="관리번호를 입력해주세요."></td>
-                                        </tr>
-                                        <tr>
-                                            <th>구매일자</th>
-                                            <td><input type="text" class="f_input ty_mid inp_date w_200" readonly></td>
-                                            <th>구매금액</th>
-                                            <td><input type="number" class="f_input ty_mid w_200" placeholder="숫자만 입력해주세요."></td>
-                                        </tr>
-                                        <tr>
-                                            <th>교정대상</th>
-                                            <td>
-                                                <select name="" id="" class="f_select ty_mid w_200">
-                                                    <option value="">선택</option>
-                                                    <option value="">교정대상</option>
-                                                    <option value="">교정제외</option>
-                                                    <option value="">자체교정</option>
-                                                </select>
-                                            </td>
-                                            <th>교정대상</th>
-                                            <td>
-                                                <select name="" id="" class="f_select ty_mid w_200">
-                                                    <option value="">선택</option>
-                                                    <option value="">6개월</option>
-                                                    <option value="">1년</option>
-                                                    <option value="">1년 6개월</option>
-                                                    <option value="">2년</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>교정일자 및 결과</th>
-                                            <td colspan="3">
-                                                <div class="cal_history_item d_flex _gap10">
-                                                    <input type="text" class="f_input ty_mid inp_date w_200" readonly>
-                                                    <select name="" id="" class="f_select ty_mid w_200">
-                                                        <option value="">선택</option>
-                                                        <option value="">정상</option>
-                                                        <option value="">불량</option>
-                                                        <option value="">불가</option>
-                                                        <option value="">수리</option>
-                                                        <option value="">기타</option>
-                                                    </select>
-                                                    <button type="button" class="btn_add"><span class="blind">추가</span></button>
-                                                </div>
-                                                <div class="cal_history_item d_flex _gap10">
-                                                    <input type="text" class="f_input ty_mid inp_date w_200" readonly>
-                                                    <select name="" id="" class="f_select ty_mid w_200">
-                                                        <option value="">선택</option>
-                                                        <option value="">정상</option>
-                                                        <option value="">불량</option>
-                                                        <option value="">불가</option>
-                                                        <option value="">수리</option>
-                                                        <option value="">기타</option>
-                                                    </select>
-                                                    <button type="button" class="btn_del"><span class="blind">추가</span></button>
-                                                </div>
-                                                <div class="cal_history_item d_flex _gap10">
-                                                    <input type="text" class="f_input ty_mid inp_date w_200" readonly>
-                                                    <select name="" id="" class="f_select ty_mid w_200">
-                                                        <option value="">선택</option>
-                                                        <option value="">정상</option>
-                                                        <option value="">불량</option>
-                                                        <option value="">불가</option>
-                                                        <option value="">수리</option>
-                                                        <option value="">기타</option>
-                                                    </select>
-                                                    <button type="button" class="btn_del"><span class="blind">추가</span></button>
-                                                </div>
-                                            </td>
-                                        </tr>    
-                                        <tr>
-                                            <th>메모</th>
-                                            <td colspan="3">
-                                                <textarea name="" id="" class="f_ta ty_mid"></textarea>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table> 
-                            </div>
-                        </section>
-                        <div class="btn_set taC mt30">
-                            <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
-                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
         <!--//container-->
         <!--footer-->
         <footer class="footer">

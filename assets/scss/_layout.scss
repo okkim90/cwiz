@@ -39,9 +39,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            img {
-                height: 40px;
-            }
+            
         }
     }
     .h_util {
@@ -314,7 +312,24 @@
                         bottom: 0;
                     }
                     .ico_dep1 {
-                        color: $c_key;
+                        &.ty_menu1 {
+                            background-image: url(../images/common/ico_menu1_on.svg);
+                         }
+                         &.ty_menu2 {
+                             background-image: url(../images/common/ico_menu2_on.svg);            
+                         }
+                         &.ty_menu3 {
+                             background-image: url(../images/common/ico_menu3_on.svg);          
+                         }
+                         &.ty_menu4 {
+                             background-image: url(../images/common/ico_menu4_on.svg);
+                         }
+                         &.ty_menu5 {
+                             background-image: url(../images/common/ico_menu5_on.svg);
+                         }
+                         &.ty_menu6 {
+                             background-image: url(../images/common/ico_menu6_on.svg);
+                         }
                     }
                     &::after { 
                         color: $c_key;
@@ -350,13 +365,29 @@
                 font-size: 20px;
                 width: 20px;
                 height: 20px;
-                color: #393939;
+                background-repeat: no-repeat;
+                background-position: center center;
                 transition: all .25s ease;
-                &::after {
-                    content: '\f013';
-                    @include fa;
-                    vertical-align: top;
+                
+                &.ty_menu1 {
+                   background-image: url(../images/common/ico_menu1.svg);
                 }
+                &.ty_menu2 {
+                    background-image: url(../images/common/ico_menu2.svg);            
+                }
+                &.ty_menu3 {
+                    background-image: url(../images/common/ico_menu3.svg);          
+                }
+                &.ty_menu4 {
+                    background-image: url(../images/common/ico_menu4.svg);
+                }
+                &.ty_menu5 {
+                    background-image: url(../images/common/ico_menu5.svg);
+                }
+                &.ty_menu6 {
+                    background-image: url(../images/common/ico_menu6.svg);
+                }
+
             }
             &::after {
                 transition: all .25s ease;
