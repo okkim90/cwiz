@@ -594,6 +594,7 @@
         border-radius: 20px;
         box-shadow: 0 4px 10px rgba(#000, .15);
         position: relative;
+        min-height: calc(100vh - 513px);
     }
     .top_tit {
         margin-bottom: 30px;
@@ -654,6 +655,25 @@
     }
 }
 
+.bd_box {
+    border: 1px solid $c_line;
+}
+.bg_box {
+    background-color: $c_bg;
+}
+.withdrawal_box {
+    border: 1px solid $c_line;
+    background-color: $c_bg;
+    height: 230px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    i {
+        font-size: 48px;
+    }
+}
 
 .ico_required {
     color:rgb(249, 59, 59);   
