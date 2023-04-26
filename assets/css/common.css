@@ -4703,6 +4703,16 @@ input::-webkit-search-results-decoration {
   width: 262px;
   height: 182px;
   flex-shrink: 0;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.eq_detail_top .img_box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .eq_detail_top .img_box .input_file {
   position: absolute;
@@ -4749,19 +4759,6 @@ input::-webkit-search-results-decoration {
 .eq_detail_top .img_box .btn_img_upluad p {
   color: #aaa;
   margin-top: 5px;
-}
-
-.img_box {
-  border: 1px solid #DDDDDD;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-.img_box img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .layer_popup {

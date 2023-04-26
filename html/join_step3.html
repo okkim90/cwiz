@@ -59,10 +59,14 @@
                         <div class="join_form_item">
                             <label for="" class="tit"><i class="ico_required"></i> 비밀번호</label>
                             <input type="password" placeholder="4~12자 이내, 영문 또는 영문+숫자" class="f_input ty_mid w100" required>
+                            <p class="msg_feedback ty_true">이용 가능한 비밀번호입니다.</p>
+                            <p class="msg_feedback ty_false">영문 또는 영문, 숫자를 조합하여 입력해 주세요. (4~12자)</p>
                         </div>
                         <div class="join_form_item">
                             <label for="" class="tit"><i class="ico_required"></i> 비밀번호 확인</label>
                             <input type="password" placeholder="비밀번호를 한번 더 입력해 주세요." class="f_input ty_mid w100" required>
+                            <p class="msg_feedback ty_true">비밀번호가 일치합니다.</p>
+                            <p class="msg_feedback ty_false">비밀번호가 일치하지 않습니다.</p>
                         </div>
                         <div class="join_form_item">
                             <label for="" class="tit"><i class="ico_required"></i> 담당자명</label>
@@ -70,7 +74,12 @@
                         </div>
                         <div class="join_form_item">
                             <label for="" class="tit"><i class="ico_required"></i> 담당자 연락처</label>
-                            <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="m_mobile" class="f_input ty_mid w100" placeholder="&quot;-&quot; 제외하고 숫자만 입력해주세요" maxlength="11"  required>
+                            <div class="f_input_box">
+                                <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="m_mobile" class="f_input ty_mid w100" placeholder="&quot;-&quot; 제외하고 숫자만 입력해주세요" maxlength="11"  required>
+                                <button type="button" class="f_btn ty_mid _key">본인인증</button>
+                            </div>
+                            <p class="msg_feedback ty_true">본인 인증에 성공하였습니다.</p>
+                            <p class="msg_feedback ty_false">본인 인증은 필수입니다. 인증 이후 서비스 신청해 주세요.</p> 
                         </div>
                         <div class="join_form_item">
                             <label for="" class="tit"><i class="ico_required"></i> 이메일</label>
