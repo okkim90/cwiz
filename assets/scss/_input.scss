@@ -19,6 +19,7 @@
         padding: 0 5px;
         border-radius: 4px;
         font-size: 12px;
+        line-height: 22px;
     }
     &.ty_small {
         height: 28px;
@@ -173,6 +174,14 @@
     &.w100 {
         width: 100%;
     }
+    &.ty_xsmall {
+        height: 22px;
+        padding: 0 5px;
+        border-radius: 4px;
+        font-size: 12px;
+        line-height: 1;
+        line-height: 22px;
+    }
     &.ty_small {
         height: 28px;
         padding: 0 5px;
@@ -193,12 +202,66 @@
 }
 
 .chk_list {
-    @include flex-box(14px)
+    @include flex-box(0)
     
 }
 .chk_item {
+    display: inline-flex;
+    align-items: center;
     cursor: pointer;
     user-select: none;
+    vertical-align: middle;
+    & + & {
+        position: relative;
+        padding-left: 10px;
+        margin-left: 9px;
+        &::before {
+            content:'';
+            width: 1px;
+            height: 16px;
+            background-color: $c_line;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -8px;
+        }
+    }
+    .input_toggle {
+        display: none;
+    }
+    input[type="checkbox"],  input[type="radio"] {
+        margin-right: 4px;
+    }
+    input[type="checkbox"]:checked,
+    input[type="radio"]:checked {
+        & ~ .input_toggle {
+            display: block;
+        }
+    }
+
+}
+
+.chk_btn {
+    position: relative;
+    user-select: none;
+    input[type="checkbox"] {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        &:checked ~ .f_btn {    
+            background-color: $c_key;
+            &:hover {
+                background-color: darken($c_key, 6%);
+            }
+        }
+    }
+    .f_btn {
+        background-color: $c_lightGrey;
+        color: #fff;
+        &:hover {
+            background-color: darken($c_lightGrey, 8%);
+        }
+    }
 }
 
 
@@ -270,5 +333,59 @@
             background-color: #222;
             
         } 
+    }
+}
+
+.num_set {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    .f_input {
+        border-radius: 0;
+    }
+
+    &_btn {
+        border: 1px solid $c_line;
+        width: 22px;
+        height: 22px;
+        background-color: #fff;
+        font-size: 13px;
+        line-height: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.ty_down {
+            border-right: none;
+            border-radius: 4px 0 0 4px;
+            &::after {
+                content: '';
+                width: 10px;
+                height: 2px;
+                background-color: #222;
+            }
+        }
+        &.ty_up {
+            border-left: none;
+            position: relative;
+            border-radius: 0 4px 4px 0;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 10px;
+                background-color: #222;
+                left: 50%;
+                top: 50%;
+                margin-left: -1px;
+                margin-top: -5px;
+            }
+            &::after {
+                content: '';
+                width: 10px;
+                height: 2px;
+                background-color: #222;
+            }
+        }
     }
 }

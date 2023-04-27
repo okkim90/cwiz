@@ -65,6 +65,10 @@
         .txt {
             text-decoration: underline;
         }
+        &::after {
+            //transform: scale(1.1);
+            color: $c_key;
+        }
     }
     &::after {
         font-size: 16px;
@@ -72,6 +76,7 @@
         font-family: "Font Awesome 6 Free";
         font-weight: bold;
         color: #393939;
+        
     }
 }
 .btn_down2 {
@@ -177,15 +182,7 @@
     cursor: pointer;
     font-weight: 500;
     
-    &.disable {
-        background-color: $c_lightGrey;
-        border-color: $c_lightGrey;
-        cursor: not-allowed;
-        &:hover {
-            background-color: $c_lightGrey;
-            border-color: $c_lightGrey;
-        }
-    }
+    
     &.ty_xsmall {
         min-width: 40px;
         height: 22px;
@@ -251,7 +248,11 @@
             border-radius: 50px;
         }
     }
-
+    &.disable {
+        opacity: 0.4;
+        cursor: not-allowed;
+       
+    }
     &.w100 {
         width: 100%;
     }
@@ -268,4 +269,14 @@
     border-radius: 50%;
     background-color: #222;
     box-shadow: 1px 1px 2px rgba(#000, 0.3);
+}
+
+.ico_edit {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/common/ico_edit.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 13px;
 }

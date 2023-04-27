@@ -294,3 +294,34 @@ function reset(target){
 if ( !document.referrer ) { 
     document.querySelector('.btn_back').style.display = 'none';
 }
+
+
+let btn_disable = document.querySelectorAll('.f_btn.disable');
+btn_disable.forEach(e=>{
+    e.addEventListener('click',(e)=>{
+        e.preventDefault()
+    })
+});
+
+
+
+function num_down(target){
+    let inputNum = $(target).siblings('.f_input');
+    let currentVal = parseInt(inputNum.val());
+    let newVal = currentVal - 1;
+    if(newVal < 0){
+        return false;
+    }else {
+        inputNum.val(newVal);
+    }
+    
+    //console.log(newVal);
+    
+}
+function num_up(target){
+    let inputNum = $(target).siblings('.f_input');
+    let currentVal = parseInt(inputNum.val());
+    let newVal = currentVal + 1;
+    inputNum.val(newVal);
+    //console.log(newVal)
+}

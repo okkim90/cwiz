@@ -3688,8 +3688,8 @@ input[type=radio],
 input[type=checkbox] {
   display: inline-block;
   vertical-align: middle;
-  width: 1.2em;
-  height: 1.2em;
+  width: 1.1em;
+  height: 1.1em;
   accent-color: #393939;
 }
 
@@ -4923,6 +4923,7 @@ input::-webkit-search-results-decoration {
   padding: 0 5px;
   border-radius: 4px;
   font-size: 12px;
+  line-height: 22px;
 }
 .f_input.ty_small {
   height: 28px;
@@ -5069,6 +5070,14 @@ input::-webkit-search-results-decoration {
 .f_select.w100 {
   width: 100%;
 }
+.f_select.ty_xsmall {
+  height: 22px;
+  padding: 0 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1;
+  line-height: 22px;
+}
 .f_select.ty_small {
   height: 28px;
   padding: 0 5px;
@@ -5089,15 +5098,68 @@ input::-webkit-search-results-decoration {
 
 .chk_list {
   display: flex;
-  gap: 14px;
+  gap: 0;
   flex-wrap: wrap;
 }
 
 .chk_item {
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  vertical-align: middle;
+}
+.chk_item + .chk_item {
+  position: relative;
+  padding-left: 10px;
+  margin-left: 9px;
+}
+.chk_item + .chk_item::before {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background-color: #DDDDDD;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -8px;
+}
+.chk_item .input_toggle {
+  display: none;
+}
+.chk_item input[type=checkbox], .chk_item input[type=radio] {
+  margin-right: 4px;
+}
+.chk_item input[type=checkbox]:checked ~ .input_toggle,
+.chk_item input[type=radio]:checked ~ .input_toggle {
+  display: block;
+}
+
+.chk_btn {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.chk_btn input[type=checkbox] {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+.chk_btn input[type=checkbox]:checked ~ .f_btn {
+  background-color: #FF7A00;
+}
+.chk_btn input[type=checkbox]:checked ~ .f_btn:hover {
+  background-color: #e06b00;
+}
+.chk_btn .f_btn {
+  background-color: #aaa;
+  color: #fff;
+}
+.chk_btn .f_btn:hover {
+  background-color: #969696;
 }
 
 .file_set {
@@ -5161,6 +5223,59 @@ input::-webkit-search-results-decoration {
 .file_set .btn_remove::after {
   content: "";
   width: 28px;
+  height: 2px;
+  background-color: #222;
+}
+
+.num_set {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.num_set .f_input {
+  border-radius: 0;
+}
+.num_set_btn {
+  border: 1px solid #DDDDDD;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  font-size: 13px;
+  line-height: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.num_set_btn.ty_down {
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+.num_set_btn.ty_down::after {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background-color: #222;
+}
+.num_set_btn.ty_up {
+  border-left: none;
+  position: relative;
+  border-radius: 0 4px 4px 0;
+}
+.num_set_btn.ty_up::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background-color: #222;
+  left: 50%;
+  top: 50%;
+  margin-left: -1px;
+  margin-top: -5px;
+}
+.num_set_btn.ty_up::after {
+  content: "";
+  width: 10px;
   height: 2px;
   background-color: #222;
 }
@@ -5231,6 +5346,9 @@ input::-webkit-search-results-decoration {
 }
 .btn_down:hover .txt {
   text-decoration: underline;
+}
+.btn_down:hover::after {
+  color: #FF7A00;
 }
 .btn_down::after {
   font-size: 16px;
@@ -5335,15 +5453,6 @@ input::-webkit-search-results-decoration {
   cursor: pointer;
   font-weight: 500;
 }
-.f_btn.disable {
-  background-color: #aaa;
-  border-color: #aaa;
-  cursor: not-allowed;
-}
-.f_btn.disable:hover {
-  background-color: #aaa;
-  border-color: #aaa;
-}
 .f_btn.ty_xsmall {
   min-width: 40px;
   height: 22px;
@@ -5409,6 +5518,10 @@ input::-webkit-search-results-decoration {
 .f_btn.ty_big._round {
   border-radius: 50px;
 }
+.f_btn.disable {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 .f_btn.w100 {
   width: 100%;
 }
@@ -5424,6 +5537,16 @@ input::-webkit-search-results-decoration {
   border-radius: 50%;
   background-color: #222;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ico_edit {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url(../images/common/ico_edit.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 13px;
 }
 
 .tab_list {
@@ -5578,7 +5701,7 @@ input::-webkit-search-results-decoration {
   padding: 6px 10px;
   font-size: 13px;
   line-height: 1.6;
-  height: 39px;
+  height: 41px;
 }
 .v_tbl.ty_big th, .v_tbl.ty_big td {
   padding: 12px 14px;
