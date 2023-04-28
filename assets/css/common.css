@@ -5743,7 +5743,7 @@ input::-webkit-search-results-decoration {
 .h_tbl_wrap {
   border: 1px solid #DDDDDD;
   border-top: 1px solid #000;
-  height: 400px;
+  max-height: 397px;
   position: relative;
 }
 .h_tbl.tl_fixed {
@@ -5790,6 +5790,9 @@ input::-webkit-search-results-decoration {
 }
 .h_tbl tbody td:last-child {
   border-right: none;
+}
+.h_tbl tbody tr:last-child td {
+  border-bottom: none;
 }
 .h_tbl .col_sort {
   display: inline-flex;

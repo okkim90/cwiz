@@ -59,7 +59,7 @@
     &_wrap {
         border: 1px solid $c_line;
         border-top: 1px solid #000;
-        height: 400px;
+        max-height: 397px;
         position: relative;
         
     }
@@ -121,12 +121,12 @@
                 border-right: none;
             }
         }
-        // tr:last-child {
-        //     td {
-        //         border-bottom: none;
+        tr:last-child {
+            td {
+                border-bottom: none;
                 
-        //     }
-        // }
+            }
+        }
     }
 
     .col_sort {
