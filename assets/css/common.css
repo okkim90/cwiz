@@ -4699,7 +4699,7 @@ input::-webkit-search-results-decoration {
   text-align: center;
   font-size: 14px;
   color: #222;
-  height: 260px;
+  height: 351px;
 }
 .no_result_box i {
   font-size: 50px;
@@ -5855,7 +5855,7 @@ input::-webkit-search-results-decoration {
   padding: 5px;
   border: 1px solid #DDDDDD;
   text-align: center;
-  height: 3em;
+  height: 3.02em;
 }
 .h_tbl tbody td.taL {
   text-align: left;
