@@ -243,7 +243,7 @@
                             </div>
                             <div class="btn_set ml_auto">
                                 <a href="" class="f_btn ty_small _solidGrey">계측기 등록 +</a>
-                                <button type="button" class="f_btn ty_small _green">엑셀 등록 <i class="fa-solid fa-file-excel"></i></button>
+                                <button type="button"  onclick="open_popup('pop_excel')" class="f_btn ty_small _green">엑셀 등록 <i class="fa-solid fa-file-excel"></i></button>
                                 <button type="button" class="f_btn ty_small _red">선택 삭제 <i class="fa-solid fa-trash-can"></i></button>
                             </div>
                         </div>
@@ -513,6 +513,70 @@
                         <input type="submit" value="임시저장" class="f_btn ty_mid _solidGrey w_100">
                     </div>
                 </form>
+            </div>
+            <div class="layer_popup pop_excel">
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont ty_small">
+                            <button type="button" class="close_popup" onclick="close_popup(this)">
+                                <span class="blind">팝업 닫기</span>
+                            </button>
+                            <div class="sub_tit">
+                                <h1 class="tit1">계측기 엑셀 등록</h1>
+                            </div>
+                            <form action="">
+                                <div class="excel_upload_box">
+                                    <!--[D] 실제 input file-->
+                                    <input type="file" id="file_excel" onchange="fileExcel(this)" class="input_file_excel" accept=".xls,.xlsx" required>
+                                    
+                                    <label for="file_excel" class="excel_upload_default">
+                                        <i><img src="../assets/images/common/ico_excel.svg" alt=""></i>
+                                        <p>Upload</p>
+                                    </label>
+                                    <div class="excel_upload_on">
+                                        <button type="button" onclick=" fileExcelDel(this)" class="btn_del2"><span class="blind">파일삭제</span></button>
+                                        <span class="file_name"></span>
+                                    </div>
+                                </div>                      
+                                <div class="btn_set mt20 taC">
+                                    <button type="button" class="f_btn ty_small _key_ol w_80">양식다운 <i class="fa-solid fa-file-arrow-down"></i></button>
+                                    <input type="submit" class="f_btn ty_small _key w_80 btn_excel_submit" style="display: none;" value="등록">
+                                </div>
+                            </form>
+                            <script>
+                                function fileExcel(target){
+                                    let $this = $(target);
+                                    let $parent = $this.parents('.excel_upload_box');
+                                    let $fileName = $parent.find('.file_name');
+                                    let $btnSubmit = $('.btn_excel_submit');
+                                    let $val = $this.val();
+                                    if($val){
+                                        $parent.addClass('file_on');
+                                        $fileName.text($val);
+                                        //console.log($val );
+                                        $btnSubmit.show()
+                                    }else{
+                                        $parent.removeClass('file_on');
+                                        $fileName.text('');
+                                        $btnSubmit.hide()
+                                    }
+                                }
+                                function fileExcelDel(target){
+                                    let $this = $(target);
+                                    let $parent = $this.parents('.excel_upload_box');
+                                    let $fileName = $parent.find('.file_name');
+                                    let $inputFile = $parent.find('.input_file_excel');
+                                    let $btnSubmit = $('.btn_excel_submit');
+                                    $inputFile.val(null);
+                                    
+                                    if(!$inputFile.val()){
+                                        $parent.removeClass('file_on');
+                                        $fileName.text(null);
+                                        $btnSubmit.hide()
+                                    }                            
+                                }
+                            </script>
+                    </div>
+                </div>
             </div>
         </main>
         <!--//container-->
