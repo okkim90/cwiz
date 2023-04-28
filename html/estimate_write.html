@@ -61,7 +61,7 @@
                     <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>교정이력</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">교정 접수 내역</a></li>
+                            <li><a href="" class="btn_dep2 ">교정 접수 내역</a></li>
                             <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
                         </ul>
                     </div>
@@ -78,8 +78,8 @@
                     <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>견적 요청</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2 on">견적 요청 조회</a></li>
-                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                            <li><a href="" class="btn_dep2">견적 요청 조회</a></li>
+                            <li><a href="" class="btn_dep2 on">견적 요청</a></li>
                         </ul>
                     </div>                   
                 </li>
@@ -132,13 +132,13 @@
                             <a href="#">견적 요청</a>
                         </li>
                         <li class="breadcrumb_item">
-                            견적 요청 상세보기
+                            견적 요청
                         </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">견적 요청 상세보기 </h1>
+                    <h1 class="tit1">견적 요청</h1>
                 </div>
                 <form action="">
                     <section class="sec mt0">
@@ -212,7 +212,8 @@
                                         <th>교정 기관</th>
                                         <td>
                                             <select name="" id="" class="f_select ty_small w_300">
-                                                <option value="" selected>코리아인스트루먼트(주)</option>
+                                                <option value="" selected disabled>선택</option>
+                                                <option value="">코리아인스트루먼트(주)</option>
                                                 <option value="">삼성교정(주)</option>
                                                 <option value="">구글교정월드(주)</option>
                                             </select>
@@ -221,7 +222,7 @@
                                     <tr>
                                         <th>요구사항</th>
                                         <td>
-                                            <input type="text" class="f_input ty_small w100" placeholder="요구사항을 입력해주세요." value="빠르고 정확한 교정 부탁드립니다.">
+                                            <input type="text" class="f_input ty_small w100" placeholder="요구사항을 입력해주세요." value="">
                                         </td>
                                         <th>견적상태</th>
                                         <td>
@@ -243,7 +244,7 @@
                             <div class="btn_set ml_auto">
                                 <a href="" class="f_btn ty_small _solidGrey">계측기 등록 +</a>
                                 <button type="button" class="f_btn ty_small _green">엑셀 등록 <i class="fa-solid fa-file-excel"></i></button>
-                                <button type="button" class="f_btn ty_small _lightGrey">선택 삭제 <i class="fa-solid fa-trash-can"></i></button>
+                                <button type="button" class="f_btn ty_small _red">선택 삭제 <i class="fa-solid fa-trash-can"></i></button>
                             </div>
                         </div>
                         <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
@@ -273,6 +274,14 @@
                                     </tr>
                                 </thead>
                                 <tbody> 
+                                    <tr>
+                                        <td colspan="9">
+                                            <div class="no_result_box">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <p class="mt10">등록된 계측기가 없습니다.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <td><input type="checkbox"></td>
                                         <td>
@@ -502,7 +511,6 @@
                     <div class="btn_set taC mt30">
                         <input type="submit" value="견적요청" class="f_btn ty_mid _key w_100">
                         <input type="submit" value="임시저장" class="f_btn ty_mid _solidGrey w_100">
-                        <button type="button" class="f_btn ty_mid _lightGrey w_100">삭제</button>
                     </div>
                 </form>
             </div>

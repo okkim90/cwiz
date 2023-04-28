@@ -4347,6 +4347,7 @@ input::-webkit-search-results-decoration {
 
 .container .contents {
   padding: 30px;
+  padding-bottom: 50px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -5742,6 +5743,8 @@ input::-webkit-search-results-decoration {
 .h_tbl_wrap {
   border: 1px solid #DDDDDD;
   border-top: 1px solid #000;
+  height: 400px;
+  position: relative;
 }
 .h_tbl.tl_fixed {
   table-layout: fixed;
@@ -5788,9 +5791,6 @@ input::-webkit-search-results-decoration {
 .h_tbl tbody td:last-child {
   border-right: none;
 }
-.h_tbl tbody tr:last-child td {
-  border-bottom: none;
-}
 .h_tbl .col_sort {
   display: inline-flex;
   margin-left: 6px;
@@ -5835,7 +5835,7 @@ input::-webkit-search-results-decoration {
   width: 61%;
 }
 .tbl_area.col2 .sub_tit2 {
-  height: 36px;
+  height: 28px;
 }
 
 .card_list {
