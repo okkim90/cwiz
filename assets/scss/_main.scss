@@ -32,8 +32,7 @@
         } 
         .h_tbl {
             &_wrap {
-                border-left: none;
-                border-right: none;
+                max-height: 238px;
             }
             thead {
                 th {
@@ -46,6 +45,9 @@
                     
                 }
             }
+        }
+        .no_result_box {
+            height: 186px;
         }
     }
 }

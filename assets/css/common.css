@@ -6077,14 +6077,16 @@ input::-webkit-search-results-decoration {
   padding: 15px 15px 20px;
 }
 .main_wrap .main_sec .h_tbl_wrap {
-  border-left: none;
-  border-right: none;
+  max-height: 238px;
 }
 .main_wrap .main_sec .h_tbl thead th {
   font-size: 13px;
 }
 .main_wrap .main_sec .h_tbl tbody td {
   font-size: 13px;
+}
+.main_wrap .main_sec .no_result_box {
+  height: 186px;
 }
 
 .main_count_list {
