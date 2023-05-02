@@ -298,8 +298,8 @@ function reset(target){
    this_form.reset();
 }
 
-
-if ( !document.referrer ) { 
+let btn_back = document.querySelector('.btn_back');
+if (btn_back && !document.referrer ) { 
     document.querySelector('.btn_back').style.display = 'none';
 }
 
