@@ -1,0 +1,85 @@
+
+.main_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    .main_sec {
+        //flex: 1;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(#000, .08);
+        position: relative;
+        min-height: 200px;
+        &_1, &_2 {
+            width: calc(50% - 10px);  
+        }
+        &_3 {
+            width: 100%;
+        }
+        &_4 {
+            width: calc(43% - 10px);
+        }
+        &_5 {
+            width: calc(57% - 10px);
+        }
+
+        @include list_col(3 ,16px, 40px);
+        .card_item {
+            .txt_box {
+                padding: 15px 15px 20px;
+            }
+        } 
+    }
+}
+
+.main_count {
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 0;
+        padding: 20px 0;
+    }
+    &_item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        margin-right: 20px;
+        border-right: 1px solid $c_line;
+        &:last-child {
+            border-right: none;
+            margin-right: 0;
+            padding-right: 0;
+        }
+        .ico_box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: rgba($c_key, .1);
+        }
+        .txt_box {
+            padding-left: 15px;
+            .count {
+                display: block;
+                font-size: 36px;
+                line-height: 42px;
+                font-weight: bold;
+                font-family: 'Roboto';
+                position: relative;
+                .sizing_box {
+                    position: absolute;
+                    opacity: 0;
+                    
+                }
+            }
+            .txt {
+                font-size: 13px;
+                line-height: 19px;
+            }
+        }
+    }
+}

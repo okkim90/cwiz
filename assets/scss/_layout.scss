@@ -669,32 +669,7 @@
     }
 }
 
-.main_wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    .main_sec {
-        //flex: 1;
-        padding: 30px;
-        background-color: #fff;
-        border-radius: 20px;
-        box-shadow: 0 4px 10px rgba(#000, .15);
-        position: relative;
-        min-height: 230px;
-        &_1, &_2 {
-            width: calc(50% - 10px);
-        }
-        &_3 {
-            width: 100%;
-        }
-        &_4 {
-            width: calc(40% - 10px);
-        }
-        &_5 {
-            width: calc(60% - 10px);
-        }
-    }
-}
+
 
 
 .c_num {

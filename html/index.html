@@ -49,8 +49,9 @@
         <aside class="sidenav">
             <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
             <div class="msg_box">
-                환영합니다. <br>
-                <b>(주)다이나믹로보다이나믹코리아인더스트리 매니저</b>님
+                CWIZ에서 <br>
+                <b>실시간</b>으로 <b>교정현황</b>을 <br>
+                확인 하실 수 있습니다.
             </div>
             
             <ul class="nav">
@@ -115,22 +116,56 @@
         <main id="container" class="container">
             <div class="main_wrap">
                 <div class="main_sec main_sec_1">
-                    <p>
-                        <div class="sub_tit">
-                            <h1 class="tit1">교정 이력</h1>
-                            <!-- 메인페이지 교정이력 6개월 고정-->
-                            <div class="date_set ml20">
-                                <input type="text" class="f_input ty_small inp_date date_start" value="2022-11-02" readonly disabled> ~
-                                <input type="text" class="f_input ty_small inp_date date_end" value="2023-05-02" readonly disabled>
-                            </div>
-                            <a href="" class="btn_view_more ml_auto">
-                                <span class="blind">더 보기</span>
-                            </a>
+                    <div class="sub_tit">
+                        <h1 class="tit1">교정 이력</h1>
+                        <!-- 메인페이지 교정이력 6개월 고정-->
+                        <div class="date_set ml20">
+                            <input type="text" class="f_input ty_small inp_date date_start" value="2022-11-02" readonly disabled> ~
+                            <input type="text" class="f_input ty_small inp_date date_end" value="2023-05-02" readonly disabled>
                         </div>
-                    </p>
-                    <p>test</p>
-                    <p>test</p>
-                   
+                        <a href="" class="btn_view_more ml_auto">
+                            <span class="blind">더 보기</span>
+                        </a>
+                    </div>
+                    <ul class="main_count_list">
+                        <li class="main_count_item">
+                            <div class="ico_box">
+                                <img src="../assets/images/main/main_ico1.svg" alt="">
+                            </div>
+                            <div class="txt_box">
+                                <!--[D] data-value = 수량 -->
+                                <strong class="count" data-value="9999">
+                                    0
+                                    <span class="sizing_box"></span>
+                                </strong>
+                                <p class="txt">접수건수</p>
+                            </div>
+                        </li>
+                        <li class="main_count_item">
+                            <div class="ico_box">
+                                <img src="../assets/images/main/main_ico2.svg" alt="">
+                            </div>
+                            <div class="txt_box">
+                                <strong class="count" data-value="4252">
+                                    0
+                                    <span class="sizing_box"></span>
+                                </strong>
+                                <p class="txt">교정완료</p>
+                            </div>
+                        </li>
+                        <li class="main_count_item">
+                            <div class="ico_box">
+                                <img src="../assets/images/main/main_ico3.svg" alt="">
+                            </div>
+                            <div class="txt_box">
+                                <strong class="count" data-value="134">
+                                    0
+                                    <span class="sizing_box"></span>
+                                </strong>
+                                <p class="txt">정상</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="main_sec main_sec_2">
                     <div class="sub_tit">
@@ -139,6 +174,44 @@
                             <span class="blind">더 보기</span>
                         </a>
                     </div>
+                    <ul class="main_count_list">
+                        <li class="main_count_item">
+                            <div class="ico_box">
+                                <img src="../assets/images/main/main_ico4.svg" alt="">
+                            </div>
+                            <div class="txt_box">
+                                <strong class="count" data-value="1332">
+                                    0
+                                    <span class="sizing_box"></span>
+                                </strong>
+                                <p class="txt">등록건수</p>
+                            </div>
+                        </li>
+                        <li class="main_count_item">
+                            <div class="ico_box">
+                                <img src="../assets/images/main/main_ico5.svg" alt="">
+                            </div>
+                            <div class="txt_box">
+                                <strong class="count" data-value="984">
+                                    0
+                                    <span class="sizing_box"></span>
+                                </strong>
+                                <p class="txt">교정이력</p>
+                            </div>
+                        </li>
+                        <li class="main_count_item">
+                            <div class="ico_box">
+                                <img src="../assets/images/main/main_ico6.svg" alt="">
+                            </div>
+                            <div class="txt_box">
+                                <strong class="count" data-value="974">
+                                    0
+                                    <span class="sizing_box"></span>
+                                </strong>
+                                <p class="txt">정상</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="main_sec main_sec_3">
                     <div class="sub_tit">
@@ -146,6 +219,73 @@
                         <a href="" class="btn_view_more ml_auto">
                             <span class="blind">더 보기</span>
                         </a>
+                    </div>
+                    <div class="h_tbl_wrap">
+                        <table class="h_tbl">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="th_fixed">접수번호 </th>
+                                    <th class="th_fixed">접수일자</th>
+                                    <th class="th_fixed">입고구분</th>
+                                    <th class="th_fixed">계측기명</th>
+                                    <th class="th_fixed">신청자</th>
+                                    <th class="th_fixed">총수량</th>
+                                    <th class="th_fixed">교정완료</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>23000100</td>
+                                    <td>2023-03-30</td>
+                                    <td>택배</td>
+                                    <td>내 & 외측 캘리퍼 외</td>
+                                    <td>이윤기</td>
+                                    <td>7</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>23000100</td>
+                                    <td>2023-03-30</td>
+                                    <td>택배</td>
+                                    <td>내 & 외측 캘리퍼 외</td>
+                                    <td>이윤기</td>
+                                    <td>7</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>23000100</td>
+                                    <td>2023-03-30</td>
+                                    <td>택배</td>
+                                    <td>내 & 외측 캘리퍼 외</td>
+                                    <td>이윤기</td>
+                                    <td>7</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>23000100</td>
+                                    <td>2023-03-30</td>
+                                    <td>택배</td>
+                                    <td>내 & 외측 캘리퍼 외</td>
+                                    <td>이윤기</td>
+                                    <td>7</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>23000100</td>
+                                    <td>2023-03-30</td>
+                                    <td>택배</td>
+                                    <td>내 & 외측 캘리퍼 외</td>
+                                    <td>이윤기</td>
+                                    <td>7</td>
+                                    <td>5</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="main_sec main_sec_4">
@@ -155,6 +295,50 @@
                             <span class="blind">더 보기</span>
                         </a>
                     </div>
+                    <ul class="card_list col_3">
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="main_sec main_sec_5">
                     <div class="sub_tit">
@@ -162,6 +346,55 @@
                         <a href="" class="btn_view_more ml_auto">
                             <span class="blind">더 보기</span>
                         </a>
+                    </div>
+                    <div class="h_tbl_wrap">
+                        <table class="h_tbl">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="th_fixed">계측기명 </th>
+                                    <th class="th_fixed">교정일</th>
+                                    <th class="th_fixed">교정결과</th>
+                                    <th class="th_fixed">D-day</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>내 & 외측 캘리퍼 외</td>
+                                    <td>2023-03-30</td>
+                                    <td>정상</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>내 & 외측 캘리퍼 외</td>
+                                    <td>2023-03-30</td>
+                                    <td>정상</td>
+                                    <td>19</td>
+                                </tr>
+                                <tr>
+                                    <td>내 & 외측 캘리퍼 외</td>
+                                    <td>2023-03-30</td>
+                                    <td>정상</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>내 & 외측 캘리퍼 외</td>
+                                    <td>2023-03-30</td>
+                                    <td>정상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>내 & 외측 캘리퍼 외</td>
+                                    <td>2023-03-30</td>
+                                    <td>정상</td>
+                                    <td>16</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

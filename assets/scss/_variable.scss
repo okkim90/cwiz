@@ -223,7 +223,7 @@ $inner: 1280px;
         padding-bottom: #{$z}px
     }
 }
-@mixin list_col($col ,$gapX, $gapY){
+@mixin list_col($col ,$gapX:20px, $gapY:40px){
     .col_#{$col} {
         gap: $gapY $gapX;
         .col_item {

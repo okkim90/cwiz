@@ -5,7 +5,7 @@
     }
     &_item {
         .img_box {
-            padding-top: 100%;
+            padding-top: 65%;
             position: relative;
             img {
                 position: absolute;
@@ -36,6 +36,7 @@
             font-size: 13px;
             margin-bottom: 10px;
             color: #666;
+            flex-wrap: wrap;
             i {
                 margin-right: 4px;
                 color: #222;

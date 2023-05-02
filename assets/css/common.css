@@ -3538,6 +3538,54 @@
   font-weight: 900;
   src: url("../fonts/noto-sans-kr-v27-korean_latin-900.woff2") format("woff2"), url("../fonts/noto-sans-kr-v27-korean_latin-900.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+/* roboto-100 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/roboto-v30-latin-100.woff2") format("woff2"), url("../fonts/roboto-v30-latin-100.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/roboto-v30-latin-300.woff2") format("woff2"), url("../fonts/roboto-v30-latin-300.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v30-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2"), url("../fonts/roboto-v30-latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-latin-700.woff2") format("woff2"), url("../fonts/roboto-v30-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/roboto-v30-latin-900.woff2") format("woff2"), url("../fonts/roboto-v30-latin-900.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 * {
   margin: 0;
   padding: 0;
@@ -4388,32 +4436,6 @@ input::-webkit-search-results-decoration {
 .container .sec_tit .tit {
   font-size: 16px;
   font-weight: bold;
-}
-
-.main_wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.main_wrap .main_sec {
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  position: relative;
-  min-height: 230px;
-}
-.main_wrap .main_sec_1, .main_wrap .main_sec_2 {
-  width: calc(50% - 10px);
-}
-.main_wrap .main_sec_3 {
-  width: 100%;
-}
-.main_wrap .main_sec_4 {
-  width: calc(40% - 10px);
-}
-.main_wrap .main_sec_5 {
-  width: calc(60% - 10px);
 }
 
 .c_num {
@@ -5969,7 +5991,7 @@ input::-webkit-search-results-decoration {
   transition: all 0.2s ease;
 }
 .card_item .img_box {
-  padding-top: 100%;
+  padding-top: 65%;
   position: relative;
 }
 .card_item .img_box img {
@@ -5995,6 +6017,7 @@ input::-webkit-search-results-decoration {
   font-size: 13px;
   margin-bottom: 10px;
   color: #666;
+  flex-wrap: wrap;
 }
 .card_item_info i {
   margin-right: 4px;
@@ -6019,6 +6042,89 @@ input::-webkit-search-results-decoration {
 }
 
 /* pages */
+.main_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.main_wrap .main_sec {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  min-height: 200px;
+}
+.main_wrap .main_sec_1, .main_wrap .main_sec_2 {
+  width: calc(50% - 10px);
+}
+.main_wrap .main_sec_3 {
+  width: 100%;
+}
+.main_wrap .main_sec_4 {
+  width: calc(43% - 10px);
+}
+.main_wrap .main_sec_5 {
+  width: calc(57% - 10px);
+}
+.main_wrap .main_sec .col_3 {
+  gap: 40px 16px;
+}
+.main_wrap .main_sec .col_3 .col_item {
+  width: calc(33.3333333333% - 10.6666666667px);
+}
+.main_wrap .main_sec .card_item .txt_box {
+  padding: 15px 15px 20px;
+}
+
+.main_count_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 0;
+  padding: 20px 0;
+}
+.main_count_item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  margin-right: 20px;
+  border-right: 1px solid #DDDDDD;
+}
+.main_count_item:last-child {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+.main_count_item .ico_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(255, 122, 0, 0.1);
+}
+.main_count_item .txt_box {
+  padding-left: 15px;
+}
+.main_count_item .txt_box .count {
+  display: block;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: bold;
+  font-family: "Roboto";
+  position: relative;
+}
+.main_count_item .txt_box .count .sizing_box {
+  position: absolute;
+  opacity: 0;
+}
+.main_count_item .txt_box .txt {
+  font-size: 13px;
+  line-height: 19px;
+}
+
 .login_wrap {
   min-height: 100vh;
   display: flex;
