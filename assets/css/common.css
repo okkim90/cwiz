@@ -6062,10 +6062,10 @@ input::-webkit-search-results-decoration {
   width: 100%;
 }
 .main_wrap .main_sec_4 {
-  width: calc(43% - 10px);
+  width: calc(44% - 10px);
 }
 .main_wrap .main_sec_5 {
-  width: calc(57% - 10px);
+  width: calc(56% - 10px);
 }
 .main_wrap .main_sec .col_3 {
   gap: 40px 16px;
@@ -6075,6 +6075,16 @@ input::-webkit-search-results-decoration {
 }
 .main_wrap .main_sec .card_item .txt_box {
   padding: 15px 15px 20px;
+}
+.main_wrap .main_sec .h_tbl_wrap {
+  border-left: none;
+  border-right: none;
+}
+.main_wrap .main_sec .h_tbl thead th {
+  font-size: 13px;
+}
+.main_wrap .main_sec .h_tbl tbody td {
+  font-size: 13px;
 }
 
 .main_count_list {

@@ -18,10 +18,10 @@
             width: 100%;
         }
         &_4 {
-            width: calc(43% - 10px);
+            width: calc(44% - 10px);
         }
         &_5 {
-            width: calc(57% - 10px);
+            width: calc(56% - 10px);
         }
 
         @include list_col(3 ,16px, 40px);
@@ -30,6 +30,23 @@
                 padding: 15px 15px 20px;
             }
         } 
+        .h_tbl {
+            &_wrap {
+                border-left: none;
+                border-right: none;
+            }
+            thead {
+                th {
+                    font-size: 13px;
+                }
+            }
+            tbody {
+                td {
+                    font-size: 13px;
+                    
+                }
+            }
+        }
     }
 }
 
@@ -73,7 +90,7 @@
                 .sizing_box {
                     position: absolute;
                     opacity: 0;
-                    
+
                 }
             }
             .txt {
