@@ -4522,6 +4522,7 @@ input::-webkit-search-results-decoration {
 
 /* footer */
 .footer {
+  border-top: 1px solid #DDDDDD;
   background-color: #EFEFEF;
   color: #7b7b7b;
   position: relative;
