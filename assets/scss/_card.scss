@@ -7,6 +7,8 @@
         .img_box {
             padding-top: 65%;
             position: relative;
+            background: url(../images/common/logo_bg.png) no-repeat center center;
+            background-color: $c_bg_grey;
             img {
                 position: absolute;
                 width: 100%;
@@ -14,6 +16,14 @@
                 left: 0;
                 top: 0;
                 object-fit: cover;
+            }
+            .tag_box {
+                display: flex;
+                gap: 5px;
+                position: absolute;
+                z-index: 10;
+                left: 10px;
+                top: 10px;
             }
             
         }
@@ -44,7 +54,7 @@
             }
         }
         .txt_box {
-            padding: 15px 20px 20px;
+            padding: 15px 18px 20px;
             background-color: #fff;
             .tit {
                 display: block;

@@ -628,7 +628,7 @@
         border-radius: 20px;
         box-shadow: 0 4px 10px rgba(#000, .15);
         position: relative;
-        min-height: calc(100vh - 513px);
+        min-height: calc(100vh - 320px);
     }
     .top_tit {
         margin-bottom: 30px;
@@ -965,6 +965,9 @@
     font-size: 14px;
     color: #222;
     height: 351px;
+    &.ty_bg {
+        background-color: $c_bg_grey;
+    }
 
     i {
         font-size: 50px;

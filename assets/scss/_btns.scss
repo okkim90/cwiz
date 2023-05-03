@@ -294,3 +294,21 @@
     background-position: center center;
     background-size: 13px;
 }
+
+.f_tag {
+    width: 50px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-radius: 22px;
+    height: 22px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    border: 1px solid transparent;
+}
+
+.tag_box {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}

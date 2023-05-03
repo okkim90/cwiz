@@ -92,6 +92,28 @@ $fz: (
 }
 
 
+@mixin tag($bg, $bd){
+   
+    background-color: $bg;
+    border-color: $bd;
+    color: #fff;
+}
+
+@mixin tag_op($bd ,$color){
+    
+    background-color: lighten($color, 43%);
+    border-color: $bd;
+    color: $color;
+}
+
+@mixin tag_ol($bd ,$color){
+    
+    background-color: transparent;
+    border-color: $bd;
+    color: $color;
+}
+
+
 // colors
 @each $key, $color in $colors {
     .fc#{$key} {
@@ -103,7 +125,7 @@ $fz: (
     .bd#{$key} {
         border-color: $color;
     }
-    .f_btn {
+    .f_btn  {
         &.#{$key} {
             @include btn($color, $color)
         }
@@ -113,6 +135,19 @@ $fz: (
         }
         &.#{$key}_op {
             @include btn_op($color ,$color);
+        }
+    }
+
+    .f_tag {
+        &.#{$key} {
+            @include tag($color, $color)
+        }
+        &.#{$key}_ol {
+            @include tag_ol($color ,$color);
+
+        }
+        &.#{$key}_op {
+            @include tag_op($color ,$color);
         }
     }
     
@@ -223,7 +258,7 @@ $inner: 1280px;
         padding-bottom: #{$z}px
     }
 }
-@mixin list_col($col ,$gapX:20px, $gapY:40px){
+@mixin list_col($col ,$gapX:20px, $gapY:30px){
     .col_#{$col} {
         gap: $gapY $gapX;
         .col_item {
@@ -232,7 +267,7 @@ $inner: 1280px;
     }
 }
 @for $i from 1 through 10 {
-    @include list_col($i ,20px, 40px);
+    @include list_col($i ,20px, 30px);
 } 
 
 
