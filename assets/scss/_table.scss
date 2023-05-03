@@ -61,7 +61,11 @@
         border-top: 1px solid #000;
         max-height: 397px;
         position: relative;
-        
+        &.auto_h {
+            max-height: none;
+            border-left: none;
+            border-right: none;
+        }
     }
 
     width: 100%;
@@ -71,6 +75,14 @@
     border-collapse: collapse;
     background-color: #fff;
     
+    &.ty_big {
+        font-size: 13px;
+        thead th, tbody td {
+            padding: 10px;
+            height: 3.4em;
+        }
+    }
+
     &.tl_fixed {
         table-layout: fixed;
     }
@@ -98,10 +110,18 @@
         }
     }
     tbody {
-        tr:hover {
-            background-color: rgba(rgb(249, 246, 61), .08);
-            cursor: pointer;
+        tr {
+            &.no_hv {
+                &:hover {
+                    cursor: default;
+                }
+            }
+            &:hover {
+                background-color: rgba(rgb(249, 246, 61), .08);
+                cursor: pointer;
+            }
         }
+        
 
         tr.on {
             background-color: rgba(rgb(249, 246, 61), .16);
@@ -181,4 +201,40 @@
             height: 28px;
         }
     }
+}
+
+.list_link {
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+    
+    .no_shrink {
+        flex-shrink: 0;
+    }
+    .f_tag {
+        margin-right: 10px;
+    }
+    .tit {
+        
+        min-width: 0;
+        text-align: left;
+        @include text-hidden-single 
+        
+         
+    }
+    .ico_file {
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/common/ico_file.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }   
+}
+
+.board_search_wrap {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba($c_key,.15);
 }
