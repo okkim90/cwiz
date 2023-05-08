@@ -4977,8 +4977,18 @@ input::-webkit-search-results-decoration {
   display: flex;
   border: 1px solid #DDDDDD;
   border-left: none;
-  border-top: none;
+  border-bottom: none;
+  position: relative;
   margin-top: 15px;
+}
+.search_details::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #DDDDDD;
+  left: 0;
+  bottom: 0;
 }
 .search_details_wrap {
   display: none;
@@ -4987,18 +4997,23 @@ input::-webkit-search-results-decoration {
   display: block;
 }
 .search_details_sec {
+  display: flex;
+  flex-direction: column;
+  height: 240px;
   flex: 1;
   border-left: 1px solid #DDDDDD;
 }
 .search_details .tit {
   display: block;
+  height: 40px;
+  flex-shrink: 0;
   line-height: 40px;
   background-color: #393939;
   text-align: center;
   color: #fff;
 }
 .search_details .list_wrap {
-  height: 200px;
+  flex: 1;
   overflow-y: auto;
 }
 .search_details .list_wrap::-webkit-scrollbar {
@@ -5037,6 +5052,87 @@ input::-webkit-search-results-decoration {
   font-weight: bold;
   margin-right: 5px;
   font-size: 11px;
+}
+.search_details .price_detail_list.dep1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.search_details .price_detail_list.dep1 li {
+  width: 50%;
+  border-bottom: 1px solid #DDDDDD;
+}
+.search_details .price_detail_list.dep1 li:nth-child(odd) {
+  border-right: 1px solid #DDDDDD;
+}
+.search_details .price_detail_list.dep1 .dep1_btn {
+  position: relative;
+  cursor: pointer;
+}
+.search_details .price_detail_list.dep1 .dep1_btn input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  z-index: -999;
+}
+.search_details .price_detail_list.dep1 .dep1_btn input[type=checkbox]:checked ~ .txt_box {
+  background-color: rgba(255, 122, 0, 0.1);
+  color: #FF7A00;
+  font-weight: 500;
+}
+.search_details .price_detail_list.dep1 .dep1_btn .txt_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  height: 100%;
+  padding: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+.search_details .price_detail_list.dep2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.search_details .price_detail_list.dep2 li {
+  min-width: 50%;
+}
+.search_details .price_detail_list.dep2 .dep2_btn {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 12px;
+  min-height: 40px;
+  padding: 5px 15px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.search_details .price_detail_list.dep2 .dep2_btn_inner {
+  display: flex;
+}
+.search_details .price_detail_list.dep2 .dep2_btn_inner input[type=checkbox] {
+  margin-top: 2px;
+  margin-right: 4px;
+}
+.search_details .price_detail_list.dep3 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  gap: 10px;
+}
+.search_details .price_detail_list.dep3 .tag_box {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 5px 10px;
+  border-radius: 14px;
+  background-color: rgba(255, 122, 0, 0.1);
+  gap: 0;
+}
+.search_details .price_detail_list.dep3 .tag_box .btn_del4 {
+  flex-shrink: 0;
+  margin-left: 2px;
 }
 
 .no_result_box {
@@ -5724,6 +5820,12 @@ input::-webkit-search-results-decoration {
   border: 1px solid #DDDDDD;
   box-sizing: border-box;
   background: url(../images/common/btn_minus.svg) no-repeat center center;
+}
+
+.btn_del4 {
+  width: 18px;
+  height: 18px;
+  background: url(../images/common/ico_del4.svg) no-repeat center center;
 }
 
 .btn_back {

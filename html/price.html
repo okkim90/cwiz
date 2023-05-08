@@ -57,20 +57,20 @@
             </div>
             
             <ul class="nav">
-                <li class="nav_item on">
+                <li class="nav_item">
                     <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>교정이력</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2 on">교정 접수 내역</a></li>
+                            <li><a href="" class="btn_dep2">교정 접수 내역</a></li>
                             <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>교정 단가 조회</button>
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>교정 수수료 조회</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">교정 단가 조회</a></li>
+                            <li><a href="" class="btn_dep2 on">교정 수수료 조회</a></li>
                         </ul>
                     </div>       
                 </li>
@@ -129,13 +129,13 @@
                             </a>
                         </li>
                         <li class="breadcrumb_item" >
-                            교정 단가 조회
+                            교정 수수료 조회
                         </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">교정 단가 조회</h1>
+                    <h1 class="tit1">교정 수수료 조회</h1>
                 </div>
                 <form action="">
                     <div class="v_tbl_wrap">
@@ -150,11 +150,11 @@
                             </colgroup>
                             <tbody> 
                                 <tr>
-                                    <th>계측기명</th>
+                                    <th>교정분야</th>
                                     <td><input type="text" class="f_input ty_small w_200 intDiv" disabled="disabled"></td>       
-                                    <th>제조사</th>
+                                    <th>분류번호</th>
                                     <td><input type="text" class="f_input ty_small w_200 intCompany" disabled="disabled"></td>   
-                                    <th>형식</th>
+                                    <th>측정기명</th>
                                     <td><input type="text" class="f_input ty_small w_200 intType" disabled="disabled"></td>    
                                 </tr>
                             </tbody>
@@ -168,208 +168,242 @@
                             <div class="search_details_sec dep1">
                                 <strong class="tit">교정분야</strong>
                                 <div class="list_wrap">
-                                    <ul class="list ulIntDiv">
-                                        <li><button type="button" class="item_option intDivItem on" val="406">RF측정</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="103">각도</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="210">경도</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="701">광도</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="702">광원 및 검출기</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="704">광통신</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="403">교류 및 교류전력</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="106">기타 길이 관련량</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="404">기타 직류 및 저주파측정</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="703">매질특성</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="902">메디컬 기준 측정 실험실</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="000">미확인</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="207">밀도</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="802">방사능</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="801">방사선</button></li>
-                                        <li><button type="button" class="item_option intDivItem" val="101">복사선의 주파수</button></li>
+                                    <ul class="price_detail_list dep1">
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">선형지수 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 및 저주파측정 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">교류 및 교류전력 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">복합형상 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">형상 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">질량 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">Lorem ipsum dolor sit amet consectetur adipisidf (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 및 저주파측정 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 및 저주파측정 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 및 저주파측정 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 및 저주파측정 (1,550)</span>
+                                            </label>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="search_details_sec dep2">
-                                <strong class="tit">제조사</strong>
+                                <strong class="tit">분류번호(측정기명)</strong>
                                 <div class="list_wrap">
-                                    <ul class="list ulIntCompany">
-                                        <li><button type="button" class="item_option intCompanyItem on" val="">전체</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="A.H.SYSTEM">A.H.SYSTEM</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="AARONIA AG">AARONIA AG</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="ADQANTESR">ADQANTESR</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="ADVANTEST">ADVANTEST</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="AEROFLEX">AEROFLEX</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="AGILENT">AGILENT</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="AGLIENT">AGLIENT</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="AMETEK">AMETEK</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="AMPLIFIER RESEARCH">AMPLIFIER RESEARCH</a>
+                                    <ul class="price_detail_list dep2">
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">직류 전체 (1,550)</span>
+                                                </div>
+                                            </label>
                                         </li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="AMPLIFIER RESERCH">AMPLIFIER RESERCH</a>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10203 (기계/전기식 콤퍼레이터)</span>
+                                                </div>  
+                                            </label>
                                         </li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="ANRITSU">ANRITSU</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="ATTEN">ATTEN</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="BIRD">BIRD</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="BK PRECISION">BK PRECISION</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="BOONTON">BOONTON</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="ECG-KOKUSAI">ECG-KOKUSAI</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="ED">ED</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="EIN">EIN</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="FAIRVIEW MICROWAVE">FAIRVIEW MICROWAVE</a>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10202 (변위계 교정기)</span>
+                                                </div>
+                                            </label>
                                         </li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="FLUKE">FLUKE</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="FOSTMENT">FOSTMENT</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="GEN COMM">GEN COMM</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="GENCOMM">GENCOMM</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="GIGATRONICS">GIGATRONICS</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="GW INSTEK">GW INSTEK</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="GWINSTEK">GWINSTEK</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="H.P">H.P</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="HC">HC</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="HP">HP</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="HUBER+SUHNER">HUBER+SUHNER</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="HUNG CHANG">HUNG CHANG</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="IFR">IFR</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="JDSU">JDSU</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="JUNG JIN">JUNG JIN</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="JUNGJIN">JUNGJIN</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="KEYSIGHT">KEYSIGHT</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="KRYTAR">KRYTAR</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="LG">LG</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="LIGNEX1">LIGNEX1</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="MARCONI">MARCONI</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="MCL">MCL</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="MICRONIX">MICRONIX</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="MIK">MIK</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="MINI-CIRCUITS">MINI-CIRCUITS</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="MOTOROLA">MOTOROLA</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="NARDA">NARDA</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="NATIONAL">NATIONAL</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="NEX1">NEX1</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="NOISEKEN">NOISEKEN</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="NONE">NONE</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="PANASONIC">PANASONIC</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="PHILIPS">PHILIPS</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="PMM">PMM</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="PRIMA">PRIMA</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="PROTEK">PROTEK</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="PULSAR">PULSAR</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="R &amp; S">R &amp; S</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="R&amp;S">R&amp;S</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="R/S">R/S</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="RF ONE ELECTRONIC">RF ONE ELECTRONIC</a>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10203-2 TV 신호 레벨 측정기, 벡터 스코프, TV 신호 주파수 편이기 V 신V 신호 주파수 호 주파수 편이기</span>
+                                                </div>
+                                            </label>
                                         </li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="RF-LAMBDA">RF-LAMBDA</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="ROHDE ＆SCHWARZ">ROHDE ＆SCHWARZ</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="ROHDE&amp;SCHWARZ">ROHDE&amp;SCHWARZ</a>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10203-2 TV 신호 레벨 측정기, 벡터 스코V 신호 주파수 프, TV 신호 주파수 편이기</span>
+                                                </div>
+                                                
+                                            </label>
                                         </li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="ROHDE&amp;SCWARZ">ROHDE&amp;SCWARZ</a>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10202 (변위계 교정기)</span>
+                                                </div>
+                                            </label>
                                         </li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="R＆S">R＆S</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="SIGLENT">SIGLENT</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="SMEM">SMEM</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="SRS">SRS</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="SRT">SRT</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="SRTechnology">SRTechnology</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="SURECOM">SURECOM</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="SUZHOU">SUZHOU</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="TEKTRONIX">TEKTRONIX</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="TELEWAVE">TELEWAVE</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="TERMALINE">TERMALINE</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="TESCOM">TESCOM</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="VAUNIX">VAUNIX</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="WEINSCHEL">WEINSCHEL</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="WERLATONE">WERLATONE</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="YOKOGAWA">YOKOGAWA</button></li>
-                                        <li><button type="button" class="item_option intCompanyItem" val="대양일렉콤">대양일렉콤</button></li>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10204 (다이얼 및 실린더 게이지 시험기)</span>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10202 (변위계 교정기)</span>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10203-2 TV 신호 레벨 측정기, 벡터 스코프, TV 신호 주파수 편이기</span>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10204 (다이얼 및 실린더 게이지 시험기)</span>
+                                                </div>
+                                            </label>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="search_details_sec dep3">
-                                <strong class="tit">형식</strong>
                                 <div class="list_wrap">
-                                    <ul class="list ulIntModel">
-                                        <li><button type="button" class="item_option intTypeItem on" val="">전체</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="100A250A">100A250A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="100B">100B</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="1080.9506K02">1080.9506K02</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="10C">10C</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="10E-800">10E-800</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="11683A">11683A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="11722A">11722A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="1851">1851</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="18N10W-10dB">18N10W-10dB</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="200W1000M7A">200W1000M7A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="2023A">2023A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="2026">2026</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="2026B">2026B</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="250A">250A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="250H">250H</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="25A">25A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="25D">25D</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="2712">2712</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="2769">2769</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="3010">3010</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="3201">3201</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="325LA">325LA</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="392.4017.04">392.4017.04</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="4022">4022</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="4024">4024</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="4027A10M">4027A10M</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="4034">4034</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="4195A">4195A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="43">43</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="432B">432B</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="436A">436A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="44A">44A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="4500C">4500C</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="47-30-43">47-30-43</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="48-40-43">48-40-43</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="4901.19.A">4901.19.A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="50-A-MFN-30dB">50-A-MFN-30dB</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="500-WA-MFN-30">500-WA-MFN-30</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="500-WT-FN">500-WT-FN</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="5000-EX">5000-EX</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="500H">500H</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="50A-MFN-30dB">50A-MFN-30dB</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="50C">50C</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="50H">50H</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="51071">51071</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="53-30-43">53-30-43</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="53-40-34">53-40-34</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="53-40-43">53-40-43</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="550L">550L</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="59318">59318</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="5D">5D</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="6060A">6060A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="6062A">6062A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="66-30-33">66-30-33</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="69047B">69047B</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="6N10W-10dB">6N10W-10dB</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="766-20">766-20</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="768-30">768-30</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="769-30">769-30</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="776B-30">776B-30</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="778D">778D</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="7802">7802</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="83620B">83620B</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="83624B">83624B</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="83630L">83630L</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="83712A">83712A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="83752A">83752A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="83752B">83752B</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8447D">8447D</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8447F">8447F</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8449B">8449B</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8477A">8477A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8481A">8481A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8481D">8481D</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8487A">8487A</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8490D-010">8490D-010</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8490D-020">8490D-020</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8490D-040">8490D-040</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8493B 3dB">8493B 3dB</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8493B 6dB">8493B 6dB</button></li>
-                                        <li><button type="button" class="item_option intTypeItem" val="8494B">8494B</button></li>
-                                    </ul>
+                                    <div class="price_detail_list dep3">
+                                        <span class="tag_box">
+                                            <span class="txt">10203 (변위계 교정기)</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호 레벨 측정기,호 레벨  레벨 측정기,호 레측정기,기,호 레벨 측정기, 벡터 스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -384,7 +418,8 @@
                     </div>
                     <div class="btn_set taC mt30">
                         <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
-                        <button type="button" class="f_btn ty_mid _solidGrey w_100 btn_detail on">상세검색</button>
+                        <button type="button" class="f_btn ty_mid _lightGrey w_100 btn_detail on">상세검색</button>
+                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
                     </div>
                     <script>
                         $(function(){

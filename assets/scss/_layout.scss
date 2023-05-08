@@ -894,7 +894,17 @@
     display: flex;
     border: 1px solid $c_line;
     border-left: none;
-    border-top: none;
+    border-bottom: none;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $c_line;
+        left: 0;
+        bottom: 0;
+    }
     margin-top: 15px;
     &_wrap {
         display: none;
@@ -903,18 +913,23 @@
         }
     }
     &_sec {
+        display: flex;
+        flex-direction: column;
+        height: 240px;
         flex: 1;
         border-left: 1px solid $c_line;
     }
     .tit {
         display: block;
+        height: 40px;
+        flex-shrink: 0;
         line-height: 40px;
         background-color: $c_solidGrey;
         text-align: center;
         color: #fff;
     }
     .list_wrap {
-        height: 200px;
+        flex: 1;
         overflow-y: auto;
         
         &::-webkit-scrollbar {
@@ -957,6 +972,92 @@
                     font-weight: bold;
                     margin-right: 5px;
                     font-size: 11px;
+                }
+            }
+        }
+    }
+
+    .price_detail_list {
+        &.dep1 {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 50%;
+                border-bottom: 1px solid $c_line;
+                &:nth-child(odd) {
+                    border-right: 1px solid $c_line;
+                } 
+            }
+            .dep1_btn {
+                position: relative;
+                cursor: pointer;
+                
+                input[type="checkbox"] {
+                    position: absolute;
+                    opacity: 0;
+                    z-index: -999;
+                    &:checked ~ .txt_box {
+                        background-color: rgba($c_key, .1);
+                        color: $c_key;
+                        font-weight: 500;
+                    }
+                }
+                .txt_box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 40px;
+                    height: 100%;
+                    padding: 5px;
+                    text-align: center;
+                    font-size: 12px;
+                }
+
+            }
+        }
+        &.dep2 {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                min-width: 50%
+            }
+            .dep2_btn {
+                display: flex;
+                align-items: center;
+                
+                text-align: left;
+                font-size: 12px;
+                min-height: 40px;
+                
+                padding: 5px 15px;
+                user-select: none;
+                cursor: pointer;
+                &_inner {
+                    display: flex;
+                    input[type="checkbox"] {
+                        margin-top: 2px;
+                        margin-right: 4px;
+                    }
+                }
+            }
+        }
+        &.dep3 {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 15px;
+            gap: 10px;
+            .tag_box {
+                display: flex;
+                flex-wrap: nowrap;
+                font-size: 12px;
+                line-height: 18px;
+                padding: 5px 10px;
+                border-radius: 14px;
+                background-color: rgba($c_key, .1);
+                gap: 0;
+                .btn_del4 {
+                    flex-shrink: 0;
+                    margin-left: 2px;
                 }
             }
         }
