@@ -5125,10 +5125,12 @@ input::-webkit-search-results-decoration {
   flex-wrap: nowrap;
   font-size: 12px;
   line-height: 18px;
-  padding: 5px 10px;
+  padding: 5px 12px;
   border-radius: 14px;
   background-color: rgba(255, 122, 0, 0.1);
   gap: 0;
+  color: #FF7A00;
+  font-weight: 500;
 }
 .search_details .price_detail_list.dep3 .tag_box .btn_del4 {
   flex-shrink: 0;
