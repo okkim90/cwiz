@@ -729,7 +729,15 @@
 .date_set {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
+    .f_select {
+        margin-right: 4px;
+    }
+    .date_end {
+        & + .f_btn {
+            margin-left: 4px;
+        }
+    }
 }
 
 .scroll_area {

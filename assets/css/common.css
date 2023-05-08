@@ -3928,7 +3928,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   background-color: #F9F9F9;
   color: #222;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
   overflow-x: auto;
 }
 
@@ -4052,6 +4052,12 @@ input[type=submit] {
 
 /* Select box 스타일 초기화 */
 /* IE 에서 Select box 화살표 제거 */
+input[type=password] {
+  -webkit-text-security: disc;
+  font-family: "large Verdana", "Verdana", sans-serif;
+  letter-spacing: 1px;
+}
+
 input[type=radio],
 input[type=checkbox] {
   display: inline-block;
@@ -4816,7 +4822,13 @@ input::-webkit-search-results-decoration {
 .date_set {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
+}
+.date_set .f_select {
+  margin-right: 4px;
+}
+.date_set .date_end + .f_btn {
+  margin-left: 4px;
 }
 
 .scroll_area {
@@ -6553,7 +6565,7 @@ input::-webkit-search-results-decoration {
   margin-bottom: 40px;
 }
 .login_box_top .img_box img {
-  height: 59px;
+  height: 58px;
 }
 .login_box_top .tit {
   font-size: 18px;

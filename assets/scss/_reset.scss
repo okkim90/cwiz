@@ -23,7 +23,7 @@ body {
     font-family: $font;
     background-color: $c_bg;
     color: #222;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.4px;
     overflow-x: auto;
 }
 
@@ -186,6 +186,11 @@ input[type="submit"] {
 /* IE 에서 Select box 화살표 제거 */ 
 // select::-ms-expand { display: none; }
 
+input[type="password"] {
+    -webkit-text-security: disc;
+    font-family: "large Verdana", "Verdana", sans-serif;
+    letter-spacing: 1px;
+}
 
 input[type="radio"],
 input[type="checkbox"] {
