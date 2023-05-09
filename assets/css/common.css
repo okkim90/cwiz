@@ -4466,7 +4466,7 @@ input::-webkit-search-results-decoration {
   line-height: 1;
 }
 .sidenav_top {
-  width: 190px;
+  width: 200px;
   margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
@@ -5671,6 +5671,20 @@ input::-webkit-search-results-decoration {
 .f_search_list {
   max-height: 200px;
   overflow-y: auto;
+}
+.f_search_list::-webkit-scrollbar {
+  width: 10px;
+}
+.f_search_list::-webkit-scrollbar-thumb {
+  background-color: #FF7A00;
+  border-radius: 5px;
+  background-clip: padding-box;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+.f_search_list::-webkit-scrollbar-track {
+  background-color: #EFEFEF;
 }
 .f_search_item {
   cursor: pointer;
