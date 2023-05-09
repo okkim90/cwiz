@@ -4330,6 +4330,18 @@ input::-webkit-search-results-decoration {
   position: relative;
   font-size: 20px;
 }
+.header .h_util .h_btns .h_btn.ty_notice.on::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FF5C5C;
+  color: #fff;
+  right: 4px;
+  top: 4px;
+  animation: alert 2s ease infinite;
+}
 .header .h_util .h_btns .h_btn.ty_notice.on::after {
   content: "";
   position: absolute;
@@ -4340,8 +4352,22 @@ input::-webkit-search-results-decoration {
   color: #fff;
   right: 4px;
   top: 4px;
+  animation: alert 2s 0.4s ease infinite;
 }
 
+@keyframes alert {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  0% {
+    transform: scale(1);
+  }
+}
 .sidenav {
   grid-area: sidenav;
   position: sticky;
@@ -5554,6 +5580,59 @@ input::-webkit-search-results-decoration {
 }
 .f_input.inp_date:read-only {
   background-color: #fff;
+}
+
+.f_search {
+  position: relative;
+}
+.f_search .f_input {
+  padding-right: 30px;
+  background-image: url(../images/common/ico_f_search.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 4px) center;
+  background-size: 20px;
+}
+.f_search .f_input:focus {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-color: transparent;
+}
+.f_search .f_input:focus ~ .f_search_list_wrap {
+  display: block;
+}
+.f_search_list_wrap {
+  position: absolute;
+  z-index: 100;
+  min-width: 100%;
+  top: calc(100% - 1px);
+  left: 0;
+  display: none;
+  border: 1px solid #FF7A00;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.f_search_list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.f_search_item {
+  cursor: pointer;
+  padding: 5px 10px;
+  white-space: nowrap;
+  color: #666;
+  font-size: 12px;
+}
+.f_search_item + .f_search_item {
+  border-top: 1px dotted #DDDDDD;
+}
+.f_search_item b {
+  color: #FF7A00;
+  font-weight: 500;
+}
+.f_search_item:hover {
+  background-color: rgba(249, 246, 61, 0.1);
+  color: #222;
 }
 
 .f_chk.ty_big {

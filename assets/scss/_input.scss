@@ -59,6 +59,62 @@
     }
 }
 
+.f_search {
+    position: relative;
+    
+    .f_input {
+        padding-right: 30px;
+        background-image: url(../images/common/ico_f_search.svg);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 4px) center;
+        background-size: 20px;
+        &:focus {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-color: transparent;
+            & ~ .f_search_list_wrap {
+                display: block;
+            }
+        } 
+    }
+   
+    &_list_wrap {
+        position: absolute;
+        z-index: 100;
+        min-width: 100%;
+        top: calc(100% - 1px);
+        left: 0;
+        display: none;
+        border: 1px solid $c_key;
+        border-radius: 0 0 4px 4px;
+        overflow: hidden;
+        background-color: #fff;
+    }
+    &_list {
+        max-height: 200px;
+        overflow-y: auto;
+        
+    }
+    &_item {
+        cursor: pointer;
+        padding: 5px 10px;
+        white-space: nowrap;
+        color: #666;
+        font-size: 12px;
+        & + & {
+            border-top: 1px dotted $c_line;
+        }
+        b {
+            color: $c_key;
+            font-weight: 500;
+        }
+        
+        &:hover {
+            background-color: rgba(rgb(249, 246, 61), .1);
+            color: #222;
+        }
+    }
+}
 
 
 .f_chk {
