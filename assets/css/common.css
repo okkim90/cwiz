@@ -4330,6 +4330,9 @@ input::-webkit-search-results-decoration {
   position: relative;
   font-size: 20px;
 }
+.header .h_util .h_btns .h_btn.ty_notice.on i {
+  animation: alert 1.2s ease infinite;
+}
 .header .h_util .h_btns .h_btn.ty_notice.on::before {
   content: "";
   position: absolute;
@@ -4340,7 +4343,6 @@ input::-webkit-search-results-decoration {
   color: #fff;
   right: 4px;
   top: 4px;
-  animation: alert 2s ease infinite;
 }
 .header .h_util .h_btns .h_btn.ty_notice.on::after {
   content: "";
@@ -4352,20 +4354,38 @@ input::-webkit-search-results-decoration {
   color: #fff;
   right: 4px;
   top: 4px;
-  animation: alert 2s 0.4s ease infinite;
 }
 
 @keyframes alert {
   0% {
-    transform: scale(0);
-    opacity: 1;
+    transform: rotate(0);
+  }
+  40% {
+    transform: rotate(0);
+  }
+  45% {
+    transform: rotate(-10deg);
   }
   50% {
-    transform: scale(1.6);
-    opacity: 0;
+    transform: rotate(10deg);
   }
-  0% {
-    transform: scale(1);
+  55% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  65% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
 .sidenav {
