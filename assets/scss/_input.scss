@@ -143,6 +143,45 @@
             border-radius: 50%;
         }
     }
+
+    &.ty_big {
+        height: 28px;
+        input {
+            &:checked + .slider:before {
+                left: calc(100% - 25px);
+            }
+        }
+        .slider {
+            height: 28px;
+            border-radius: 28px;
+            &_txt { 
+                font-size: 13px;
+                line-height: 28px;
+                &.true {
+                    padding: 0 30px 0 10px;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: translateY(-100%);
+                }
+                &.false {
+                    padding: 0 10px 0 30px;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            &:before {
+                position: absolute;
+                content: "";
+                height: 22px;
+                width: 22px;
+                left: 3px;
+                bottom: 3px;
+                background-color: white;
+                transition: all .2s ease-in-out;
+                border-radius: 50%;
+            }
+        }
+    }
 }
   
 
@@ -304,20 +343,19 @@
         height: 36px;
         background: url(../images/common/ico_del.svg) no-repeat center center;
         background-size: 20px;
+        border: none;
         
     }
     .btn_add {
-        border: 1px solid #222;
+        border: 1px solid $c_line;
         margin-left: 10px;
         box-sizing: border-box;
         width: 36px;
         height: 36px;
-        background: url(../images/common/ico_plus.svg) no-repeat center center;
         flex-shrink: 0;
-        
     }
     .btn_remove {
-        border: 1px solid #222;
+        border: 1px solid $c_line;
         margin-left: 10px;
         box-sizing: border-box;
         width: 36px;
@@ -326,12 +364,12 @@
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
+        border-radius: 5px;
         &::after {
             content:'';
-            width: 28px;
+            width: 18px;
             height: 2px;
-            background-color: #222;
-            
+            background-color: #aaa;
         } 
     }
 }

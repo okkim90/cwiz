@@ -5,7 +5,7 @@
     }
     &_item {
         .img_box {
-            padding-top: 65%;
+            padding-top: calc(200%/3);
             position: relative;
             background: url(../images/common/logo_bg.png) no-repeat center center;
             background-color: $c_bg_grey;
