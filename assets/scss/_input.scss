@@ -61,21 +61,23 @@
 
 .f_search {
     position: relative;
-    
+    &.on {
+        .f_input {
+            border-color: $c_key;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-color: transparent;
+        }
+        .f_search_list_wrap {
+            display: block;
+        }
+    }
     .f_input {
         padding-right: 30px;
         background-image: url(../images/common/ico_f_search.svg);
         background-repeat: no-repeat;
         background-position: calc(100% - 4px) center;
-        background-size: 20px;
-        &:focus {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            border-bottom-color: transparent;
-            & ~ .f_search_list_wrap {
-                display: block;
-            }
-        } 
+        background-size: 20px; 
     }
    
     &_list_wrap {

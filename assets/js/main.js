@@ -384,6 +384,16 @@ function commaSeparateNumber(val){
     return val;
 }
 
+// function f_search(target){
+//     let $this = $(target);
+//     let $parent = $this.parents('.f_search');
+//     if($this.val()){
+//         $parent.addClass('on');
+//     }else{
+//         $parent.removeClass('on');
+//     }
+// }
+
 
 
 $(function(){
@@ -405,3 +415,4 @@ $(function(){
     });
     
 });
+
