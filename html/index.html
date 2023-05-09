@@ -48,18 +48,36 @@
         <!-- nav -->
         <aside class="sidenav">
             <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
-            <div class="msg_box">
-                CWIZ에서 <br>
-                <b>실시간</b>으로 <b>교정현황</b>을 <br>
-                확인 하실 수 있습니다.
+           
+            <!--[D] 회사로고 없을경우-->
+            <div class="sidenav_top">
+                <div class="msg_box">
+                    안녕하세요. <br>
+                    <b>데이몬월드와이드코리아크(영업소)</b> <br> 
+                    <b>김영술</b>님
+                </div>
+                <button type="button" class="btn_add_logo">
+                    <i class="fa-solid fa-image"></i>
+                </button>
             </div>
             
+
+            <!--[D] 회사로고 있는 경우-->
+            <!-- <div class="sidenav_top">
+                <div class="img_box">
+                    <img src="../assets/images/common/Tesla_logo.png" alt="">
+                </div>
+                <button type="button" class="btn_add_logo">
+                    <i class="fa-solid fa-image"></i>
+                </button>
+            </div> -->
+            
             <ul class="nav">
-                <li class="nav_item on">
+                <li class="nav_item">
                     <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>교정이력</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2 on">교정 접수 내역</a></li>
+                            <li><a href="" class="btn_dep2">교정 접수 내역</a></li>
                             <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
                         </ul>
                     </div>
@@ -98,16 +116,6 @@
                             <li><a href="" class="btn_dep2">자료실</a></li>
                         </ul>
                     </div>                   
-                </li>
-                <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>관리자</button>
-                    <div class="nav_dep2_box">
-                        <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">회원 관리</a></li>
-                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
-                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
-                        </ul>
-                    </div>                 
                 </li>
             </ul>
         </aside>
