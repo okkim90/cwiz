@@ -4479,6 +4479,7 @@ input::-webkit-search-results-decoration {
 }
 .sidenav_top .img_box {
   width: 130px;
+  min-height: 45px;
 }
 .sidenav_top .img_box img {
   width: 100%;
