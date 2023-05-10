@@ -5333,13 +5333,19 @@ input::-webkit-search-results-decoration {
   overflow: hidden;
   position: relative;
 }
+.img_box.ty_upload.ty_logo {
+  display: block;
+  width: 260px;
+  height: auto;
+  min-height: 90px;
+}
 .img_box.ty_upload img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.img_box.ty_upload .input_file {
+.img_box.ty_upload .input_file, .img_box.ty_upload .input_img_upluad {
   position: absolute;
   left: 0;
   top: 0;
@@ -5510,6 +5516,9 @@ input::-webkit-search-results-decoration {
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(../images/common/ico_del3.svg);
+}
+.layer_popup .img_box.ty_logo {
+  margin: 0 auto;
 }
 
 /* templetes */
