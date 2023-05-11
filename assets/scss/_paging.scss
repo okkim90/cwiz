@@ -5,7 +5,9 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-       
+        &.mt20 {
+            margin-top: 20px;
+        }
     }
     &_btn {
         display: block;

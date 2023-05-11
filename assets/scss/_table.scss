@@ -3,6 +3,9 @@
     border-top: 1px solid #000;
     table-layout: fixed;
     background-color: #fff;
+    &.tl_auto {
+        table-layout: auto;
+    }
     tr.hidden_tr {
         display: none;
         &.on {
@@ -191,10 +194,10 @@
         
         .tbl_wrap {
             &._left {
-                width: 39%;  
+                width: 40%;  
             }
             &._right {
-                width: 61%;
+                width: 60%;
             }
         }
         .sub_tit2 {
