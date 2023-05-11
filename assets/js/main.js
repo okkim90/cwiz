@@ -416,3 +416,27 @@ $(function(){
     
 });
 
+function f_alert_open() {
+    document.querySelector('.f_alert_box').classList.add('on');
+}
+
+function f_alert_close() {
+    document.querySelector('.f_alert_box').classList.remove('on');
+}
+
+function f_alert_chk(target) {
+    let read_item = document.querySelectorAll('.f_alert_item.read');
+    
+
+    if(target.checked == true){
+        read_item.forEach((e)=>{
+            e.style.display = 'none';
+        });
+    }else{
+        read_item.forEach((e)=>{
+            e.style.display = 'block';
+        });
+    }
+    
+}
+
