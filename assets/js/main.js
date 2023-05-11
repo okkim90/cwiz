@@ -425,18 +425,26 @@ function f_alert_close() {
 }
 
 function f_alert_chk(target) {
+    let alert_box = document.querySelector('.f_alert_box');
+    let alert_item = document.querySelectorAll('.f_alert_item');
     let read_item = document.querySelectorAll('.f_alert_item.read');
+   
     
-
+        
     if(target.checked == true){
         read_item.forEach((e)=>{
             e.style.display = 'none';
         });
+        if(alert_item.length == read_item.length){
+            alert_box.classList.add('all_read');
+        }
     }else{
+        alert_box.classList.remove('all_read');
         read_item.forEach((e)=>{
             e.style.display = 'block';
         });
     }
+    
     
 }
 

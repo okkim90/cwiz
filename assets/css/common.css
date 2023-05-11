@@ -4375,6 +4375,22 @@ input::-webkit-search-results-decoration {
   opacity: 1;
   visibility: visible;
 }
+.header .f_alert_box .no_result_box {
+  height: 300px;
+  border-top: 1px solid #DDDDDD;
+}
+.header .f_alert_box .no_result_box i {
+  color: #393939;
+}
+.header .f_alert_box .no_result_box.all_read {
+  display: none;
+}
+.header .f_alert_box.all_read .no_result_box.all_read {
+  display: flex;
+}
+.header .f_alert_box.all_read .f_alert_list {
+  display: none;
+}
 .header .f_alert_top {
   display: flex;
   align-items: center;
@@ -4385,6 +4401,9 @@ input::-webkit-search-results-decoration {
 .header .f_alert_top .tit {
   font-size: 22px;
   font-weight: 500;
+}
+.header .f_alert_top .f_toggle {
+  margin-top: 4px;
 }
 .header .f_alert_close {
   background-image: url(../images/common/ico_close.svg);

@@ -214,6 +214,28 @@
                 opacity: 1;
                 visibility: visible;
             }
+
+            .no_result_box {
+                height: 300px;
+                border-top: 1px solid $c_line;
+                
+                i {
+                    color: #393939;
+                }
+
+                &.all_read {
+                    display: none;
+                }
+            }
+            
+            &.all_read {
+                .no_result_box.all_read {
+                    display: flex;
+                }
+                .f_alert_list {
+                    display: none;
+                }
+            }
         }
         &_top {
             display: flex;
@@ -225,6 +247,9 @@
             .tit {
                 font-size: 22px;
                 font-weight: 500;
+            }
+            .f_toggle {
+                margin-top: 4px;
             }
         }
         &_close {
