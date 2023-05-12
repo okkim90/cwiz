@@ -2,7 +2,7 @@
     position: absolute;
     margin: 0px auto;
     width: 100px;
-    z-index:990;
+    z-index:99999;
     display:none;
 }
 .loader:before {

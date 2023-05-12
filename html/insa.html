@@ -313,13 +313,7 @@
                         <li style="display: list-item;">레벨2</li>
                         <li style="display: list-item;">레벨3</li>
                         <li style="display: list-item;">레벨4</li>
-                        <li style="display: none;">레벨5</li>
-                        <li style="display: none;">레벨6</li>
-                        <li style="display: none;">레벨7</li>
-                        <li style="display: none;">레벨8</li>
-                        <li style="display: none;">레벨9</li>
-                        <li style="display: none;">레벨10</li>
-                        <li style="display: none;">레벨11</li>
+                        <li style="display: list-item;">레벨5</li>
                     </ol>
 
                     <ol id="orgMap" class="org_map">
@@ -385,6 +379,26 @@
                                                         <div class="name_modify" style="display:none;"><input type="text"><a
                                                                 href="javascript:void(0)" class="btn_enter"></a></div>
                                                     </div>
+                                                    <ol>
+                                                        <li>
+                                                            <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="14981" depth="3"
+                                                                no="16698" loc="5" childs="6" no_depth="0" ori_name="관리"><span class="name"
+                                                                    title="관리">관리</span>
+                                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                        onclick="orgmanage.member(16698)">6</a><a href="javascript:void(0)"
+                                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                                class="ss v2"
+                                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                                <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                        href="javascript:void(0)" class="btn_enter"></a></div>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
                                                 </li>
                                             </ol>
                                         </li>
@@ -900,6 +914,191 @@
         </footer>
         <!--//footer-->
     </div>
-    
+    <script>
+        
+
+
+
+
+        /* 조직도 헤더 노출 함수 */
+        var MAX_ORG_DEPTH = 11;
+
+        var orgmap = {
+            orgMapHeaderShow : function() {
+                $('#orgMapHeader').children('li').hide();
+                
+                var maxDepth = 1;
+                $('#orgMap').find('div.wrap1').each(function(k, v){
+                    var depth = $(v).data('realDepth');
+                    if(depth >= maxDepth){
+                        maxDepth = depth;
+                    }
+                })
+                
+                $('#orgMapHeader').children('li:lt(' + maxDepth + ')').show();
+            }
+        }
+
+        $(function(){
+            /* 조직명 수정 */
+            $(document).on('mouseover', '#orgMap .wrap1[ext_key] .name', function(e){
+                if($('#officeapi').length){
+                    $(this).css('background', '#e8ecef');
+                }
+            });
+            $(document).on('click', '#orgMap .wrap1 .name', function() {
+                if($(this).closest('.wrap1[ext_key]').length && $('#officeapi').length){
+                    return;
+                }
+                $(this).parent('.wrap1').find('.name_modify').fadeIn(200);
+                $(this).parent('.wrap1').find('.name_modify').children('input[type=text]').attr({'value' : $(this).text() });
+                $(this).parent('.wrap1').find('.name_modify').children('input[type=text]').select();
+            });
+            $(document).on('keydown', '#orgMap .wrap1 .name_modify>input[type=text]', function(e) {
+                
+                // 이권능 추가
+                $(this).closest('.wrap1').addClass('modified_name');
+                // 이권능 추가 끝
+                
+                if(e.keyCode==13) {
+                    $(this).next('a').click();
+                }
+            });
+            $(document).on('blur', '#orgMap .wrap1 .name_modify>input[type=text]', function(e) {
+                $(this).next('a').click();
+            });
+            $(document).on('click', '#orgMap .wrap1 .name_modify>a.btn_enter', function() {
+                var nowInputBoxText = $(this).prev('input[type=text]').val();
+                console.log(nowInputBoxText);
+                $(this).closest('.wrap1').children('.name').text(nowInputBoxText);
+                $(this).parent('.name_modify').hide();
+                
+                // 이권능 추가
+                if($(this).closest('.wrap1').hasClass('modified_name')){
+                    //orgmanage.setNodeName(this);
+                    $(this).closest('.wrap1').removeClass('modified_name');
+                }
+                // 이권능 추가 끝
+            });
+
+            /* ... 메뉴 열기/닫기 */
+            $(document).on('focus', '#orgMap .wrap1 .menu_all', function(e) {
+                $(this).children('.sub').show();
+                $(this).closest('.wrap1').css({'z-index' : '1'}).focus();
+            });
+
+            $(document).on('blur', '#orgMap .wrap1 .menu_all', function(e) {
+                $('#orgMap .wrap1 .menu_all .sub').hide();
+                $(this).closest('.wrap1').css({'z-index' : '0'});
+            });
+
+            /* 생성 */
+            $(document).on('mousedown', '#orgMap .ss.v1', function() {
+                // 이권능 수정
+                orgmanage.addNode($(this));
+            });
+
+            /* 삭제 */
+            $(document).on('mousedown', '.ss.v3', function(e) {
+                // 이권능 수정
+                orgmanage.removeChecker(e, this);
+            });
+
+            /* 이동 버튼 디스플레이 */
+            $(document).on('click', '.move_group>a', function(e) {
+                $(this).closest('.wrap1').find('.ss.v4').click();
+            });
+
+            /* 이동 버튼 */
+            $(document).on('click', '.ss.v4', function(e) {
+                $(this).parent('.sub').hide();
+
+                $(this).closest('.wrap1').css({'z-index' : '0'});
+                $(this).closest('.wrap1').children('.move_group').find('a').show();
+                
+                
+                $(this).closest('.wrap1').css({'z-index' : '1'}).focus();
+                $(this).closest('.menu').next('.move_group').show();
+                
+                var div_parent = $(this).closest('div.wrap1');
+                var ol_parent = $(this).closest('ol');
+                
+                var top_tf = true;
+                var bottom_tf = true;
+                var right_tf = true;
+                var left_tf = true;
+
+                // 오른쪽 이동 버튼 제한
+                var max_child_depth = $(this).closest('.wrap1').data('realDepth');
+                $(this).closest('li').find('ol .wrap1').each(function(k, v){
+                    var depth = $(v).data('realDepth');
+                    if(max_child_depth <= depth){
+                        max_child_depth = depth;
+                    }
+                });
+
+                if(max_child_depth >= MAX_ORG_DEPTH){
+                    $(this).closest('.menu').next('.move_group').children('.right').hide();
+                    right_tf = false;
+                }
+                // 왼쪽 이동 버튼 제한
+                if (!ol_parent.prev('div').hasClass('noDepth')) {
+                    $(this).closest('.menu').next('.move_group').children('.left').hide();
+                    left_tf = false;
+                }
+
+                var no = $(this).closest('.wrap1').attr('no');
+                var parent_no = $(this).closest('.wrap1').data('parentNo');
+                var parent = $(this).parents('li:has(div.wrap1[no="' + parent_no + '"]):first');
+                
+                // 위로 이동 버튼 제한
+                if(parent.children('ol').children('li:has(div.wrap1[no="' + no + '"])').prev('li').length === 0){
+                    $(this).closest('.menu').next('.move_group').children('.top').hide();
+                    top_tf = false;
+                }
+                // 아래로 이동 버튼 제한
+                if(parent.children('ol').children('li:has(div.wrap1[no="' + no + '"])').next('li').length === 0){
+                    $(this).closest('.menu').next('.move_group').children('.bottom').hide();
+                    bottom_tf = false;
+                }
+                
+                if(top_tf === false && bottom_tf === false && right_tf === false && left_tf === false){
+                    alert('이동할 수 없습니다.');
+                }
+                
+                    return false;
+                });
+
+            /* Top Button */
+            $(document).on('click', '.move_group>.top', function() {
+                
+                // 이권능 수정
+                orgmanage.moveNode($(this));
+            });
+
+            /* Bottom Button */
+            $(document).on('click', '.move_group>.bottom', function() {
+                
+                // 이권능 수정
+                orgmanage.moveNode($(this));
+            });
+
+            /* Left Button */
+            $(document).on('click', '.move_group>.left', function() {
+                orgmanage.moveNode($(this));
+            });
+
+            /* Right Button */
+            $(document).on('click', '.move_group>.right', function() {
+                orgmanage.moveNode($(this));
+            });
+
+            // 바탕화면 클릭시 이동 버튼 제거
+            $(document).on('click', '.content_inbox', function(e){
+                $('.wrap1>.move_group').find('a').show();
+                $('.wrap1>.move_group').hide();
+            });
+        });
+    </script>
 </body>
 </html>

@@ -60,7 +60,7 @@
 }
 
 .spr_insa {
-  background-image: url(/static/images/insa/spr_insa_icon.png);
+  background-image: url(../images/insa/spr_insa_icon.png);
   background-repeat: no-repeat;
 }
 
@@ -142,18 +142,6 @@
   left: 2475px;
 }
 
-.org_map {
-  position: relative;
-}
-.org_map::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  background-color: #222;
-  left: 106px;
-}
-
 .org_map .wrap1 {
   height: 30px;
   width: 225px;
@@ -185,7 +173,7 @@
   width: 225px;
   position: relative;
   cursor: default;
-  background: #fff url(/static/images/insa/line_org_01.png) 0 15px no-repeat;
+  background: #fff url(../images/insa/line_org_01.png) 0 15px no-repeat;
 }
 
 .org_map li {
@@ -195,27 +183,17 @@
 .org_map ol {
   margin-top: -45px;
   min-width: 225px;
-  background: url(/static/images/insa/line_org_02.png) 106px 0 repeat-y;
-  position: relative;
-  box-sizing: content-box;
-}
-.org_map ol::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  background-color: #222;
-  left: 106px;
+  background: url(../images/insa/line_org_02.png) 106px 0 repeat-y;
 }
 
 .org_map li > ol > li {
   padding-left: 249px;
-  background: url(/static/images/insa/line_org_01.png) 106px 15px no-repeat;
+  background: url(../images/insa/line_org_01.png) 106px 15px no-repeat;
   padding-right: 300px;
 }
 
 .org_map li > ol > li:last-child {
-  background: #fff url(/static/images/insa/line_org_03.png) 106px 0 no-repeat;
+  background: #fff url(../images/insa/line_org_03.png) 106px 0 no-repeat;
 }
 
 .org_map .menu {
@@ -229,7 +207,7 @@
   float: right;
   height: 30px;
   padding: 0 8px 0 23px;
-  background: url(/static/images/insa/org_people.png) 7px 9px no-repeat;
+  background: url(../images/insa/org_people.png) 7px 9px no-repeat;
 }
 
 .org_map .menu_all {
@@ -238,18 +216,18 @@
   padding: 0 6px;
   width: 20px;
   height: 30px;
-  background: url(/static/images/insa/org_menu.png) 50% 50% no-repeat;
+  background: url(../images/insa/org_menu.png) 50% 50% no-repeat;
   margin-right: 6px;
   position: relative;
   cursor: pointer;
 }
 
 .org_map .wrap1 .people:hover {
-  background: #cbd5e0 url(/static/images/insa/org_people_on.png) 7px 9px no-repeat;
+  background: #cbd5e0 url(../images/insa/org_people_on.png) 7px 9px no-repeat;
 }
 
 .org_map .wrap1 .menu_all:hover {
-  background: #cbd5e0 url(/static/images/insa/org_menu_on.png) 50% 50% no-repeat;
+  background: #cbd5e0 url(../images/insa/org_menu_on.png) 50% 50% no-repeat;
 }
 
 .org_map .menu_all .sub {
@@ -277,24 +255,24 @@
   color: #000;
 }
 
-/* .org_map .menu_all .sub .ggori { display:block; position:absolute; left:69px; top:-5px; width:7px; height:6px; background:url(/static/images/insa/org_ggori.png) no-repeat; }*/
+/* .org_map .menu_all .sub .ggori { display:block; position:absolute; left:69px; top:-5px; width:7px; height:6px; background:url(../images/insa/org_ggori.png) no-repeat; }*/
 .org_map .menu_all .sub .ss.v1 {
-  background-image: url(/static/images/insa/icon_org_ss1.png);
+  background-image: url(../images/insa/icon_org_ss1.png);
   background-position: 13px 9px;
 }
 
 .org_map .menu_all .sub .ss.v2 {
-  background-image: url(/static/images/insa/icon_org_ss4.png);
+  background-image: url(../images/insa/icon_org_ss4.png);
   background-position: 12px 9px;
 }
 
 .org_map .menu_all .sub .ss.v3 {
-  background-image: url(/static/images/insa/icon_org_ss3.png);
+  background-image: url(../images/insa/icon_org_ss3.png);
   background-position: 12px 7px;
 }
 
 .org_map .menu_all .sub .ss.v4 {
-  background-image: url(/static/images/insa/icon_org_ss2.png);
+  background-image: url(../images/insa/icon_org_ss2.png);
   background-position: 12px 9px;
 }
 
@@ -305,7 +283,7 @@
 .org_map .move_group > a {
   display: block;
   position: absolute;
-  background-image: url(/static/images/insa/spr_insa_icon.png);
+  background-image: url(../images/insa/spr_insa_icon.png);
 }
 
 .org_map .move_group .left {
@@ -351,6 +329,7 @@
   border-radius: 2px;
   background: #fff;
   display: none;
+  box-sizing: content-box;
 }
 
 .org_map .name_modify input[type=text] {
@@ -368,7 +347,7 @@
   width: 28px;
   height: 28px;
   vertical-align: top;
-  background: url(/static/images/insa/spr_insa_icon.png) -182px 8px no-repeat;
+  background: url(../images/insa/spr_insa_icon.png) -182px 8px no-repeat;
 }
 
 .contents_insa {
@@ -497,7 +476,7 @@
   height: 13px;
   padding: 0;
   vertical-align: middle;
-  background: url(/static/images/insa/spr_insa_icon.png) 0 0 no-repeat;
+  background: url(../images/insa/spr_insa_icon.png) 0 0 no-repeat;
 }
 
 .move_list.sp1 {
@@ -686,7 +665,7 @@
 
 .insa_layer_cont1 .cont {
   padding: 0 40px 0 0;
-  background: url(/static/images/insa/arrow_up.png) 100% 26px no-repeat;
+  background: url(../images/insa/arrow_up.png) 100% 26px no-repeat;
 }
 
 .insa_layer_cont1 .txt1 {
@@ -708,7 +687,7 @@
   display: inline-block;
   width: 26px;
   height: 26px;
-  background: url(/static/images/insa/spr_insa_icon.png) -9px 1px no-repeat;
+  background: url(../images/insa/spr_insa_icon.png) -9px 1px no-repeat;
 }
 
 a.updown {
@@ -721,7 +700,7 @@ a.updown .up {
   height: 4px;
   vertical-align: middle;
   margin-left: 4px;
-  background: url(/static/images/insa/spr_insa_icon.png) -40px 0 no-repeat;
+  background: url(../images/insa/spr_insa_icon.png) -40px 0 no-repeat;
 }
 
 a.updown .down {
@@ -730,7 +709,7 @@ a.updown .down {
   height: 4px;
   vertical-align: middle;
   margin-left: 4px;
-  background: url(/static/images/insa/spr_insa_icon.png) -50px 0 no-repeat;
+  background: url(../images/insa/spr_insa_icon.png) -50px 0 no-repeat;
 }
 
 table.sub_table1 {
@@ -1215,7 +1194,7 @@ textarea.textbox_insa {
 .list_insa_t1 > li {
   float: left;
   padding: 0 0 0 1px;
-  background: url(/static/images/insa/bar_insa_01.png) 0 50% no-repeat;
+  background: url(../images/insa/bar_insa_01.png) 0 50% no-repeat;
 }
 
 .list_insa_t1 > li:first-child {

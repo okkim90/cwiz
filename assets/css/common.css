@@ -4057,6 +4057,14 @@ input[type=password] {
   font-family: "large Verdana", "Verdana", sans-serif;
   letter-spacing: 1px;
 }
+input[type=password]::-moz-placeholder {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 0;
+}
+input[type=password]::placeholder {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 0;
+}
 
 input[type=radio],
 input[type=checkbox] {
@@ -4084,12 +4092,14 @@ textarea:focus {
   outline: none;
 }
 
-::-moz-placeholder {
+*::-moz-placeholder {
+  font-family: "Noto Sans KR", sans-serif;
   font-size: inherit;
   color: rgba(0, 0, 0, 0.4);
 }
 
-::placeholder {
+*::placeholder {
+  font-family: "Noto Sans KR", sans-serif;
   font-size: inherit;
   color: rgba(0, 0, 0, 0.4);
 }

@@ -16,7 +16,7 @@
 .Pl25 { padding-left:25px !important; }
 .Mt35 { margin-top:35px !important; }
 
-.spr_insa { background-image:url(/static/images/insa/spr_insa_icon.png); background-repeat:no-repeat; }
+.spr_insa { background-image:url(../images/insa/spr_insa_icon.png); background-repeat:no-repeat; }
 
 .gray_02 { color:#333 !important; }
 .gray_03 { color:#666 !important; }
@@ -40,62 +40,39 @@
 .org_map_header>li:nth-child(10) { left:2229px; }
 .org_map_header>li:nth-child(11) { left:2475px; }
 
-.org_map {
-    position: relative;
-    &::before {
-        content:'';
-        position: absolute;
-        width: 1px;
-        height: 100%;
-        background-color: #222;
-        left: 106px;
 
-    }
-}
-.org_map .wrap1 { height:30px; width:225px; background:#e8ecef; line-height:28px; cursor:text; position:relative; border-radius:2px; }
-.org_map .wrap1:hover {}
+.org_map .wrap1 { height:30px; width:225px; background:#e8ecef; line-height:28px; cursor:text; position:relative; border-radius:2px;}
+
 .org_map .wrap1 .name { display:inline-block; width: 127px;padding:0 8px; height:30px; letter-spacing:-1px; overflow:hidden; text-overflow: ellipsis; word-break:break-all; white-space: nowrap;}
 
 .org_map .wrap1 .name:hover { background:#cbd5e0; }
-.org_map .noDepth { height:30px; width:225px; position:relative; cursor:default; background:#fff url(/static/images/insa/line_org_01.png) 0 15px no-repeat; }
+.org_map .noDepth { height:30px; width:225px; position:relative; cursor:default; background:#fff url(../images/insa/line_org_01.png) 0 15px no-repeat; }
 .org_map li { margin-top:15px; }
-.org_map ol { margin-top:-45px; min-width:225px; background:url(/static/images/insa/line_org_02.png) 106px 0 repeat-y; 
-    position: relative;
-    box-sizing: content-box;
-    &::before {
-        content:'';
-        position: absolute;
-        width: 1px;
-        height: 100%;
-        background-color: #222;
-        left: 106px;
-
-    }
-}
-.org_map li>ol>li { padding-left:249px; background:url(/static/images/insa/line_org_01.png) 106px 15px no-repeat; padding-right:300px;}
-.org_map li>ol>li:last-child { background:#fff url(/static/images/insa/line_org_03.png) 106px 0 no-repeat; }
+.org_map ol { margin-top:-45px; min-width:225px; background:url(../images/insa/line_org_02.png) 106px 0 repeat-y; }
+.org_map li>ol>li { padding-left:249px; background:url(../images/insa/line_org_01.png) 106px 15px no-repeat; padding-right:300px;}
+.org_map li>ol>li:last-child { background:#fff url(../images/insa/line_org_03.png) 106px 0 no-repeat; }
 .org_map .menu { position:absolute; right:0; top:0; }
-.org_map .people { display:block; float:right; height:30px; padding:0 8px 0 23px; background:url(/static/images/insa/org_people.png) 7px 9px no-repeat; }
-.org_map .menu_all { display:block; float:right;padding: 0 6px; width:20px; height:30px; background:url(/static/images/insa/org_menu.png) 50% 50% no-repeat; margin-right:6px; position:relative; cursor:pointer; }
-.org_map .wrap1 .people:hover { background:#cbd5e0 url(/static/images/insa/org_people_on.png) 7px 9px no-repeat;}
-.org_map .wrap1 .menu_all:hover { background:#cbd5e0 url(/static/images/insa/org_menu_on.png) 50% 50% no-repeat; }
+.org_map .people { display:block; float:right; height:30px; padding:0 8px 0 23px; background:url(../images/insa/org_people.png) 7px 9px no-repeat; }
+.org_map .menu_all { display:block; float:right;padding: 0 6px; width:20px; height:30px; background:url(../images/insa/org_menu.png) 50% 50% no-repeat; margin-right:6px; position:relative; cursor:pointer; }
+.org_map .wrap1 .people:hover { background:#cbd5e0 url(../images/insa/org_people_on.png) 7px 9px no-repeat;}
+.org_map .wrap1 .menu_all:hover { background:#cbd5e0 url(../images/insa/org_menu_on.png) 50% 50% no-repeat; }
 .org_map .menu_all .sub { display:block; position:absolute; left:-70px; top:25px; width:143px; padding:12px 0; border:1px #cbcdcc solid; background:#fdfdfd; display:none; }
 .org_map .menu_all .sub .ss { display:block; vertical-align:top; height:30px; padding:0 0 0 35px; background-repeat:no-repeat; }
 .org_map .menu_all .sub .ss:hover { background-color:#e8ecee; color:#000; }
-/* .org_map .menu_all .sub .ggori { display:block; position:absolute; left:69px; top:-5px; width:7px; height:6px; background:url(/static/images/insa/org_ggori.png) no-repeat; }*/
-.org_map .menu_all .sub .ss.v1 { background-image:url(/static/images/insa/icon_org_ss1.png); background-position:13px 9px; }
-.org_map .menu_all .sub .ss.v2 { background-image:url(/static/images/insa/icon_org_ss4.png); background-position:12px 9px; }
-.org_map .menu_all .sub .ss.v3 { background-image:url(/static/images/insa/icon_org_ss3.png); background-position:12px 7px; }
-.org_map .menu_all .sub .ss.v4 { background-image:url(/static/images/insa/icon_org_ss2.png); background-position:12px 9px; }
+/* .org_map .menu_all .sub .ggori { display:block; position:absolute; left:69px; top:-5px; width:7px; height:6px; background:url(../images/insa/org_ggori.png) no-repeat; }*/
+.org_map .menu_all .sub .ss.v1 { background-image:url(../images/insa/icon_org_ss1.png); background-position:13px 9px; }
+.org_map .menu_all .sub .ss.v2 { background-image:url(../images/insa/icon_org_ss4.png); background-position:12px 9px; }
+.org_map .menu_all .sub .ss.v3 { background-image:url(../images/insa/icon_org_ss3.png); background-position:12px 7px; }
+.org_map .menu_all .sub .ss.v4 { background-image:url(../images/insa/icon_org_ss2.png); background-position:12px 9px; }
 .org_map .move_group { display:none; }
-.org_map .move_group>a { display:block; position:absolute; background-image:url(/static/images/insa/spr_insa_icon.png); }
+.org_map .move_group>a { display:block; position:absolute; background-image:url(../images/insa/spr_insa_icon.png); }
 .org_map .move_group .left { left:-18px; top:0; width:18px; height:30px; background-position:-68px 8px; }
 .org_map .move_group .right { right:-18px; top:0; width:18px; height:30px; background-position:-98px 8px; }
 .org_map .move_group .bottom { left:97px; top:29px; width:19px; height:17px; background-position:-128px 2px; }
 .org_map .move_group .top { left:97px; top:-18px; width:19px; height:17px; background-position:-158px 2px; }
-.org_map .name_modify { position:absolute; left:0; top:0; width:223px; height:28px; line-height:0; border:1px #cbcdcc solid; border-radius:2px; background:#fff; display:none; }
+.org_map .name_modify { position:absolute; left:0; top:0; width:223px; height:28px; line-height:0; border:1px #cbcdcc solid; border-radius:2px; background:#fff; display:none; box-sizing: content-box }
 .org_map .name_modify input[type='text'] { float:left; border:none; height:28px; padding:0 7px; width:174px; letter-spacing:-1px; }
-.org_map .name_modify .btn_enter { float:left; display:inline-block; width:28px; height:28px; vertical-align:top; background:url(/static/images/insa/spr_insa_icon.png) -182px 8px no-repeat; }
+.org_map .name_modify .btn_enter { float:left; display:inline-block; width:28px; height:28px; vertical-align:top; background:url(../images/insa/spr_insa_icon.png) -182px 8px no-repeat; }
 
 
 .contents_insa { padding:30px 25px; min-width:733px; }
@@ -125,7 +102,7 @@
 .insa-position.gon2 td {padding-top: 10px;word-break: normal; line-height: 1.8}
 .insa-position.gon td.last_space { text-align:right; padding-right:25px; }
 .insa-position th { cursor:default; }
-.move_list { display:none; width:5px; height:13px; padding:0; vertical-align:middle; background:url(/static/images/insa/spr_insa_icon.png) 0 0 no-repeat; }
+.move_list { display:none; width:5px; height:13px; padding:0; vertical-align:middle; background:url(../images/insa/spr_insa_icon.png) 0 0 no-repeat; }
 .move_list.sp1 { margin-left:12px; }
 .move_list.sp2 { margin-right:4px; }
 .move_list.view { display:inline-block; }
@@ -169,15 +146,15 @@
 .item_down { display: inline-block; width: 23px; height: 19px;  background: url(/static/ui/images/sp_icon.png) -353px -65px no-repeat; }
 
 .insa_layer_cont1 { position:relative; }
-.insa_layer_cont1 .cont { padding:0 40px 0 0; background:url(/static/images/insa/arrow_up.png) 100% 26px no-repeat; }
+.insa_layer_cont1 .cont { padding:0 40px 0 0; background:url(../images/insa/arrow_up.png) 100% 26px no-repeat; }
 .insa_layer_cont1 .txt1 { position:absolute; right:8px; top:80px; font-size:12px; line-height:1.3em; color:#939baa; }
 .cont_i1 { padding:0 0 6px; margin-top:-10px; text-align:right; }
 
-.icon_excel_down { display: inline-block; width: 26px; height: 26px; background:url(/static/images/insa/spr_insa_icon.png) -9px 1px no-repeat; }
+.icon_excel_down { display: inline-block; width: 26px; height: 26px; background:url(../images/insa/spr_insa_icon.png) -9px 1px no-repeat; }
 
 a.updown { color:#444; }
-a.updown .up { display:inline-block; width:7px; height:4px; vertical-align:middle; margin-left:4px; background:url(/static/images/insa/spr_insa_icon.png) -40px 0 no-repeat;  }
-a.updown .down { display:inline-block; width:7px; height:4px; vertical-align:middle;  margin-left:4px;background:url(/static/images/insa/spr_insa_icon.png) -50px 0 no-repeat;  }
+a.updown .up { display:inline-block; width:7px; height:4px; vertical-align:middle; margin-left:4px; background:url(../images/insa/spr_insa_icon.png) -40px 0 no-repeat;  }
+a.updown .down { display:inline-block; width:7px; height:4px; vertical-align:middle;  margin-left:4px;background:url(../images/insa/spr_insa_icon.png) -50px 0 no-repeat;  }
 
 table.sub_table1 { width:100%; table-layout:Fixed; }
 table.sub_table1>tbody>tr>td { border-bottom:none; border-top:1px #dedede solid; }
@@ -287,7 +264,7 @@ textarea.textbox_insa { padding:4px; line-height:1.4em; }
 .btn_insa_top1 { padding-bottom:20px; }
 
 .list_insa_t1 { font-size:16px; line-height:20px; letter-spacing:-1px; overflow:Hidden; zoom:1; }
-.list_insa_t1>li { float:left; padding:0  0 0 1px; background:url(/static/images/insa/bar_insa_01.png) 0 50% no-repeat; }
+.list_insa_t1>li { float:left; padding:0  0 0 1px; background:url(../images/insa/bar_insa_01.png) 0 50% no-repeat; }
 .list_insa_t1>li:first-child { padding-left:0; background-image:none; }
 .list_insa_t1>li>a { display:block; vertical-align:top; padding:0 19px 1px;  color:#0667c5; }
 .list_insa_t1>li:first-child>a { padding-left:0; }

@@ -190,6 +190,10 @@ input[type="password"] {
     -webkit-text-security: disc;
     font-family: "large Verdana", "Verdana", sans-serif;
     letter-spacing: 1px;
+    &::placeholder {
+        font-family: $font;
+        letter-spacing: 0;
+    }
 }
 
 input[type="radio"],
@@ -223,10 +227,12 @@ textarea:focus {
 
 ::-webkit-input-placeholder {
     font-size: inherit;
+    font-family: $font;
     color: rgba(#000,.4);
 }
 
-::placeholder {
+*::placeholder {
+    font-family: $font;
     font-size: inherit;
     color: rgba(#000,.4);
 }
