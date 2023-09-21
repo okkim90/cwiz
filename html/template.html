@@ -299,6 +299,116 @@
                 <h2 class="tit2 mb15">TITKE2 중타이틀 중타이틀 중타이틀 (18px)</h2>
                 <h3 class="tit3 mb10">TITKE3 소타이틀 소타이틀 소타이틀 (16px)</h3>
 
+
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">툴팁</h2>
+                    </div>
+                    <!-- tooltip -->
+                    <div class="f_tooltip">
+                        <i class="f_tooltip_ico fa-solid fa-circle-info"></i>
+                        <div class="f_tooltip_cont">
+                            선택한 연도 1월1일부터 오늘까지 조회됩니다. <br> 
+                            연간 조회 시 검색 조건은 1개 이상 입력하셔야합니다.
+                        </div>
+                    </div>
+                    <!--// tooltip -->
+                    <br><br>
+                    <div class="v_tbl_wrap">
+                        <table class="v_tbl">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 160px;">
+                                    <col>
+                                    <col style="width: 160px;">
+                                    <col>
+                                    <col style="width: 160px;">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>기간 조회  
+                                        <div class="f_tooltip">
+                                            <i class="f_tooltip_ico fa-solid fa-circle-info"></i>
+                                            <div class="f_tooltip_cont">
+                                                선택한 연도 1월1일부터 오늘까지 조회됩니다. <br> 
+                                                연간 조회 시 검색 조건은 1개 이상 입력하셔야합니다.
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td colspan="5">
+                                        <div class="date_set">
+                                            <select name="" id="" class="f_select ty_small">
+                                                <option value="">접수일</option>
+                                                <option value="">기간 선택 2</option>
+                                                <option value="">기간 선택 3</option>
+                                                <option value="">기간 선택 4</option>
+                                            </select>
+                                            <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
+                                            <input type="text" class="f_input ty_small inp_date date_end" readonly>
+                                            <button type="button" onclick="set_today(this);" class="f_btn ty_xsmall _round _red_op w_50">오늘</button>
+                                            <button type="button" onclick="set_7d(this)" class="f_btn ty_xsmall _round _key_op w_50">7일</button>
+                                            <button type="button" onclick="set_1m(this)" class="f_btn ty_xsmall _round _green_op w_50">1개월</button>
+                                            <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _blue_op w_50">3개월</button>
+                                            <button type="button" onclick="set_1y(this)" class="f_btn ty_xsmall _round _purple_op w_50">1년</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>업체명
+                                        <div class="f_tooltip">
+                                            <i class="f_tooltip_ico fa-solid fa-circle-info"></i>
+                                            <div class="f_tooltip_cont">
+                                                선택한 연도 1월1일부터 오늘까지 조회됩니다. <br> 
+                                                연간 조회 시 검색 조건은 1개 이상 입력하셔야합니다.
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                    <th>신청자
+                                        <div class="f_tooltip">
+                                            <i class="f_tooltip_ico fa-solid fa-circle-info"></i>
+                                            <div class="f_tooltip_cont">
+                                                선택한 연도 1월1일부터 오늘까지 조회됩니다. <br> 
+                                                연간 조회 시 검색 조건은 1개 이상 입력하셔야합니다.
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                    <th>접수자</th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                </tr>
+                                <tr>
+                                    <th>접수번호</th>
+                                    <td>
+                                        <input type="text" class="f_input ty_small w_100"> - <input type="text" class="f_input ty_small w_100">
+                                    </td>
+                                    <th>교정번호</th>
+                                    <td>
+                                        <input type="text" class="f_input ty_small w_100"> - <input type="text" class="f_input ty_small w_100">
+                                    </td>
+                                    <th>기기번호</th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                </tr>
+                                <tr >
+                                    <th>계측기명</th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                    <th>모델명</th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                    <th>관리번호</th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                </tr>
+                                <tr>
+                                    <th>제조사</th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                    <th>주소</th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                    <th>비고</th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                </section>
                 <section class="sec">
                     <div class="sec_tit">
                         <h2 class="tit2">Key Colors</h2>

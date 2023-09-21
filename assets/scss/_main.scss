@@ -75,17 +75,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background-color: rgba($c_key, .1);
+            img {
+                height: 32px;
+            }
         }
         .txt_box {
             padding-left: 15px;
             .count {
                 display: block;
-                font-size: 36px;
+                font-size: 32px;
                 line-height: 42px;
+                letter-spacing: -0.01em;
                 font-weight: bold;
                 font-family: 'Roboto';
                 position: relative;

@@ -337,84 +337,76 @@ function num_up(target){
 
 /* 카운트 이벤트 */
 
-let delay = 300;
-let delay2 = 500;
-let dur = 500;
-let dur2 = 700;
+// let delay = 300;
+// let delay2 = 500;
+// let dur = 500;
+// let dur2 = 700;
 
 
-function count_wrap(target){
-    target.each(function(i){
-        //$(this).width($(this).width());
-        if($(this).hasClass('percent')){
-            $(this).delay(delay2 + 300).animate(
-                {
-                    Counter: $(this).data('value'),
-                },
-                {
-                    duration: dur2,
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).html(now.toFixed(1));
-                    },
-                }
-            );
-        }else{
-            $(this).animate(
-                {
-                    Counter: $(this).data('value'),
-                },
-                {
-                    duration: 1000,
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).html(commaSeparateNumber(Math.ceil(now)));
-                    },
-                }
-            );
-        }
-    });
-}
+// function count_wrap(target){
+//     target.each(function(i){
+//         //$(this).width($(this).width());
+//         if($(this).hasClass('percent')){
+//             $(this).delay(delay2 + 300).animate(
+//                 {
+//                     Counter: $(this).data('value'),
+//                 },
+//                 {
+//                     duration: dur2,
+//                     easing: 'swing',
+//                     step: function (now) {
+//                         $(this).html(now.toFixed(1));
+//                     },
+//                 }
+//             );
+//         }else{
+//             $(this).animate(
+//                 {
+//                     Counter: $(this).data('value'),
+//                 },
+//                 {
+//                     duration: 1000,
+//                     easing: 'swing',
+//                     step: function (now) {
+//                         $(this).html( commaSeparateNumber(Math.ceil(now)) );
+//                     },
+//                 }
+//             );
+//         }
+//     });
+// }
 
-/* 콤마찍기 */
-function commaSeparateNumber(val){
-    while (/(\d+)(\d{3})/.test(val.toString())){
-      val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-    }
-    return val;
-}
-
-// function f_search(target){
-//     let $this = $(target);
-//     let $parent = $this.parents('.f_search');
-//     if($this.val()){
-//         $parent.addClass('on');
-//     }else{
-//         $parent.removeClass('on');
+// /* 콤마찍기 */
+// function commaSeparateNumber(val){
+//     while (/(\d+)(\d{3})/.test(val.toString())){
+//       val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 //     }
+//     return val;
 // }
 
 
 
-$(function(){
-    let count_box = $('.count');
-    /* 카운트박스 영역 잡기 */
 
-    $('.sizing_box').each(function(){
-        let count_box = $(this).parents('.count');
-        let count_val = count_box.data('value');
-        let count_val_comma =  commaSeparateNumber(count_val);
-        $(this).html(count_val_comma);
-        //console.log(count_val_comma);
 
-        let width = $(this).width();
-        $(this).parents('.count').width(width);
-    });
-    $(window).on('load',function(){
-        count_wrap(count_box)
-    });
+// $(function(){
+//     let count_box = $('.count');
+//     /* 카운트박스 영역 잡기 */
+
+//     $('.sizing_box').each(function(){
+//         let count_box = $(this).parents('.count');
+//         let count_val = count_box.data('value');
+//         let count_val_comma =  commaSeparateNumber(count_val);
+//         $(this).html(count_val_comma);
+//         //console.log(count_val_comma);
+
+//         // let width = $(this).width();
+//         // $(this).parents('.count').width(width);
+//     });
+//     $(window).on('load',function(){
+//         count_wrap(count_box)
+//     });
     
-});
+// });
 
 function f_alert_open() {
     document.querySelector('.f_alert_box').classList.add('on');
