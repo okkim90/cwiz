@@ -1837,6 +1837,26 @@
   width: 1000px;
 }
 
+.w_5 {
+  width: 5px;
+}
+
+.w_10 {
+  width: 10px;
+}
+
+.w_15 {
+  width: 15px;
+}
+
+.w_20 {
+  width: 20px;
+}
+
+.w_25 {
+  width: 25px;
+}
+
 .w_10 {
   width: 10px;
 }
@@ -4745,23 +4765,48 @@ input::-webkit-search-results-decoration {
   background-position: center center;
   transition: all 0.25s ease;
 }
+.sidenav .nav .btn_dep1 .ico_dep1::before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+}
 .sidenav .nav .btn_dep1 .ico_dep1.ty_menu1 {
   background-image: url(../images/common/ico_menu1.svg);
+}
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu1::before {
+  content: url(../images/common/ico_menu1_on.svg);
 }
 .sidenav .nav .btn_dep1 .ico_dep1.ty_menu2 {
   background-image: url(../images/common/ico_menu2.svg);
 }
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu2::before {
+  content: url(../images/common/ico_menu2_on.svg);
+}
 .sidenav .nav .btn_dep1 .ico_dep1.ty_menu3 {
   background-image: url(../images/common/ico_menu3.svg);
+}
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu3::before {
+  content: url(../images/common/ico_menu3_on.svg);
 }
 .sidenav .nav .btn_dep1 .ico_dep1.ty_menu4 {
   background-image: url(../images/common/ico_menu4.svg);
 }
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu4::before {
+  content: url(../images/common/ico_menu4_on.svg);
+}
 .sidenav .nav .btn_dep1 .ico_dep1.ty_menu5 {
   background-image: url(../images/common/ico_menu5.svg);
 }
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu5::before {
+  content: url(../images/common/ico_menu5_on.svg);
+}
 .sidenav .nav .btn_dep1 .ico_dep1.ty_menu6 {
   background-image: url(../images/common/ico_menu6.svg);
+}
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu6::before {
+  content: url(../images/common/ico_menu6_on.svg);
 }
 .sidenav .nav .btn_dep1::after {
   transition: all 0.25s ease;
@@ -5600,6 +5645,49 @@ input::-webkit-search-results-decoration {
   font-weight: normal;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.11);
   text-align: left;
+}
+
+.status_box {
+  position: relative;
+  cursor: default;
+}
+.status_box:hover .status_box_date {
+  opacity: 1;
+  visibility: visible;
+}
+.status_box_ico {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.status_box_ico.ico_release {
+  background-image: url(../images/common/ico_release.svg);
+}
+.status_box_ico.ico_release.on {
+  background-image: url(../images/common/ico_release_on.svg);
+}
+.status_box_ico.ico_accept {
+  background-image: url(../images/common/ico_accept.svg);
+}
+.status_box_ico.ico_accept.on {
+  background-image: url(../images/common/ico_accept_on.svg);
+}
+.status_box_date {
+  transition: all 0.1s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  font-size: 11px;
+  line-height: 22px;
+  white-space: nowrap;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #DDDDDD;
+  z-index: 10;
+  right: 0;
+  top: 100%;
+  padding: 0 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .layer_popup {

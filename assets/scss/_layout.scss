@@ -554,24 +554,11 @@
                         bottom: 0;
                     }
                     .ico_dep1 {
-                        &.ty_menu1 {
-                            background-image: url(../images/common/ico_menu1_on.svg);
-                         }
-                         &.ty_menu2 {
-                             background-image: url(../images/common/ico_menu2_on.svg);            
-                         }
-                         &.ty_menu3 {
-                             background-image: url(../images/common/ico_menu3_on.svg);          
-                         }
-                         &.ty_menu4 {
-                             background-image: url(../images/common/ico_menu4_on.svg);
-                         }
-                         &.ty_menu5 {
-                             background-image: url(../images/common/ico_menu5_on.svg);
-                         }
-                         &.ty_menu6 {
-                             background-image: url(../images/common/ico_menu6_on.svg);
-                         }
+                        @for $i from 1 through 6 {
+                            &.ty_menu#{$i}{
+                                background-image: url(../images/common/ico_menu#{$i}_on.svg);
+                            }
+                        } 
                     }
                     &::after { 
                         color: $c_key;
@@ -610,26 +597,21 @@
                 background-repeat: no-repeat;
                 background-position: center center;
                 transition: all .25s ease;
-                
-                &.ty_menu1 {
-                   background-image: url(../images/common/ico_menu1.svg);
+                &::before{
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    overflow: hidden;
+                    z-index: -1;
                 }
-                &.ty_menu2 {
-                    background-image: url(../images/common/ico_menu2.svg);            
+                @for $i from 1 through 6 {
+                    &.ty_menu#{$i}{
+                        background-image: url(../images/common/ico_menu#{$i}.svg);
+                        &::before {
+                            content: url(../images/common/ico_menu#{$i}_on.svg);
+                        }
+                    }
                 }
-                &.ty_menu3 {
-                    background-image: url(../images/common/ico_menu3.svg);          
-                }
-                &.ty_menu4 {
-                    background-image: url(../images/common/ico_menu4.svg);
-                }
-                &.ty_menu5 {
-                    background-image: url(../images/common/ico_menu5.svg);
-                }
-                &.ty_menu6 {
-                    background-image: url(../images/common/ico_menu6.svg);
-                }
-
             }
             &::after {
                 transition: all .25s ease;
@@ -1544,5 +1526,50 @@
         font-weight: normal;
         box-shadow: 0 2px 8px rgba(#000, .11);
         text-align: left;
+    }
+}
+
+.status_box {
+    position: relative;
+    cursor: default;
+    &:hover {
+        .status_box_date {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &_ico {
+        display: block;
+        width: 20px;
+        height: 20px;
+        &.ico_release {
+            background-image: url(../images/common/ico_release.svg);
+            &.on {
+                background-image: url(../images/common/ico_release_on.svg);
+            }
+        }
+        &.ico_accept {
+            background-image: url(../images/common/ico_accept.svg);
+            &.on {
+                background-image: url(../images/common/ico_accept_on.svg);
+            }
+        }
+    }
+    &_date {
+        transition: all .1s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        font-size: 11px;
+        line-height: 22px;
+        white-space: nowrap;
+        background-color: #fff;
+        border-radius: 3px;
+        border: 1px solid $c_line;
+        z-index: 10;
+        right: 0;
+        top: 100%;
+        padding: 0 6px;
+        box-shadow: 0 0 10px rgba(#000, .3);
     }
 }

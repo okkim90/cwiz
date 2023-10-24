@@ -195,6 +195,13 @@ $inner: 1280px;
     }
 }
 
+@for $i from 1 through 5 {
+    $w : 5*$i;
+    .w_#{$w} {
+        width: #{$w}px
+    }
+}
+
 
 @for $i from 1 through 100 {
     $w : 10*$i;

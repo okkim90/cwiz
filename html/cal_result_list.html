@@ -363,9 +363,12 @@
                 <section class="sec">
                     <div class="sub_tit2 mb10 d_flex al_b">
                         <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
-                        <div class="sub_tit_btns btn_set">
+                        <div class="sub_tit_btns btn_set ai_c">
+                            <button type="button" class="f_btn ty_small _green btn_down2">엑셀 다운</button>
+                            |
                             <button type="button" class="f_btn ty_small _blue btn_down2">국문 다운</button>
                             <button type="button" class="f_btn ty_small _red btn_down2">영문 다운</button>
+                            <button type="button" class="f_btn ty_small _purple btn_down2">사외 다운</button>
                         </div>
                     </div>
                     <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
@@ -376,6 +379,7 @@
                                     <th class="th_fixed">교정번호</th>
                                     <th class="th_fixed">국문</th>
                                     <th class="th_fixed">영문</th>
+                                    <th class="th_fixed">사외</th>
                                     <th class="th_fixed">의뢰구분</th>
                                     <th class="th_fixed">계측기명</th>
                                     <th class="th_fixed">제조사</th>
@@ -388,17 +392,17 @@
                                     <th class="th_fixed">교정결과</th>
                                     <th class="th_fixed">교정담당</th>
                                     <th class="th_fixed">교정수수료</th>
+                                    <th class="th_fixed">
+                                        <div class="d_flex ai_c jc_c">
+                                            <span>출고</span>
+                                            <span class="w_15">|</span>
+                                            <span>수납</span>
+                                        </div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td colspan="16">
-                                        <div class="no_result_box">
-                                            <i class="fa-solid fa-magnifying-glass"></i>
-                                            <p class="mt10">검색 결과가 없습니다.</p>
-                                        </div>
-                                    </td>
-                                </tr>
+                                
                                 <tr>
                                     <td><input type="checkbox"></td>
                                     <td>
@@ -406,6 +410,9 @@
                                     </td>
                                     <td>
                                         <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
                                     </td>
                                     <td>
                                         <a href="" class="btn_down fc_blue"></a>
@@ -422,6 +429,21 @@
                                     <td>정상</td>
                                     <td>김강강</td>
                                     <td>19,000,000</td>
+                                    <td>
+                                        <div class="d_flex ai_c jc_c">
+                                            <span class="status_box">
+                                                <!--아이콘 활성화 일때  'on' class 추가-->
+                                                <span class="status_box_ico ico_release on"></span>
+                                                <span class="status_box_date">출고일 : 2023-10-24</span>
+                                            </span>
+                                            <span class="w_15">|</span>
+                                            <span class="status_box">
+                                                <!--아이콘 활성화 일때  'on' class 추가-->
+                                                <span class="status_box_ico ico_accept on"></span>
+                                                <span class="status_box_date">수납일 : 2023-10-24</span>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -430,6 +452,85 @@
                                     </td>
                                     <td>
                                         <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
+                                    </td>
+                                    <td></td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                    <td>    
+                                        <div class="d_flex ai_c jc_c">
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_release"></span>
+                                                <span class="status_box_date">출고일 : 2023-10-24</span>
+                                            </span>
+                                            <span class="w_15">|</span>
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_accept"></span>
+                                                <span class="status_box_date">수납일 : 2023-10-24</span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
+                                    </td>
+                                    <td></td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                    <td>    
+                                        <div class="d_flex ai_c jc_c">
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_release"></span>
+                                                <span class="status_box_date">출고일 : 2023-10-24</span>
+                                            </span>
+                                            <span class="w_15">|</span>
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_accept"></span>
+                                                <span class="status_box_date">수납일 : 2023-10-24</span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_red"></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_down fc_blue"></a>
                                     </td>
                                     <td>
                                         <a href="" class="btn_down fc_blue"></a>
@@ -446,6 +547,19 @@
                                     <td>정상</td>
                                     <td>김강강</td>
                                     <td>19,000,000</td>
+                                    <td>    
+                                        <div class="d_flex ai_c jc_c">
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_release on"></span>
+                                                <span class="status_box_date">출고일 : 2023-10-24</span>
+                                            </span>
+                                            <span class="w_15">|</span>
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_accept on"></span>
+                                                <span class="status_box_date">수납일 : 2023-10-24</span>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -458,6 +572,7 @@
                                     <td>
                                         <a href="" class="btn_down fc_blue"></a>
                                     </td>
+                                    <td></td>
                                     <td>교정</td>
                                     <td>피스톤식 피스톤식 부피계(디스펜서)</td>
                                     <td>TECHNICAL TECHNICAL&TRY</td>
@@ -470,6 +585,19 @@
                                     <td>정상</td>
                                     <td>김강강</td>
                                     <td>19,000,000</td>
+                                    <td>    
+                                        <div class="d_flex ai_c jc_c">
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_release on"></span>
+                                                <span class="status_box_date">출고일 : 2023-10-24</span>
+                                            </span>
+                                            <span class="w_15">|</span>
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_accept on"></span>
+                                                <span class="status_box_date">수납일 : 2023-10-24</span>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -482,6 +610,7 @@
                                     <td>
                                         <a href="" class="btn_down fc_blue"></a>
                                     </td>
+                                    <td></td>
                                     <td>교정</td>
                                     <td>피스톤식 피스톤식 부피계(디스펜서)</td>
                                     <td>TECHNICAL TECHNICAL&TRY</td>
@@ -494,6 +623,19 @@
                                     <td>정상</td>
                                     <td>김강강</td>
                                     <td>19,000,000</td>
+                                    <td>    
+                                        <div class="d_flex ai_c jc_c">
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_release"></span>
+                                                <span class="status_box_date">출고일 : 2023-10-24</span>
+                                            </span>
+                                            <span class="w_15">|</span>
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_accept"></span>
+                                                <span class="status_box_date">수납일 : 2023-10-24</span>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -506,6 +648,7 @@
                                     <td>
                                         <a href="" class="btn_down fc_blue"></a>
                                     </td>
+                                    <td></td>
                                     <td>교정</td>
                                     <td>피스톤식 피스톤식 부피계(디스펜서)</td>
                                     <td>TECHNICAL TECHNICAL&TRY</td>
@@ -518,6 +661,19 @@
                                     <td>정상</td>
                                     <td>김강강</td>
                                     <td>19,000,000</td>
+                                    <td>    
+                                        <div class="d_flex ai_c jc_c">
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_release"></span>
+                                                <span class="status_box_date">출고일 : 2023-10-24</span>
+                                            </span>
+                                            <span class="w_15">|</span>
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_accept"></span>
+                                                <span class="status_box_date">수납일 : 2023-10-24</span>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -530,6 +686,7 @@
                                     <td>
                                         <a href="" class="btn_down fc_blue"></a>
                                     </td>
+                                    <td></td>
                                     <td>교정</td>
                                     <td>피스톤식 피스톤식 부피계(디스펜서)</td>
                                     <td>TECHNICAL TECHNICAL&TRY</td>
@@ -542,78 +699,27 @@
                                     <td>정상</td>
                                     <td>김강강</td>
                                     <td>19,000,000</td>
+                                    <td>    
+                                        <div class="d_flex ai_c jc_c">
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_release"></span>
+                                                <span class="status_box_date">출고일 : 2023-10-24</span>
+                                            </span>
+                                            <span class="w_15">|</span>
+                                            <span class="status_box">
+                                                <span class="status_box_ico ico_accept"></span>
+                                                <span class="status_box_date">수납일 : 2023-10-24</span>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td>
-                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
+                                    <td colspan="18">
+                                        <div class="no_result_box">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <p class="mt10">검색 결과가 없습니다.</p>
+                                        </div>
                                     </td>
-                                    <td>
-                                        <a href="" class="btn_down fc_red"></a>
-                                    </td>
-                                    <td>
-                                        <a href="" class="btn_down fc_blue"></a>
-                                    </td>
-                                    <td>교정</td>
-                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
-                                    <td>TECHNICAL TECHNICAL&TRY</td>
-                                    <td>200,123 (0.01) mm</td>
-                                    <td>3P7900141</td>
-                                    <td>2023-03-28</td>
-                                    <td>박박박</td>
-                                    <td>계산대기</td>
-                                    <td>2023-03-28</td>
-                                    <td>정상</td>
-                                    <td>김강강</td>
-                                    <td>19,000,000</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td>
-                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                    </td>
-                                    <td>
-                                        <a href="" class="btn_down fc_red"></a>
-                                    </td>
-                                    <td>
-                                        <a href="" class="btn_down fc_blue"></a>
-                                    </td>
-                                    <td>교정</td>
-                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
-                                    <td>TECHNICAL TECHNICAL&TRY</td>
-                                    <td>200,123 (0.01) mm</td>
-                                    <td>3P7900141</td>
-                                    <td>2023-03-28</td>
-                                    <td>박박박</td>
-                                    <td>계산대기</td>
-                                    <td>2023-03-28</td>
-                                    <td>정상</td>
-                                    <td>김강강</td>
-                                    <td>19,000,000</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td>
-                                        <button type="button" class="btn_t_link" onclick="open_popup('pop_cal_view')">2300001-9</button>
-                                    </td>
-                                    <td>
-                                        <a href="" class="btn_down fc_red"></a>
-                                    </td>
-                                    <td>
-                                        <a href="" class="btn_down fc_blue"></a>
-                                    </td>
-                                    <td>교정</td>
-                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
-                                    <td>TECHNICAL TECHNICAL&TRY</td>
-                                    <td>200,123 (0.01) mm</td>
-                                    <td>3P7900141</td>
-                                    <td>2023-03-28</td>
-                                    <td>박박박</td>
-                                    <td>계산대기</td>
-                                    <td>2023-03-28</td>
-                                    <td>정상</td>
-                                    <td>김강강</td>
-                                    <td>19,000,000</td>
                                 </tr>
                             </tbody>
                         </table>
