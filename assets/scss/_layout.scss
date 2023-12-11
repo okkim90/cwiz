@@ -1555,6 +1555,7 @@
             }
         }
     }
+    
     &_date {
         transition: all .1s ease-in-out;
         opacity: 0;
@@ -1571,5 +1572,10 @@
         top: 100%;
         padding: 0 6px;
         box-shadow: 0 0 10px rgba(#000, .3);
+        @at-root tr:last-child & {
+            top: auto;
+            bottom: 50%;
+            right: 50%;
+        }
     }
 }

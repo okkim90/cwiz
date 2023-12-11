@@ -33,27 +33,60 @@
                     Your browser is not supported!
                 </video>
             </div>
-			<div class="login_box">
-                <div class="login_box_top">
-                    <div class="img_box">
-                        <img src="../assets/images/common/logo.svg" alt="코리아인스투르먼트(주)">
+			<div class="login_box ty_intro">
+                <div class="login_box_sec sec_left">
+                    <div class="login_box_top">
+                        <div class="img_box">
+                            <img src="../assets/images/common/logo.svg" alt="코리아인스투르먼트(주)">
+                        </div>
+                    </div>
+                    <form method="post" id="frm" action="" class="login_form">
+                        <label for="member_id" class="login_form_label">아이디</label>
+                        <input type="text" name="member_id" id="member_id" placeholder="아이디를 입력해주세요." class="f_input w100" value="">
+                        <label for="member_pw" class="login_form_label">비밀번호</label>
+                        <input type="password" name="member_pw" id="member_pw" placeholder="비밀번호를 입력하세요." class="f_input w100" value="">
+                        <input type="submit" value="로그인" class="f_btn ty_big _key w100">
+                    </form>
+                    <ul class="login_btns">
+                        <li><a href="login_id.html">아이디 찾기</a></li>
+                        <li><a href="login_pw.html">비밀번호 재설정</a></li>
+                    </ul>
+                    <div class="login_bot">
+                        <button type="button" class="f_btn ty_big _key_op w100">CMI ID 조회하기</button>
+                        <p class="msg_tel">시스템 이용 문의 : 1600-4245</p>
                     </div>
                 </div>
-                <form method="post" id="frm" action="" class="login_form">
-					<label for="member_id" class="login_form_label">아이디</label>
-                    <input type="text" name="member_id" id="member_id" placeholder="아이디를 입력해주세요." class="f_input w100" value="">
-					<label for="member_pw" class="login_form_label">비밀번호</label>
-                    <input type="password" name="member_pw" id="member_pw" placeholder="비밀번호를 입력하세요." class="f_input w100" value="">
-                    <input type="submit" value="로그인" class="f_btn ty_big _key w100">
-                </form>
-				<ul class="login_btns">
-					<li><a href="login_id.html">아이디 찾기</a></li>
-					<li><a href="login_pw.html">비밀번호 재설정</a></li>
-				</ul>
-				<div class="login_bot">
-					<a href="join_intro.html" class="f_btn ty_big _key_op w100">C-WIZ 신청하기</a>
-					<p class="msg_tel">시스템 이용 문의 : 1600-4245</p>
-				</div>
+                <div class="login_box_sec join_ad">
+                    <strong class="join_ad_tit">CWIZ는 교정관리 시스템입니다.</strong>
+                    <ul class="join_ad_list">
+                        <li>
+                            <div class="img_box"><img src="../assets/images/common/ico_login1.svg" alt=""></div>
+                            <p class="desc">실시간 교정 진행 조회</p>
+                        </li>
+                        <li>
+                            <div class="img_box"><img src="../assets/images/common/ico_login2.svg" alt=""></div>
+                            <p class="desc">온라인 교정 의뢰</p>
+                        </li>
+                        <li>
+                            <div class="img_box"><img src="../assets/images/common/ico_login3.svg" alt=""></div>
+                            <p class="desc">차기 교정일 확인</p>
+                        </li>
+                        <li>
+                            <div class="img_box"><img src="../assets/images/common/ico_login4.svg" alt=""></div>
+                            <p class="desc">온라인 견적 문의</p>
+                        </li>
+                        <li>
+                            <div class="img_box"><img src="../assets/images/common/ico_login5.svg" alt=""></div>
+                            <p class="desc">온라인 결제</p>
+                        </li>
+                        <li>
+                            <div class="img_box"><img src="../assets/images/common/ico_login6.svg" alt=""></div>
+                            <p class="desc">우리 장비 관리</p>
+                        </li>
+                    </ul>
+                    <p class="join_ad_info">아직 회원이 아니신가요? <br> 서비스 신청을 하시면 다양한 서비스 및 정보를 <br> 무료로 제공받을 수 있습니다.</p>
+                    <a href="join_intro.html" class="f_btn ty_big _key_op w100">C-WIZ 신청하기</a>
+                </div>
             </div>
 		</div>
     </main>
