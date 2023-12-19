@@ -134,6 +134,9 @@
             border: 1px solid $c_line;
             text-align: center;
             height: 3.02em;
+            &.wb_all {
+                word-break: break-all;
+            }
             &.taL {
                 text-align: left;
             }

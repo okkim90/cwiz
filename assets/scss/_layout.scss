@@ -1307,6 +1307,9 @@
     &.ty_bg {
         background-color: $c_bg_grey;
     }
+    &.ty_small {
+        height: 160px;
+    }
 
     i {
         font-size: 50px;

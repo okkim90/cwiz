@@ -11,17 +11,12 @@
         box-shadow: 0 4px 10px rgba(#000, .08);
         position: relative;
         min-height: 200px;
-        &_1, &_2 {
-            width: calc(50% - 10px);  
-        }
-        &_3 {
+       
+        
+        width: calc(50% - 10px);
+        
+        &.w100 {
             width: 100%;
-        }
-        &_4 {
-            width: calc(44% - 10px);
-        }
-        &_5 {
-            width: calc(56% - 10px);
         }
 
         @include list_col(3 ,16px, 40px);
