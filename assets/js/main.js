@@ -440,3 +440,36 @@ function f_alert_chk(target) {
     
 }
 
+function tr_chk(target){
+    //target.classList.add('on');
+   
+    let tr_chk = target.querySelector('.tr_chk');
+    if(tr_chk.type == 'checkbox'){
+
+    }
+    if(tr_chk.type == 'radio'){
+        
+        if(!tr_chk.checked){
+            tr_chk.checked = true;
+        }
+    }
+}
+const el_tr_chk = document.querySelectorAll('.tr_chk');
+
+function chk_ctrl(target){
+
+}
+
+
+el_tr_chk.forEach(e=>{
+    e.addEventListener('change',(event) =>{
+        //console.log(e.closest('tr'));
+        //event.stopPropagation();
+        //console.log('qkasdfasdf');
+        if(event.currentTarget.checked){
+            //event.currentTarget.closest('tr').classList.add('on');
+        }else{
+            //event.currentTarget.closest('tr').classList.remove('on');
+        }
+    })
+})

@@ -6295,6 +6295,7 @@ tr:last-child .status_box_date {
      -moz-user-select: none;
           user-select: none;
   vertical-align: middle;
+  gap: 4px;
 }
 .chk_item + .chk_item {
   position: relative;
@@ -6315,7 +6316,7 @@ tr:last-child .status_box_date {
   display: none;
 }
 .chk_item input[type=checkbox], .chk_item input[type=radio] {
-  margin-right: 4px;
+  cursor: pointer;
 }
 .chk_item input[type=checkbox]:checked ~ .input_toggle,
 .chk_item input[type=radio]:checked ~ .input_toggle {

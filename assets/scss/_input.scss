@@ -325,6 +325,7 @@
     cursor: pointer;
     user-select: none;
     vertical-align: middle;
+    gap: 4px;
     & + & {
         position: relative;
         padding-left: 10px;
@@ -344,7 +345,8 @@
         display: none;
     }
     input[type="checkbox"],  input[type="radio"] {
-        margin-right: 4px;
+        //margin-right: 4px;
+        cursor: pointer;
     }
     input[type="checkbox"]:checked,
     input[type="radio"]:checked {

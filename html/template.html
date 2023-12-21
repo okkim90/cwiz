@@ -276,7 +276,7 @@
         <!-- // nav -->
 
         <!--container-->
-        <main id="container" class="container">
+        <main id="container" class="container">ww
             <div id="contents" class="contents">
                 <a href="javascript:history.back()" class="btn_back"><span class="blind">뒤로가기</span></a>
                 <nav class="breadcrumb_area">
@@ -299,6 +299,175 @@
                 <h2 class="tit2 mb15">TITKE2 중타이틀 중타이틀 중타이틀 (18px)</h2>
                 <h3 class="tit3 mb10">TITKE3 소타이틀 소타이틀 소타이틀 (16px)</h3>
 
+                <section class="sec">
+                    <h3 class="tit2 mb15">팝업 모음</h3>
+                    <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_company1')">성적서 업체 검색</button>
+                    <!-- [팝업] 성적서 업체 검색 -->
+                    <div class="layer_popup popup_company1" onclick="close_popup(this)">
+                        <div class="layer_popup_inner">
+                            <div class="layer_popup_cont">
+                                <button type="button" class="close_popup" onclick="close_popup(this)">
+                                    <span class="blind">팝업 닫기</span>
+                                </button>
+                                <div class="sub_tit">
+                                    <h1 class="tit1">성적서 업체 검색</h1>
+                                </div>
+                                <section class="sec">
+                                    <div class="v_tbl_wrap">
+                                        <table class="v_tbl">
+                                            <tbody>
+                                                <colgroup>
+                                                    <col style="width: 15%;">
+                                                    <col>
+                                                    <col style="width: 15%;">
+                                                    <col>
+                                                    <col style="width: 15%;">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>업체명</th>
+                                                    <td><input type="text" class="f_input ty_small w100"></td>
+                                                    <th>주소</th>
+                                                    <td><input type="text" class="f_input ty_small w100"></td>
+                                                    <th>사업자번호</th>
+                                                    <td><input type="text" class="f_input ty_small w100"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table> 
+                                        <div class="btn_set taC mt30">
+                                            <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                            <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="sec">
+                                    <div class="sub_tit2 mb10 d_flex al_b">
+                                        <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                                        <select name="" id="" class="f_select ty_small w_80 ml20">
+                                            <option value="">10개</option>
+                                            <option value="">30개</option>
+                                            <option value="">50개</option>
+                                            <option value="">100개</option>
+                                        </select>
+                                    </div>
+                                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
+                                        <table class="h_tbl tl_fixed">
+                                            <colgroup>
+                                                <col style="width: 40px;">
+                                                <col>
+                                                <col>
+                                                <col style="width: 100px;">
+                                                <col style="width: 80px;">
+                                                <col style="width: 100px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="th_fixed"></th>
+                                                    <th class="th_fixed">업체명</th>
+                                                    <th class="th_fixed">주소</th>
+                                                    <th class="th_fixed">사업자번호</th>
+                                                    <th class="th_fixed">담당자</th>
+                                                    <th class="th_fixed">휴대폰번호</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <div class="no_result_box" style="height: 160px;">
+                                                            <i class="fa-solid fa-face-smile"></i>
+                                                            <p class="mt10">최근 문의가 없습니다.</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr onclick="tr_chk(this)">
+                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                    <td>111-22-33333</td>
+                                                    <td>권은비</td>
+                                                    <td>010-1234-1234</td>
+                                                </tr>
+                                                <tr onclick="tr_chk(this)">
+                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                    <td>111-22-33333</td>
+                                                    <td>권은비</td>
+                                                    <td>010-1234-1234</td>
+                                                </tr>
+                                                <tr onclick="tr_chk(this)">
+                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                    <td>111-22-33333</td>
+                                                    <td>권은비</td>
+                                                    <td>010-1234-1234</td>
+                                                </tr>
+                                                <tr onclick="tr_chk(this)">
+                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                    <td>111-22-33333</td>
+                                                    <td>권은비</td>
+                                                    <td>010-1234-1234</td>
+                                                </tr>
+                                                <tr onclick="tr_chk(this)">
+                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                    <td>111-22-33333</td>
+                                                    <td>권은비</td>
+                                                    <td>010-1234-1234</td>
+                                                </tr>
+                                                <tr onclick="tr_chk(this)">
+                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                    <td>111-22-33333</td>
+                                                    <td>권은비</td>
+                                                    <td>010-1234-1234</td>
+                                                </tr>
+                                                <tr onclick="tr_chk(this)">
+                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                    <td>111-22-33333</td>
+                                                    <td>권은비</td>
+                                                    <td>010-1234-1234</td>
+                                                </tr>
+                                                <tr onclick="tr_chk(this)">
+                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                    <td>111-22-33333</td>
+                                                    <td>권은비</td>
+                                                    <td>010-1234-1234</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="paging_wrap mt20">
+                                        <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                                        <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                                        <ul class="paging_list">
+                                            <li><span class="paging_btn current">1</span></li>
+                                            <li><a href="" class="paging_btn">2</a></li>
+                                            <li><a href="" class="paging_btn">3</a></li>
+                                            <li><a href="" class="paging_btn">4</a></li>
+                                            <li><a href="" class="paging_btn">5</a></li>
+                                        </ul>
+                                        <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                                        <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                                    </div>
+                                    <div class="btn_set taC mt30">
+                                        <input type="submit" value="선택" class="f_btn ty_mid _key w_100">
+                                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section class="sec">
                     <h3 class="tit2 mb15">문의하기</h3>
                     <div class="reply_wrap">
@@ -1857,7 +2026,7 @@
                                     <colgroup>
                                         <col style="width: 160px;">
                                         <col>
-                                        <col style="width: 160px;">
+                                       w <col style="width: 160px;">
                                         <col>
                                         <col style="width: 160px;">
                                         <col>
