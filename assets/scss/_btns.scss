@@ -51,6 +51,20 @@
     text-decoration: underline;
     color: $c_blue;
     font-size: 12px;
+    @at-root .v_tbl & {
+        font-size: inherit;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    @at-root .h_tbl & {
+        font-size: inherit;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 .btn_pdf {
     display: inline-block;
@@ -311,6 +325,15 @@
     text-align: center;
     line-height: 20px;
     border: 1px solid transparent;
+    font-weight: 500;
+    &.ty_small {
+        min-width: 30px;
+        padding: 0 4px;
+        font-size: 10px;
+        height: 18px;
+        line-height: 16px;
+        border-radius: 20px;
+    }
 }
 
 .tag_box {

@@ -214,15 +214,14 @@
     align-items: center;
     
     width: 100%;
+    gap: 5px;
     
     .no_shrink {
         flex-shrink: 0;
     }
-    .f_tag {
-        margin-right: 10px;
-    }
+    
     .tit {
-        
+        //flex: 1;
         min-width: 0;
         text-align: left;
         @include text-hidden-single 
@@ -230,13 +229,29 @@
          
     }
     .ico_file {
-        margin-left: 5px;
-        width: 20px;
-        height: 20px;
+        
+        width: 18px;
+        height: 18px;
         background-image: url(../images/common/ico_file.svg);
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: 14px;
     }   
+    .ico_comment {
+        display: inline-flex;
+        
+        gap: 3px;
+        align-items: center;
+        &::before {
+            content:'';
+            width: 18px;
+            height: 18px;
+            background-image: url(../images/common/ico_comment.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 14px;
+        }
+    }
 }
 
 .board_search_wrap {
