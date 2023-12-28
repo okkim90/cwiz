@@ -59,6 +59,8 @@
 
 
 .h_tbl {
+    position: relative;
+    z-index: 10;
     &_wrap {
         border: 1px solid $c_line;
         border-top: 1px solid #000;
@@ -119,10 +121,14 @@
                     cursor: default;
                 }
             }
+           
+            
+            
             &:hover {
                 background-color: rgba(rgb(249, 246, 61), .08);
                 cursor: pointer;
             }
+            
         }
         
 

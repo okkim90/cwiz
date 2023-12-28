@@ -301,171 +301,1275 @@
 
                 <section class="sec">
                     <h3 class="tit2 mb15">팝업 모음</h3>
-                    <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_company1')">성적서 업체 검색</button>
-                    <!-- [팝업] 성적서 업체 검색 -->
-                    <div class="layer_popup popup_company1" onclick="close_popup(this)">
-                        <div class="layer_popup_inner">
-                            <div class="layer_popup_cont">
-                                <button type="button" class="close_popup" onclick="close_popup(this)">
-                                    <span class="blind">팝업 닫기</span>
-                                </button>
-                                <div class="sub_tit">
-                                    <h1 class="tit1">성적서 업체 검색</h1>
-                                </div>
-                                <section class="sec">
-                                    <div class="v_tbl_wrap">
-                                        <table class="v_tbl">
-                                            <tbody>
-                                                <colgroup>
-                                                    <col style="width: 15%;">
-                                                    <col>
-                                                    <col style="width: 15%;">
-                                                    <col>
-                                                    <col style="width: 15%;">
-                                                    <col>
-                                                </colgroup>
-                                                <tr>
-                                                    <th>업체명</th>
-                                                    <td><input type="text" class="f_input ty_small w100"></td>
-                                                    <th>주소</th>
-                                                    <td><input type="text" class="f_input ty_small w100"></td>
-                                                    <th>사업자번호</th>
-                                                    <td><input type="text" class="f_input ty_small w100"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table> 
-                                        <div class="btn_set taC mt30">
-                                            <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
-                                            <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                    <div class="d_flex _gap10">
+                        <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_company1')">성적서 업체 검색</button>
+                        <!-- [팝업] 성적서 업체 검색 -->
+                        <div class="layer_popup popup_company1" onclick="close_popup(this)">
+                            <div class="layer_popup_inner">
+                                <div class="layer_popup_cont">
+                                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                                        <span class="blind">팝업 닫기</span>
+                                    </button>
+                                    <div class="sub_tit">
+                                        <h1 class="tit1">성적서 업체 검색</h1>
+                                    </div>
+                                    <section class="sec">
+                                        <div class="v_tbl_wrap">
+                                            <table class="v_tbl">
+                                                <tbody>
+                                                    <colgroup>
+                                                        <col style="width: 15%;">
+                                                        <col>
+                                                        <col style="width: 15%;">
+                                                        <col>
+                                                        <col style="width: 15%;">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>업체명</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>주소</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>사업자번호</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> 
+                                            <div class="btn_set taC mt30">
+                                                <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                                <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </section>
-                                <section class="sec">
-                                    <div class="sub_tit2 mb10 d_flex al_b">
-                                        <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
-                                        <select name="" id="" class="f_select ty_small w_80 ml20">
-                                            <option value="">10개</option>
-                                            <option value="">30개</option>
-                                            <option value="">50개</option>
-                                            <option value="">100개</option>
-                                        </select>
-                                    </div>
-                                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
-                                        <table class="h_tbl tl_fixed">
-                                            <colgroup>
-                                                <col style="width: 40px;">
-                                                <col>
-                                                <col>
-                                                <col style="width: 100px;">
-                                                <col style="width: 80px;">
-                                                <col style="width: 100px;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th class="th_fixed"></th>
-                                                    <th class="th_fixed">업체명</th>
-                                                    <th class="th_fixed">주소</th>
-                                                    <th class="th_fixed">사업자번호</th>
-                                                    <th class="th_fixed">담당자</th>
-                                                    <th class="th_fixed">휴대폰번호</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td colspan="6">
-                                                        <div class="no_result_box" style="height: 160px;">
-                                                            <i class="fa-solid fa-face-smile"></i>
-                                                            <p class="mt10">최근 문의가 없습니다.</p>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr onclick="tr_chk(this)">
-                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
-                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
-                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
-                                                    <td>111-22-33333</td>
-                                                    <td>권은비</td>
-                                                    <td>010-1234-1234</td>
-                                                </tr>
-                                                <tr onclick="tr_chk(this)">
-                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
-                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
-                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
-                                                    <td>111-22-33333</td>
-                                                    <td>권은비</td>
-                                                    <td>010-1234-1234</td>
-                                                </tr>
-                                                <tr onclick="tr_chk(this)">
-                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
-                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
-                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
-                                                    <td>111-22-33333</td>
-                                                    <td>권은비</td>
-                                                    <td>010-1234-1234</td>
-                                                </tr>
-                                                <tr onclick="tr_chk(this)">
-                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
-                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
-                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
-                                                    <td>111-22-33333</td>
-                                                    <td>권은비</td>
-                                                    <td>010-1234-1234</td>
-                                                </tr>
-                                                <tr onclick="tr_chk(this)">
-                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
-                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
-                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
-                                                    <td>111-22-33333</td>
-                                                    <td>권은비</td>
-                                                    <td>010-1234-1234</td>
-                                                </tr>
-                                                <tr onclick="tr_chk(this)">
-                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
-                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
-                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
-                                                    <td>111-22-33333</td>
-                                                    <td>권은비</td>
-                                                    <td>010-1234-1234</td>
-                                                </tr>
-                                                <tr onclick="tr_chk(this)">
-                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
-                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
-                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
-                                                    <td>111-22-33333</td>
-                                                    <td>권은비</td>
-                                                    <td>010-1234-1234</td>
-                                                </tr>
-                                                <tr onclick="tr_chk(this)">
-                                                    <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
-                                                    <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
-                                                    <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
-                                                    <td>111-22-33333</td>
-                                                    <td>권은비</td>
-                                                    <td>010-1234-1234</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="paging_wrap mt20">
-                                        <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
-                                        <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
-                                        <ul class="paging_list">
-                                            <li><span class="paging_btn current">1</span></li>
-                                            <li><a href="" class="paging_btn">2</a></li>
-                                            <li><a href="" class="paging_btn">3</a></li>
-                                            <li><a href="" class="paging_btn">4</a></li>
-                                            <li><a href="" class="paging_btn">5</a></li>
-                                        </ul>
-                                        <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
-                                        <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
-                                    </div>
-                                    <div class="btn_set taC mt30">
-                                        <input type="submit" value="선택" class="f_btn ty_mid _key w_100">
-                                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
-                                    </div>
-                                </section>
+                                    </section>
+                                    <section class="sec">
+                                        <div class="sub_tit2 mb10 d_flex al_b">
+                                            <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                                            <select name="" id="" class="f_select ty_small w_80 ml20">
+                                                <option value="">10개</option>
+                                                <option value="">30개</option>
+                                                <option value="">50개</option>
+                                                <option value="">100개</option>
+                                            </select>
+                                        </div>
+                                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
+                                            <table class="h_tbl tl_fixed">
+                                                <colgroup>
+                                                    <col style="width: 40px;">
+                                                    <col>
+                                                    <col>
+                                                    <col style="width: 100px;">
+                                                    <col style="width: 80px;">
+                                                    <col style="width: 100px;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="th_fixed"></th>
+                                                        <th class="th_fixed">업체명</th>
+                                                        <th class="th_fixed">주소</th>
+                                                        <th class="th_fixed">사업자번호</th>
+                                                        <th class="th_fixed">담당자</th>
+                                                        <th class="th_fixed">휴대폰번호</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <div class="no_result_box" style="height: 160px;">
+                                                                <i class="fa-solid fa-face-smile"></i>
+                                                                <p class="mt10">검색 결과가 없습니다.</p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk" ></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                        <td>권은비</td>
+                                                        <td>010-1234-1234</td>
+                                                    </tr>
+                                                    <tr  class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                        <td>권은비</td>
+                                                        <td>010-1234-1234</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                        <td>권은비</td>
+                                                        <td>010-1234-1234</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                        <td>권은비</td>
+                                                        <td>010-1234-1234</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                        <td>권은비</td>
+                                                        <td>010-1234-1234</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                        <td>권은비</td>
+                                                        <td>010-1234-1234</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                        <td>권은비</td>
+                                                        <td>010-1234-1234</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                        <td>권은비</td>
+                                                        <td>010-1234-1234</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="paging_wrap mt20">
+                                            <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                                            <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                                            <ul class="paging_list">
+                                                <li><span class="paging_btn current">1</span></li>
+                                                <li><a href="" class="paging_btn">2</a></li>
+                                                <li><a href="" class="paging_btn">3</a></li>
+                                                <li><a href="" class="paging_btn">4</a></li>
+                                                <li><a href="" class="paging_btn">5</a></li>
+                                            </ul>
+                                            <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                                            <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                                        </div>
+                                        <div class="btn_set taC mt30">
+                                            <input type="submit" value="선택" class="f_btn ty_mid _key w_100">
+                                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                                        </div>
+                                    </section>
+                                </div>
                             </div>
                         </div>
+                        <!--// [팝업] 성적서 업체 검색 -->            
+
+                        <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_company2')">교정 기관 검색 (다중선택)</button>
+                        <!-- [팝업] 교정기관 선택 (다중선택) -->
+                        <div class="layer_popup popup_company2" onclick="close_popup(this)">
+                            <div class="layer_popup_inner">
+                                <div class="layer_popup_cont">
+                                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                                        <span class="blind">팝업 닫기</span>
+                                    </button>
+                                    <div class="sub_tit">
+                                        <h1 class="tit1">교정 기관 검색</h1>
+                                    </div>
+                                    <section class="sec">
+                                        <div class="v_tbl_wrap">
+                                            <table class="v_tbl">
+                                                <tbody>
+                                                    <colgroup>
+                                                        <col style="width: 15%;">
+                                                        <col>
+                                                        <col style="width: 15%;">
+                                                        <col>
+                                                        <col style="width: 15%;">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>업체명</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>주소</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>사업자번호</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> 
+                                            <div class="btn_set taC mt30">
+                                                <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                                <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="sec">
+                                        <div class="sub_tit2 mb10 d_flex al_b">
+                                            <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                                            <select name="" id="" class="f_select ty_small w_80 ml20">
+                                                <option value="">10개</option>
+                                                <option value="">30개</option>
+                                                <option value="">50개</option>
+                                                <option value="">100개</option>
+                                            </select>
+                                        </div>
+                                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
+                                            <table class="h_tbl tl_fixed">
+                                                <colgroup>
+                                                    <col style="width: 40px;">
+                                                    <col>
+                                                    <col>
+                                                    <col style="width: 100px;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="th_fixed"><label class="chk_item"><input type="checkbox" name=""  class="tr_chk_all" onchange="checkAll(this)"></label></th>
+                                                        <th class="th_fixed">업체명</th>
+                                                        <th class="th_fixed">주소</th>
+                                                        <th class="th_fixed">사업자번호</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <div class="no_result_box" style="height: 160px;">
+                                                                <i class="fa-solid fa-face-smile"></i>
+                                                                <p class="mt10">검색 결과가 없습니다.</p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="paging_wrap mt20">
+                                            <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                                            <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                                            <ul class="paging_list">
+                                                <li><span class="paging_btn current">1</span></li>
+                                                <li><a href="" class="paging_btn">2</a></li>
+                                                <li><a href="" class="paging_btn">3</a></li>
+                                                <li><a href="" class="paging_btn">4</a></li>
+                                                <li><a href="" class="paging_btn">5</a></li>
+                                            </ul>
+                                            <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                                            <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                                        </div>
+                                        <div class="btn_set taC mt30">
+                                            <input type="submit" value="선택" class="f_btn ty_mid _key w_100">
+                                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_company3')">교정 기관 검색 (단독선택)</button>
+                        <!-- [팝업] 교정기관 선택 (단독선택) -->
+                        <div class="layer_popup popup_company3" onclick="close_popup(this)">
+                            <div class="layer_popup_inner">
+                                <div class="layer_popup_cont">
+                                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                                        <span class="blind">팝업 닫기</span>
+                                    </button>
+                                    <div class="sub_tit">
+                                        <h1 class="tit1">교정 기관 검색</h1>
+                                    </div>
+                                    <section class="sec">
+                                        <div class="v_tbl_wrap">
+                                            <table class="v_tbl">
+                                                <tbody>
+                                                    <colgroup>
+                                                        <col style="width: 15%;">
+                                                        <col>
+                                                        <col style="width: 15%;">
+                                                        <col>
+                                                        <col style="width: 15%;">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>업체명</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>주소</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>사업자번호</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> 
+                                            <div class="btn_set taC mt30">
+                                                <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                                <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="sec">
+                                        <div class="sub_tit2 mb10 d_flex al_b">
+                                            <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                                            <select name="" id="" class="f_select ty_small w_80 ml20">
+                                                <option value="">10개</option>
+                                                <option value="">30개</option>
+                                                <option value="">50개</option>
+                                                <option value="">100개</option>
+                                            </select>
+                                        </div>
+                                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
+                                            <table class="h_tbl tl_fixed">
+                                                <colgroup>
+                                                    <col style="width: 40px;">
+                                                    <col>
+                                                    <col>
+                                                    <col style="width: 100px;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="th_fixed"></th>
+                                                        <th class="th_fixed">업체명</th>
+                                                        <th class="th_fixed">주소</th>
+                                                        <th class="th_fixed">사업자번호</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <div class="no_result_box" style="height: 160px;">
+                                                                <i class="fa-solid fa-face-smile"></i>
+                                                                <p class="mt10">검색 결과가 없습니다.</p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                    <tr class="chk_tr">
+                                                        <td><label class="chk_item"><input type="radio" name="radio" class="tr_chk"></label></td>
+                                                        <td>(주)업체명이이렇게너무너무너무너무너무너무너무너무너무길어서어떡합니까</td>
+                                                        <td>서울특별시 구로구 남부순환로 1303 KIC빌딩 2층 고객지원센터</td>
+                                                        <td>111-22-33333</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="paging_wrap mt20">
+                                            <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                                            <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                                            <ul class="paging_list">
+                                                <li><span class="paging_btn current">1</span></li>
+                                                <li><a href="" class="paging_btn">2</a></li>
+                                                <li><a href="" class="paging_btn">3</a></li>
+                                                <li><a href="" class="paging_btn">4</a></li>
+                                                <li><a href="" class="paging_btn">5</a></li>
+                                            </ul>
+                                            <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                                            <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                                        </div>
+                                        <div class="btn_set taC mt30">
+                                            <input type="submit" value="선택" class="f_btn ty_mid _key w_100">
+                                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_cal')">계측기 검색</button>
+                        <!-- [팝업] 계측기 검색 -->
+                        <div class="layer_popup popup_cal" onclick="close_popup(this)">
+                            <div class="layer_popup_inner">
+                                <div class="layer_popup_cont">
+                                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                                        <span class="blind">팝업 닫기</span>
+                                    </button>
+                                    <div class="sub_tit">
+                                        <h1 class="tit1">계측기 검색</h1>
+                                    </div>
+                                    <div class="tabs_wrap"> 
+                                        <ul class="tabs">
+                                            <li class="tabs_item on">
+                                                <button class="tabs_btn" onclick="tabs(this,0)">우리장비</button>
+                                            </li>
+                                            <li class="tabs_item">
+                                                <button class="tabs_btn" onclick="tabs(this,1)">전체목록</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tabs_cont on" style="height: 623px;">
+                                            <section class="sec mt0">
+                                                <div class="v_tbl_wrap">
+                                                    <table class="v_tbl tl_auto">
+                                                        <tbody>
+                                                            <colgroup>
+                                                                <col style="width: 12%;">
+                                                                <col>
+                                                                <col style="width: 12%;">
+                                                                <col>
+                                                                <col style="width: 12%;">
+                                                                <col style="width: 255px;">
+                                                            </colgroup>
+                                                            <tr>
+                                                                <th>CMI 번호</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>계측기명</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>제조사</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>형식</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>기기번호</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>최근 교정일</th>
+                                                                <td>
+                                                                    <div class="date_set" style="flex-wrap: wrap;">
+                                                                        <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
+                                                                        <input type="text" class="f_input ty_small inp_date date_end" readonly> 
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table> 
+                                                    <div class="btn_set taC mt30">
+                                                        <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                                        <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="sec">
+                                                <div class="sub_tit2 mb10 d_flex al_b">
+                                                    <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                                                    <select name="" id="" class="f_select ty_small w_80 ml20">
+                                                        <option value="">10개</option>
+                                                        <option value="">30개</option>
+                                                        <option value="">50개</option>
+                                                        <option value="">100개</option>
+                                                    </select>
+                                                </div>
+                                                <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
+                                                    <table class="h_tbl tl_fixed">
+                                                        <colgroup>
+                                                            <col style="width: 40px;">
+                                                            <col style="width: 80px;">
+                                                            <col>
+                                                            <col>
+                                                            <col style="width: 100px;">
+                                                            <col style="width: 100px;">
+                                                            <col style="width: 100px;">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="th_fixed"><input type="checkbox" name="" class="tr_chk_all" onchange="checkAll(this)"></label></th>
+                                                                <th class="th_fixed">CMI No</th>
+                                                                <th class="th_fixed">계측기명</th>
+                                                                <th class="th_fixed">제조사</th>
+                                                                <th class="th_fixed">형식</th>
+                                                                <th class="th_fixed">기기번호</th>
+                                                                <th class="th_fixed">최근교정일</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="7">
+                                                                    <div class="no_result_box" style="height: 160px;">
+                                                                        <i class="fa-solid fa-face-smile"></i>
+                                                                        <p class="mt10">검색 결과가 없습니다.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td><a href="" class="btn_t_link">123456</a></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                                <td>기기번호노출</td>
+                                                                <td>2023-11-12</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td><a href="" class="btn_t_link">123456</a></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                                <td>기기번호노출</td>
+                                                                <td>2023-11-12</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td><a href="" class="btn_t_link">123456</a></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                                <td>기기번호노출</td>
+                                                                <td>2023-11-12</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td><a href="" class="btn_t_link">123456</a></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                                <td>기기번호노출</td>
+                                                                <td>2023-11-12</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td><a href="" class="btn_t_link">123456</a></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                                <td>기기번호노출</td>
+                                                                <td>2023-11-12</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="paging_wrap mt20">
+                                                    <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                                                    <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                                                    <ul class="paging_list">
+                                                        <li><span class="paging_btn current">1</span></li>
+                                                        <li><a href="" class="paging_btn">2</a></li>
+                                                        <li><a href="" class="paging_btn">3</a></li>
+                                                        <li><a href="" class="paging_btn">4</a></li>
+                                                        <li><a href="" class="paging_btn">5</a></li>
+                                                    </ul>
+                                                    <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                                                    <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                                                </div>
+                                                <div class="btn_set taC mt30">
+                                                    <input type="submit" value="선택" class="f_btn ty_mid _key w_100">
+                                                    <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="tabs_cont"  style="height: 623px;">
+                                            <section class="sec mt0">
+                                                <div class="v_tbl_wrap">
+                                                    <table class="v_tbl tl_auto">
+                                                        <tbody>
+                                                            <colgroup>
+                                                                <col style="width: 12%;">
+                                                                <col>
+                                                                <col style="width: 12%;">
+                                                                <col>
+                                                                <col style="width: 12%;">
+                                                                <col>
+                                                            </colgroup>
+                                                            <tr>
+                                                                <th>계측기명</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>제조사</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>형식</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table> 
+                                                    <div class="btn_set taC mt30">
+                                                        <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                                        <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="sec">
+                                                <div class="sub_tit2 mb10 d_flex al_b">
+                                                    <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                                                    <select name="" id="" class="f_select ty_small w_80 ml20">
+                                                        <option value="">10개</option>
+                                                        <option value="">30개</option>
+                                                        <option value="">50개</option>
+                                                        <option value="">100개</option>
+                                                    </select>
+                                                </div>
+                                                <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
+                                                    <table class="h_tbl tl_fixed">
+                                                        <colgroup>
+                                                            <col style="width: 40px;">
+                                                            <col>
+                                                            <col>
+                                                            <col style="width: 100px;">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="th_fixed"><input type="checkbox" name="" class="tr_chk_all" onchange="checkAll(this)"></label></th>
+                                                                <th class="th_fixed">계측기명</th>
+                                                                <th class="th_fixed">제조사</th>
+                                                                <th class="th_fixed">형식</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="4">
+                                                                    <div class="no_result_box" style="height: 160px;">
+                                                                        <i class="fa-solid fa-face-smile"></i>
+                                                                        <p class="mt10">검색 결과가 없습니다.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                            </tr>      
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                            </tr>      
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                            </tr>      
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                            </tr>      
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                            </tr>                                                          
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="paging_wrap mt20">
+                                                    <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                                                    <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                                                    <ul class="paging_list">
+                                                        <li><span class="paging_btn current">1</span></li>
+                                                        <li><a href="" class="paging_btn">2</a></li>
+                                                        <li><a href="" class="paging_btn">3</a></li>
+                                                        <li><a href="" class="paging_btn">4</a></li>
+                                                        <li><a href="" class="paging_btn">5</a></li>
+                                                    </ul>
+                                                    <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                                                    <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                                                </div>
+                                                <div class="btn_set taC mt30">
+                                                    <input type="submit" value="선택" class="f_btn ty_mid _key w_100">
+                                                    <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// [팝업] 계측기 검색-->
+                        
+                        <button type="button" class="f_btn ty_mid _key" onclick="open_popup('pop_excel')">계측기 엑셀 등록</button>
+                        <!-- [팝업] 계측기 엑셀 등록 -->
+                        <div class="layer_popup pop_excel" onclick="close_popup(this)">
+                            <div class="layer_popup_inner">
+                                <div class="layer_popup_cont ty_small">
+                                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                                            <span class="blind" >팝업 닫기</span>
+                                        </button>
+                                        <div class="sub_tit">
+                                            <h1 class="tit1">계측기 엑셀 등록</h1>
+                                        </div>
+                                        <form action="">
+                                            <div class="excel_upload_box">
+                                                <!--[D] 실제 input file-->
+                                                <input type="file" id="file_excel" onchange="fileExcel(this)" class="input_file_excel" accept=".xls,.xlsx" required>
+                                                
+                                                <label for="file_excel" class="excel_upload_default">
+                                                    <i><img src="../assets/images/common/ico_excel.svg" alt=""></i>
+                                                    <p>Upload</p>
+                                                </label>
+                                                <div class="excel_upload_on">
+                                                    <button type="button" onclick=" fileExcelDel(this)" class="btn_del2"><span class="blind">파일삭제</span></button>
+                                                    <span class="file_name"></span>
+                                                </div>
+                                            </div>                      
+                                            <div class="btn_set mt20 taC">
+                                                <button type="button" class="f_btn ty_small _key_ol w_80">양식다운 <i class="fa-solid fa-file-arrow-down"></i></button>
+                                                <input type="submit" class="f_btn ty_small _key w_80 btn_excel_submit" style="display: none;" value="등록">
+                                            </div>
+                                        </form>
+                                        <script>
+                                            function fileExcel(target){
+                                                let $this = $(target);
+                                                let $parent = $this.parents('.excel_upload_box');
+                                                let $fileName = $parent.find('.file_name');
+                                                let $btnSubmit = $('.btn_excel_submit');
+                                                let $val = $this.val();
+                                                if($val){
+                                                    $parent.addClass('file_on');
+                                                    $fileName.text($val);
+                                                    //console.log($val );
+                                                    $btnSubmit.show()
+                                                }else{
+                                                    $parent.removeClass('file_on');
+                                                    $fileName.text('');
+                                                    $btnSubmit.hide()
+                                                }
+                                            }
+                                            function fileExcelDel(target){
+                                                let $this = $(target);
+                                                let $parent = $this.parents('.excel_upload_box');
+                                                let $fileName = $parent.find('.file_name');
+                                                let $inputFile = $parent.find('.input_file_excel');
+                                                let $btnSubmit = $('.btn_excel_submit');
+                                                $inputFile.val(null);
+                                                
+                                                if(!$inputFile.val()){
+                                                    $parent.removeClass('file_on');
+                                                    $fileName.text(null);
+                                                    $btnSubmit.hide()
+                                                }                            
+                                            }
+                                        </script>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// [팝업] 계측기 엑셀 등록 -->
+
+                        <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_history')">과거 이력 검색</button>
+                        <!-- [팝업] 과거 이력 검색 -->
+                        <div class="layer_popup popup_history" onclick="close_popup(this)">
+                            <div class="layer_popup_inner">
+                                <div class="layer_popup_cont">
+                                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                                        <span class="blind">팝업 닫기</span>
+                                    </button>
+                                    <div class="sub_tit">
+                                        <h1 class="tit1">과거 이력 검색</h1>
+                                    </div>
+                                    <div class="tabs_wrap"> 
+                                        <ul class="tabs">
+                                            <li class="tabs_item on">
+                                                <button class="tabs_btn" onclick="tabs(this,0)">교정내역</button>
+                                            </li>
+                                            <li class="tabs_item">
+                                                <button class="tabs_btn" onclick="tabs(this,1)">견적내역</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tabs_cont on">
+                                            <section class="sec mt0">
+                                                <div class="v_tbl_wrap">
+                                                    <table class="v_tbl tl_auto">
+                                                        <tbody>
+                                                            <colgroup>
+                                                                <col style="width: 12%;">
+                                                                <col style="width: 255px;">
+                                                                <col style="width: 12%;">
+                                                                <col>
+                                                                <col style="width: 12%;">
+                                                                <col>
+                                                            </colgroup>
+                                                            <tr>
+                                                                <th>접수일</th>
+                                                                <td>
+                                                                    <div class="date_set" style="flex-wrap: wrap;">
+                                                                        <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
+                                                                        <input type="text" class="f_input ty_small inp_date date_end" readonly> 
+                                                                    </div>
+                                                                </td>
+                                                                <th>접수번호</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>성적서업체</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>제조사</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>형식</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>기기번호</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table> 
+                                                    <div class="btn_set taC mt30">
+                                                        <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                                        <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="sec">
+                                                <div class="sub_tit2 mb10 d_flex al_b">
+                                                    <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                                                    <select name="" id="" class="f_select ty_small w_80 ml20">
+                                                        <option value="">10개</option>
+                                                        <option value="">30개</option>
+                                                        <option value="">50개</option>
+                                                        <option value="">100개</option>
+                                                    </select>
+                                                </div>
+                                                <div class="h_tbl_wrap y_scroll_area" style="height: 280px;">
+                                                    <table class="h_tbl tl_fixed">
+                                                        <colgroup>
+                                                            <col style="width: 60px;">
+                                                            <col style="width: 80px;">
+                                                            <col style="width: 70px;">
+                                                            <col>
+                                                            <col>
+                                                            <col style="width: 70px;">
+                                                            <col style="width: 70px;">
+                                                            <col style="width: 70px;">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="th_fixed">No.</th>
+                                                                <th class="th_fixed">접수일</th>
+                                                                <th class="th_fixed">접수번호</th>
+                                                                <th class="th_fixed">성적서 업체</th>
+                                                                <th class="th_fixed">교정 기관</th>
+                                                                <th class="th_fixed">신청자</th>
+                                                                <th class="th_fixed">총수량</th>
+                                                                <th class="th_fixed">교정완료</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="8">
+                                                                    <div class="no_result_box" style="height: 160px;">
+                                                                        <i class="fa-solid fa-face-smile"></i>
+                                                                        <p class="mt10">검색 결과가 없습니다.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td>9999</td>
+                                                                <td>2023-12-12</td>
+                                                                <td><a href="" class="btn_t_link">123456</a></td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업체</td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업</td>
+                                                                <td>장원영</td>
+                                                                <td>9,999</td>
+                                                                <td>9,999</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td>9999</td>
+                                                                <td>2023-12-12</td>
+                                                                <td><a href="" class="btn_t_link">123456</a></td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업체</td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업</td>
+                                                                <td>장원영</td>
+                                                                <td>9,999</td>
+                                                                <td>9,999</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td>9999</td>
+                                                                <td>2023-12-12</td>
+                                                                <td><a href="" class="btn_t_link">123456</a></td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업체</td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업</td>
+                                                                <td>장원영</td>
+                                                                <td>9,999</td>
+                                                                <td>9,999</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="paging_wrap mt20">
+                                                    <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                                                    <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                                                    <ul class="paging_list">
+                                                        <li><span class="paging_btn current">1</span></li>
+                                                        <li><a href="" class="paging_btn">2</a></li>
+                                                        <li><a href="" class="paging_btn">3</a></li>
+                                                        <li><a href="" class="paging_btn">4</a></li>
+                                                        <li><a href="" class="paging_btn">5</a></li>
+                                                    </ul>
+                                                    <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                                                    <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                                                </div>
+                                            </section>
+                                            <section class="sec">
+                                                <div class="sub_tit2 mb10 d_flex al_b">
+                                                    <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                                                    <div class="sub_tit_btns btn_set">
+                                                        <button target="_blank" class="f_btn ty_mid _key_ol">견적 등록 +</button>
+                                                    </div>
+                                                </div>
+                                                <div class="h_tbl_wrap y_scroll_area" style="height: 280px;">
+                                                    <table class="h_tbl tl_fixed">
+                                                        <colgroup>
+                                                            <col style="width: 40px;">
+                                                            <col style="width: 80px;">
+                                                            <col>
+                                                            <col>
+                                                            <col style="width: 100px;">
+                                                            <col style="width: 100px;">
+                                                            <col style="width: 100px;">
+                                                            <col style="width: 70px;">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="th_fixed"><input type="checkbox" name="" class="tr_chk_all" onchange="checkAll(this)"></label></th>
+                                                                <th class="th_fixed">교정번호</th>
+                                                                <th class="th_fixed">계측기명</th>
+                                                                <th class="th_fixed">제조사</th>
+                                                                <th class="th_fixed">형식</th>
+                                                                <th class="th_fixed">기기번호</th>
+                                                                <th class="th_fixed">교정상태</th>
+                                                                <th class="th_fixed">교정결과</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="8">
+                                                                    <div class="no_result_box" style="height: 160px;">
+                                                                        <i class="fa-solid fa-face-smile"></i>
+                                                                        <p class="mt10">검색 결과가 없습니다.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td><a href="" class="btn_t_link">123456-1</a></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                                <td>기기번호노출</td>
+                                                                <td>교정 진행중</td>
+                                                                <td>-</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td><a href="" class="btn_t_link">123456-1</a></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                                <td>기기번호노출</td>
+                                                                <td>교정 진행중</td>
+                                                                <td>-</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td><a href="" class="btn_t_link">123456-1</a></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                                <td>기기번호노출</td>
+                                                                <td>교정완료</td>
+                                                                <td>정상</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td><a href="" class="btn_t_link">123456-1</a></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                                <td>기기번호노출</td>
+                                                                <td>교정완료</td>
+                                                                <td>불량</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="tabs_cont">
+                                            <section class="sec mt0">
+                                                <div class="v_tbl_wrap">
+                                                    <table class="v_tbl tl_auto">
+                                                        <tbody>
+                                                            <colgroup>
+                                                                <col style="width: 12%;">
+                                                                <col style="width: 255px;">
+                                                                <col style="width: 12%;">
+                                                                <col>
+                                                                <col style="width: 12%;">
+                                                                <col>
+                                                            </colgroup>
+                                                            <tr>
+                                                                <th>접수일</th>
+                                                                <td>
+                                                                    <div class="date_set" style="flex-wrap: wrap;">
+                                                                        <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
+                                                                        <input type="text" class="f_input ty_small inp_date date_end" readonly> 
+                                                                    </div>
+                                                                </td>
+                                                                <th>접수번호</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>성적서업체</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>제조사</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>형식</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                                <th>기기번호</th>
+                                                                <td><input type="text" class="f_input ty_small w100"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table> 
+                                                    <div class="btn_set taC mt30">
+                                                        <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                                        <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="sec">
+                                                <div class="sub_tit2 mb10 d_flex al_b">
+                                                    <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                                                    <select name="" id="" class="f_select ty_small w_80 ml20">
+                                                        <option value="">10개</option>
+                                                        <option value="">30개</option>
+                                                        <option value="">50개</option>
+                                                        <option value="">100개</option>
+                                                    </select>
+                                                </div>
+                                                <div class="h_tbl_wrap y_scroll_area" style="height: 280px;">
+                                                    <table class="h_tbl tl_fixed">
+                                                        <colgroup>
+                                                            <col style="width: 60px;">
+                                                            <col style="width: 80px;">
+                                                            <col style="width: 120px;">
+                                                            <col>
+                                                            <col>
+                                                            <col style="width: 70px;">
+                                                            <col style="width: 70px;">
+                                                            <col style="width: 90px;">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="th_fixed">No.</th>
+                                                                <th class="th_fixed">접수일</th>
+                                                                <th class="th_fixed">견적번호</th>
+                                                                <th class="th_fixed">성적서 업체</th>
+                                                                <th class="th_fixed">교정 기관</th>
+                                                                <th class="th_fixed">신청자</th>
+                                                                <th class="th_fixed">총수량</th>
+                                                                <th class="th_fixed">최종견적(원)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="8">
+                                                                    <div class="no_result_box" style="height: 160px;">
+                                                                        <i class="fa-solid fa-face-smile"></i>
+                                                                        <p class="mt10">검색 결과가 없습니다.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td>9999</td>
+                                                                <td>2023-12-12</td>
+                                                                <td><a href="" class="btn_t_link">EST-1234123-09</a></td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업체</td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업</td>
+                                                                <td>장원영</td>
+                                                                <td>9,999</td>
+                                                                <td>999,000,000</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td>9999</td>
+                                                                <td>2023-12-12</td>
+                                                                <td><a href="" class="btn_t_link">EST-1234123-09</a></td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업체</td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업</td>
+                                                                <td>장원영</td>
+                                                                <td>9,999</td>
+                                                                <td>999,000,000</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td>9999</td>
+                                                                <td>2023-12-12</td>
+                                                                <td><a href="" class="btn_t_link">EST-1234123-09</a></td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업체</td>
+                                                                <td>(주)업체명업체명업체명업체명업체명업체명업체명업</td>
+                                                                <td>장원영</td>
+                                                                <td>9,999</td>
+                                                                <td>999,000,000</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="paging_wrap mt20">
+                                                    <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                                                    <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                                                    <ul class="paging_list">
+                                                        <li><span class="paging_btn current">1</span></li>
+                                                        <li><a href="" class="paging_btn">2</a></li>
+                                                        <li><a href="" class="paging_btn">3</a></li>
+                                                        <li><a href="" class="paging_btn">4</a></li>
+                                                        <li><a href="" class="paging_btn">5</a></li>
+                                                    </ul>
+                                                    <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                                                    <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                                                </div>
+                                            </section>
+                                            <section class="sec">
+                                                <div class="sub_tit2 mb10 d_flex al_b">
+                                                    <h2 class="tit4"><b>상세 내역 :</b> 1,000건</h2>
+                                                    <div class="sub_tit_btns btn_set">
+                                                        <button target="_blank" class="f_btn ty_mid _key_ol">견적 등록 +</button>
+                                                    </div>
+                                                </div>
+                                                <div class="h_tbl_wrap y_scroll_area" style="height: 280px;">
+                                                    <table class="h_tbl tl_fixed">
+                                                        <colgroup>
+                                                            <col style="width: 40px;">
+                                                            <col>
+                                                            <col>
+                                                            <col style="width: 70px;">
+                                                            <col style="width: 70px;">
+                                                            <col style="width: 70px;">
+                                                            <col style="width: 100px;">
+                                                            <col style="width: 100px;">
+                                                            <col style="width: 70px;">
+                                                            <col style="width: 100px;">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="th_fixed"><input type="checkbox" name="" class="tr_chk_all" onchange="checkAll(this)"></label></th>
+                                                                <th class="th_fixed">계측기명</th>
+                                                                <th class="th_fixed">제조사</th>
+                                                                <th class="th_fixed">형식</th>
+                                                                <th class="th_fixed">구분</th>
+                                                                <th class="th_fixed">접수방식</th>
+                                                                <th class="th_fixed">기타단가(원)</th>
+                                                                <th class="th_fixed">교정단가(원)</th>
+                                                                <th class="th_fixed">수량</th>
+                                                                <th class="th_fixed">최종견적(원)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="10">
+                                                                    <div class="no_result_box" style="height: 160px;">
+                                                                        <i class="fa-solid fa-face-smile"></i>
+                                                                        <p class="mt10">검색 결과가 없습니다.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                                <td>비공인</td>
+                                                                <td>반출</td>
+                                                                <td>999,000</td>
+                                                                <td>999,000,000</td>
+                                                                <td>9,999</td>
+                                                                <td>999,000,000</td>
+                                                            </tr>
+                                                            <tr class="chk_tr">
+                                                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                                                <td>계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                                                <td>제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                                                <td>형식노출</td>
+                                                                <td>공인</td>
+                                                                <td>출장</td>
+                                                                <td>999,000</td>
+                                                                <td>999,000,000</td>
+                                                                <td>9,999</td>
+                                                                <td>999,000,000</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// [팝업] 과거 이력 검색 -->
+
                     </div>
                 </section>
                 <section class="sec">

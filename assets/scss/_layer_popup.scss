@@ -7,6 +7,7 @@
     z-index: 9999;
     background-color: rgba(#000,.6);
     padding: 30px;
+    
     box-sizing: border-box;
     display: none;
     &.on {
@@ -25,6 +26,7 @@
         border-radius: 20px;
         width: 1200px;
         padding: 30px;
+        padding-bottom: 40px;
         box-sizing: border-box;
         max-height: 100%;
         overflow-y: auto;
@@ -33,7 +35,11 @@
         }
     }
 
-
+    .sec {
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
 
     .close_popup {
         position: absolute;

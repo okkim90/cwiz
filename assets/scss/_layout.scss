@@ -983,7 +983,22 @@
 }
 
 .t_ellipsis1 {
-    @include text-hidden-single
+    @include text-hidden-single;
+    
+}
+.ov_tooltip {
+    position: relative;
+    cursor: default;
+    .ov_tooltip_cont {
+        position: fixed;
+        max-width: 300px;
+        font-size: 12px;
+        word-break: break-all;
+        padding: 4px;
+        background-color: #fff;
+        border: 1px solid $c_line;
+        z-index: 10;
+    }
 }
 
 /* footer */
