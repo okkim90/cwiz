@@ -78,25 +78,25 @@
     //font-size: 16px;
     line-height: 1;
     display: inline-flex;
-    color: #222;
+    //color: #222;
     align-items: center;
     &:hover {
         .txt {
             text-decoration: underline;
         }
-        &::after {
-            //transform: scale(1.1);
-            color: $c_key;
-        }
+        // &::after {
+        //     //transform: scale(1.1);
+        //     color: $c_key;
+        // }
     }
     &::after {
         font-size: 16px;
         content: '\f56d';
         font-family: "Font Awesome 6 Free";
         font-weight: bold;
-        color: #393939;
-        
+        //color: #393939;
     }
+    
 }
 .btn_down2 {
     &::after {

@@ -3820,6 +3820,10 @@
   text-align: center;
 }
 
+.fwB {
+  font-weight: bold;
+}
+
 /*반응형 화면 크기*/
 .t_hidden_2 {
   width: 100%;
@@ -6568,21 +6572,16 @@ tr:last-child .status_box_date {
 .btn_down {
   line-height: 1;
   display: inline-flex;
-  color: #222;
   align-items: center;
 }
 .btn_down:hover .txt {
   text-decoration: underline;
-}
-.btn_down:hover::after {
-  color: #FF7A00;
 }
 .btn_down::after {
   font-size: 16px;
   content: "\f56d";
   font-family: "Font Awesome 6 Free";
   font-weight: bold;
-  color: #393939;
 }
 
 .btn_down2::after {
