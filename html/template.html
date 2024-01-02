@@ -2366,6 +2366,145 @@
                         </div>
                         <!--//[팝업] 우리 장비 상세보기-->
 
+                        <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_address_add')">배송지 등록하기</button>
+                        <!--[팝업] 배송지 등록하기 -->
+                        <div class="layer_popup popup_address_add" onclick="close_popup(this)">
+                            <div class="layer_popup_inner">
+                                <div class="layer_popup_cont ty_mid">
+                                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                                        <span class="blind">팝업 닫기</span>
+                                    </button>
+                                    <div class="sub_tit">
+                                        <h1 class="tit1">배송지 등록하기</h1>
+                                    </div>
+                                    <section class="sec">
+
+                                        <div class="d_flex mb10">
+                                            <p class="tip ml_auto self_bot"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
+                                        </div>
+                                       
+                                        <div class="v_tbl_wrap">
+                                            <table class="v_tbl tl_auto">
+                                                <tbody>
+                                                    <colgroup>
+                                                        <col style="width: 120px;">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>업체명 <i class="ico_required"></i></th>
+                                                        <td>
+                                                            <input type="text" class="f_input ty_small w100" placeholder="업체명을 입력해주세요.">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>주소 <i class="ico_required"></i></th>
+                                                        <td>     
+                                                            <div class="d_flex fw_w _gap5">
+                                                                <input type="text" class="f_input ty_small w_120 shrink0" readonly>
+                                                                <button type="button" class="f_btn ty_small w_100 shrink0 _key">주소찾기</button>
+                                                                <input type="text" class="f_input ty_small w100" placeholder="기본주소를 입력해주세요.">
+                                                                <input type="text" class="f_input ty_small w100" placeholder="상세주로를 입력해주세요.">
+                                                            </div> 
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>담당자명 <i class="ico_required"></i></th>
+                                                        <td>
+                                                            <input type="text" class="f_input ty_small w_300" placeholder="담당자명을 입력해주세요.">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>연락처 <i class="ico_required"></i></th>
+                                                        <td>
+                                                            <input type="text" class="f_input ty_small w_300" placeholder="연락처를 입력해주세요. (숫자만)">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> 
+                                        </div>    
+                                        <label class="btn_chk no_select mt12">
+                                            <input type="checkbox">
+                                            기본 배송지로 선택
+                                        </label>
+                                    </section>
+                                    <div class="btn_set taC mt30">
+                                        <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
+                                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <!--//[팝업] 배송지 등록하기-->
+
+                        <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_address_edit')">배송지 수정하기</button>
+                        <!--[팝업] 배송지 수정하기 -->
+                        <div class="layer_popup popup_address_edit" onclick="close_popup(this)">
+                            <div class="layer_popup_inner">
+                                <div class="layer_popup_cont ty_mid">
+                                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                                        <span class="blind">팝업 닫기</span>
+                                    </button>
+                                    <div class="sub_tit">
+                                        <h1 class="tit1">배송지 수정하기</h1>
+                                    </div>
+                                    <section class="sec">
+
+                                        <div class="d_flex mb10">
+                                            <p class="tip ml_auto self_bot"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
+                                        </div>
+                                       
+                                        <div class="v_tbl_wrap">
+                                            <table class="v_tbl tl_auto">
+                                                <tbody>
+                                                    <colgroup>
+                                                        <col style="width: 120px;">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>업체명 <i class="ico_required"></i></th>
+                                                        <td>
+                                                            <input type="text" class="f_input ty_small w100" placeholder="업체명을 입력해주세요." value="그랜드 정션">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>주소 <i class="ico_required"></i></th>
+                                                        <td>     
+                                                            <div class="d_flex fw_w _gap5">
+                                                                <input type="text" class="f_input ty_small w_120 shrink0" value="12345" readonly>
+                                                                <button type="button" class="f_btn ty_small w_100 shrink0 _key">주소찾기</button>
+                                                                <input type="text" class="f_input ty_small w100" placeholder="기본주소를 입력해주세요." value="서울특별시 구로구 디지털로 111">
+                                                                <input type="text" class="f_input ty_small w100" placeholder="상세주로를 입력해주세요." value="그랜드 빌딩 99층">
+                                                            </div> 
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>담당자명 <i class="ico_required"></i></th>
+                                                        <td>
+                                                            <input type="text" class="f_input ty_small w_300" placeholder="담당자명을 입력해주세요." value="혜린">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>연락처 <i class="ico_required"></i></th>
+                                                        <td>
+                                                            <input type="text" class="f_input ty_small w_300" placeholder="연락처를 입력해주세요. (숫자만)" value="01012345234">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> 
+                                        </div>    
+                                        <label class="btn_chk no_select mt12">
+                                            <input type="checkbox" checked>
+                                            기본 배송지로 선택
+                                        </label>
+                                    </section>
+                                    <div class="btn_set taC mt30">
+                                        <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
+                                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <!--//[팝업] 배송지 수정하기-->
                     </div>
                 </section>
                 <section class="sec">

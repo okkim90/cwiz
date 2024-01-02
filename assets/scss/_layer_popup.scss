@@ -30,6 +30,9 @@
         box-sizing: border-box;
         max-height: 100%;
         overflow-y: auto;
+        &.ty_mid {
+            width: 600px;
+        }
         &.ty_small {
             width: 350px;
         }

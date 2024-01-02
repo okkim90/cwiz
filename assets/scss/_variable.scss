@@ -326,6 +326,15 @@ $inner: 1280px;
     .shrink0 {
         flex-shrink: 0;
     }
+    .self_top {
+        align-self: flex-start;
+    }
+    .self_c {
+        align-self: center;
+    }
+    .self_bot {
+        align-self: flex-end;
+    }
 }
 
 .ml_auto {
@@ -340,4 +349,7 @@ $inner: 1280px;
 
 .fwB {
     font-weight: bold;
+}
+.no_select {
+    user-select: none;
 }

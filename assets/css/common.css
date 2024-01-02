@@ -3807,6 +3807,15 @@
 .d_flex .shrink0 {
   flex-shrink: 0;
 }
+.d_flex .self_top {
+  align-self: flex-start;
+}
+.d_flex .self_c {
+  align-self: center;
+}
+.d_flex .self_bot {
+  align-self: flex-end;
+}
 
 .ml_auto {
   margin-left: auto;
@@ -3822,6 +3831,12 @@
 
 .fwB {
   font-weight: bold;
+}
+
+.no_select {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 /*반응형 화면 크기*/
@@ -5902,6 +5917,9 @@ tr:last-child .status_box_date {
   max-height: 100%;
   overflow-y: auto;
 }
+.layer_popup_cont.ty_mid {
+  width: 600px;
+}
 .layer_popup_cont.ty_small {
   width: 350px;
 }
@@ -6878,6 +6896,14 @@ tr:last-child .status_box_date {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
+}
+
+.btn_chk {
+  display: inline-flex;
+  vertical-align: top;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
 }
 
 .tabs {

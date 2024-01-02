@@ -341,3 +341,11 @@
     gap: 5px;
     flex-wrap: wrap;
 }
+
+.btn_chk {
+    display: inline-flex;
+    vertical-align: top;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
