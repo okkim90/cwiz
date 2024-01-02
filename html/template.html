@@ -301,7 +301,7 @@
 
                 <section class="sec">
                     <h3 class="tit2 mb15">팝업 모음</h3>
-                    <div class="d_flex _gap10">
+                    <div class="d_flex _gap10 fw_w">
                         <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_company1')">성적서 업체 검색</button>
                         <!-- [팝업] 성적서 업체 검색 -->
                         <div class="layer_popup popup_company1" onclick="close_popup(this)">
@@ -1121,7 +1121,7 @@
                             </div>
                         </div>
                         <!--// [팝업] 계측기 엑셀 등록 -->
-
+                        
                         <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_history')">과거 이력 검색</button>
                         <!-- [팝업] 과거 이력 검색 -->
                         <div class="layer_popup popup_history" onclick="close_popup(this)">
@@ -1571,7 +1571,7 @@
                         <!--// [팝업] 과거 이력 검색 -->
 
                         <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_detail')">교정 이력 상세보기</button>
-                        <!-- [팝업] 과거 이력 검색 -->
+                        <!-- [팝업] 교정 이력 상세 -->
                         <div class="layer_popup popup_detail" onclick="close_popup(this)">
                             <div class="layer_popup_inner">
                                 <div class="layer_popup_cont">
@@ -2004,7 +2004,368 @@
                                 </div>
                             </div>
                         </div>
-                        <!--// [팝업] 과거 이력 검색 -->
+                        <!--// [팝업] 교정 이력 상세 -->
+
+                        <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_eqmt_add')">우리 장비 등록하기</button>
+                        <!--[팝업] 우리 장비 등록하기-->
+                        <div class="layer_popup popup_eqmt_add" onclick="close_popup(this)">
+                            <div class="layer_popup_inner">
+                                <div class="layer_popup_cont">
+                                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                                        <span class="blind">팝업 닫기</span>
+                                    </button>
+                                    <div class="sub_tit">
+                                        <h1 class="tit1">우리 장비 등록하기</h1>
+                                    </div>
+                                    <!--[D] 이미지 등록 전 -->
+                                    <section class="sec ">
+                                        <h2 class="tit4 mb10 fwB">1. 장비 정보</h2>
+                                        <div class="v_tbl_wrap">
+                                            <table class="v_tbl tl_auto">
+                                                <tbody>
+                                                    <colgroup>
+                                                        <col style="width: 12%;">
+                                                        <col>
+                                                        <col style="width: 12%;">
+                                                        <col>
+                                                        <col style="width: 280px;">
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>계측기명</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>관리번호</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <td rowspan="4">
+                                                            <!--[D] 이미지 첨부 전 -->
+                                                            <div class="img_upload">
+                                                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                                                <label for="upload_eq_img" class="btn_img_upluad">
+                                                                    <i class="fa-solid fa-image" aria-hidden="true"></i>
+                                                                    <p>사진 첨부하기 (260 x 160)</p>
+                                                                </label>
+                                                            </div>
+                                                            <!--// [D] 이미지 첨부 전 -->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>제조사</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>교정주기</th>
+                                                        <td>
+                                                            <select name="" id="" class="f_select ty_small w_110">
+                                                                <option value="">1년</option>
+                                                                <option value="">10년</option>
+                                                                <option value="">100년</option>
+                                                                <option value="">1000년</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>형식</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>구매일자</th>
+                                                        <td><input type="text" class="f_input ty_small inp_date date_start" readonly></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>기기번호</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>구매금액</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                    </tr> 
+                                                    <tr>
+                                                        <th>메모</th>
+                                                        <td colspan="4">
+                                                            <textarea name="" id="" class="f_ta ty_small" style="height: 60px; resize:vertical"></textarea>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> 
+                                        </div>
+                                        <div class="btn_set taC mt30">
+                                            <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
+                                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                                        </div>
+                                    </section>
+                                    <!--// [D] 이미지 등록 전 -->
+                                    <!--[D] 이미지 등록 후 -->
+                                    <section class="sec">
+                                        <h2 class="tit4 mb10 fwB">1. 장비 정보</h2>
+                                        <div class="v_tbl_wrap">
+                                            <table class="v_tbl tl_auto">
+                                                <tbody>
+                                                    <colgroup>
+                                                        <col style="width: 12%;">
+                                                        <col>
+                                                        <col style="width: 12%;">
+                                                        <col>
+                                                        <col style="width: 280px;">
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>계측기명</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>관리번호</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <td rowspan="4">
+                                                            <!--[D] 이미지 첨부 후 -->
+                                                            <div class="img_upload">
+                                                                <input type="file" id="upload_eq_img" class="input_file" accept="image/*">
+                                                                <div class="img_upload_edit">
+                                                                    <label for="upload_eq_img" class="img_upload_edit_btn"><i class="fa-solid fa-rotate" aria-hidden="true"></i><span class="blind">수정</span></label>
+                                                                    <button type="button" class="img_upload_edit_btn"><i class="fa-solid fa-trash-can" aria-hidden="true"></i><span class="blind">삭제</span></button>
+                                                                </div>
+                                                                <img src="https://picsum.photos/260/160" alt="">
+                                                            </div>
+                                                            <!--// [D] 이미지 첨부 후 -->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>제조사</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>교정주기</th>
+                                                        <td>
+                                                            <select name="" id="" class="f_select ty_small">
+                                                                <option value="">1년</option>
+                                                                <option value="">10년</option>
+                                                                <option value="">100년</option>
+                                                                <option value="">1000년</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>형식</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>구매일자</th>
+                                                        <td><input type="text" class="f_input ty_small inp_date date_start" readonly></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>기기번호</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>구매금액</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                    </tr> 
+                                                    <tr>
+                                                        <th>메모</th>
+                                                        <td colspan="4">
+                                                            <textarea name="" id="" class="f_ta ty_small" style="height: 60px; resize:vertical"></textarea>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> 
+                                        </div>   
+                                        <div class="btn_set taC mt30">
+                                            <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
+                                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                                        </div> 
+                                    </section>
+                                    <!--//[D] 이미지 등록 후 -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--//[팝업] 우리 장비 등록하기-->
+
+                        <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_eqmt_view')">우리 장비 상세보기</button>
+                        <!--[팝업] 우리 장비 상세보기-->
+                        <div class="layer_popup popup_eqmt_view" onclick="close_popup(this)">
+                            <div class="layer_popup_inner">
+                                <div class="layer_popup_cont">
+                                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                                        <span class="blind">팝업 닫기</span>
+                                    </button>
+                                    <div class="sub_tit">
+                                        <h1 class="tit1">우리 장비 상세보기</h1>
+                                    </div>
+                                    <section class="sec">
+                                        <h2 class="tit4 mb10 fwB">1. 장비 정보 <b class="fc_key">( CMI ID: 1234567 )</b></h2>
+                                        <div class="v_tbl_wrap">
+                                            <table class="v_tbl tl_auto">
+                                                <tbody>
+                                                    <colgroup>
+                                                        <col style="width: 12%;">
+                                                        <col>
+                                                        <col style="width: 12%;">
+                                                        <col>
+                                                        <col style="width: 280px;">
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>계측기명</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>관리번호</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <td rowspan="4">
+                                                            <!--[D] 이미지 첨부 후 -->
+                                                            <div class="img_upload">
+                                                                <input type="file" id="upload_eq_img" class="input_file" accept="image/*">
+                                                                <div class="img_upload_edit">
+                                                                    <label for="upload_eq_img" class="img_upload_edit_btn"><i class="fa-solid fa-rotate" aria-hidden="true"></i><span class="blind">수정</span></label>
+                                                                    <button type="button" class="img_upload_edit_btn"><i class="fa-solid fa-trash-can" aria-hidden="true"></i><span class="blind">삭제</span></button>
+                                                                </div>
+                                                                <img src="https://picsum.photos/260/160" alt="">
+                                                            </div>
+                                                            <!--// [D] 이미지 첨부 후 -->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>제조사</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>교정주기</th>
+                                                        <td>
+                                                            <select name="" id="" class="f_select ty_small">
+                                                                <option value="">1년</option>
+                                                                <option value="">10년</option>
+                                                                <option value="">100년</option>
+                                                                <option value="">1000년</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>형식</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>구매일자</th>
+                                                        <td><input type="text" class="f_input ty_small inp_date date_start" readonly></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>기기번호</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                        <th>구매금액</th>
+                                                        <td><input type="text" class="f_input ty_small w100"></td>
+                                                    </tr> 
+                                                    <tr>
+                                                        <th>메모</th>
+                                                        <td colspan="4">
+                                                            <textarea name="" id="" class="f_ta ty_small" style="height: 60px; resize:vertical"></textarea>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> 
+                                        </div>   
+                                        
+                                    </section>
+                                    <section class="sec">
+                                        <div class="d_flex mb10 ai_c">
+                                            <h2 class="tit4 fwB">2. 교정 정보</h2>
+                                            <div class="btn_set ai_c ml_auto">
+                                                <a href="" class="btn_down fc_navy"><span class="txt mr4">국문</span></a>
+                                                <span class="bar ty_small"></span> 
+                                                <a href="" class="btn_down fc_key"><span class="txt mr4">영문</span></a>
+                                                <span class="bar ty_small"></span> 
+                                                <a href="" class="btn_down fc_red"><span class="txt mr4">사외</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
+                                            <table class="h_tbl tl_fixed">
+                                                <colgroup>
+                                                    <col style="width: 90px;">
+                                                    <col style="width: 80px;">
+                                                    <col style="width: 180px;">
+                                                    <col>
+                                                    <col style="width: 90px;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="th_fixed">교정일</th>
+                                                        <th class="th_fixed">교정 결과</th>
+                                                        <th class="th_fixed">교정 성적서</th>
+                                                        <th class="th_fixed">교정 기관</th>
+                                                        <th class="th_fixed">차기 교정일</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2023-10-30</td>
+                                                        <td>정상</td>
+                                                        <td>
+                                                            <div class="btn_set ai_c taC">
+                                                                <a href="" class="btn_down fc_navy"><span class="txt mr4">국문</span></a>
+                                                                <span class="bar ty_small"></span> 
+                                                                <a href="" class="btn_down fc_key"><span class="txt mr4">영문</span></a>
+                                                                <span class="bar ty_small"></span> 
+                                                                <a href="" class="btn_down fc_red"><span class="txt mr4">사외</span></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>(주)교정기관명이너무길어요교정기관명이너무길어요교정기관명이너무길어요</td>
+                                                        <td>2024-10-30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2023-10-30</td>
+                                                        <td><span class="fc_red">불량</span></td>
+                                                        <td>
+                                                            <div class="btn_set ai_c taC">
+                                                                <a href="" class="btn_down fc_navy"><span class="txt mr4">국문</span></a>
+                                                                <span class="bar ty_small"></span> 
+                                                                <a href="" class="btn_down fc_key"><span class="txt mr4">영문</span></a>
+                                                                <span class="bar ty_small"></span> 
+                                                                <a href="" class="btn_down fc_red"><span class="txt mr4">사외</span></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>(주)교정기관명이너무길어요교정기관명이너무길어요교정기관명이너무길어요</td>
+                                                        <td>2024-10-30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2023-10-30</td>
+                                                        <td>교정취소</td>
+                                                        <td>
+                                                            <div class="btn_set ai_c taC">
+                                                                <a href="" class="btn_down fc_navy"><span class="txt mr4">국문</span></a>
+                                                                <span class="bar ty_small"></span> 
+                                                                <a href="" class="btn_down fc_key"><span class="txt mr4">영문</span></a>
+                                                                <span class="bar ty_small"></span> 
+                                                                <a href="" class="btn_down fc_red"><span class="txt mr4">사외</span></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>(주)교정기관명이너무길어요교정기관명이너무길어요교정기관명이너무길어요</td>
+                                                        <td>2024-10-30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2023-10-30</td>
+                                                        <td>정상</td>
+                                                        <td>
+                                                            <div class="btn_set ai_c taC">
+                                                                <a href="" class="btn_down fc_navy"><span class="txt mr4">국문</span></a>
+                                                                <span class="bar ty_small"></span> 
+                                                                <a href="" class="btn_down fc_key"><span class="txt mr4">영문</span></a>
+                                                                <span class="bar ty_small"></span> 
+                                                                <a href="" class="btn_down fc_red"><span class="txt mr4">사외</span></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>(주)교정기관명이너무길어요교정기관명이너무길어요교정기관명이너무길어요</td>
+                                                        <td>2024-10-30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2023-10-30</td>
+                                                        <td>정상</td>
+                                                        <td>
+                                                            <div class="btn_set ai_c taC">
+                                                                <a href="" class="btn_down fc_navy"><span class="txt mr4">국문</span></a>
+                                                                <span class="bar ty_small"></span> 
+                                                                <a href="" class="btn_down fc_key"><span class="txt mr4">영문</span></a>
+                                                                <span class="bar ty_small"></span> 
+                                                                <a href="" class="btn_down fc_red"><span class="txt mr4">사외</span></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>(주)교정기관명이너무길어요교정기관명이너무길어요교정기관명이너무길어요</td>
+                                                        <td>2024-10-30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">
+                                                            <div class="no_result_box" style="height: 160px;">
+                                                                <i class="fa-solid fa-face-smile"></i>
+                                                                <p class="mt10">교정 정보가 없습니다.</p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </section>
+                                    <div class="btn_set taC mt30">
+                                        <input type="submit" value="수정" class="f_btn ty_mid _key w_100">
+                                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <!--//[팝업] 우리 장비 상세보기-->
+
                     </div>
                 </section>
                 <section class="sec">

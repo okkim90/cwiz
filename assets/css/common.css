@@ -5715,6 +5715,68 @@ input::-webkit-search-results-decoration {
   height: 20px;
 }
 
+.img_upload {
+  width: 262px;
+  height: 162px;
+  flex-shrink: 0;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.img_upload img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.img_upload .input_file {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: -9999;
+}
+.img_upload_edit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 0 6px;
+  color: #fff;
+  padding: 4px 6px;
+  display: flex;
+  gap: 4px;
+}
+.img_upload_edit_btn {
+  cursor: pointer;
+  font-size: 14px;
+  width: 20px;
+  height: 20px;
+}
+.img_upload .btn_img_upluad {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #EFEFEF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.img_upload .btn_img_upluad i {
+  color: #aaa;
+  font-size: 50px;
+}
+.img_upload .btn_img_upluad p {
+  color: #aaa;
+  margin-top: 5px;
+}
+
 .f_tooltip {
   display: inline-block;
   position: relative;
