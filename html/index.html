@@ -265,126 +265,87 @@
         <!--container-->
         <main id="container" class="container">
             <div class="main_wrap">
-                <div class="main_sec main_sec_1 w100">
+                <div class="main_sec main_sec_1">
                     <div class="sub_tit">
-                        <h1 class="tit1">교정 진행 현황</h1>
-                        <!-- 메인페이지 교정이력 6개월 고정-->
-                        <!-- <div class="date_set ml20">
-                            <input type="text" class="f_input ty_small inp_date date_start" value="2022-11-02" readonly > ~
-                            <input type="text" class="f_input ty_small inp_date date_end" value="2023-05-02" readonly >
-                        </div> -->
-                        <div class="d_flex _gap4 ml20">
-                            <!--[DEV] 활성화 'on' class-->
-                            <button class="f_btn ty_small w_50 _round _key_ol on">전체</button>
-                            <button class="f_btn ty_small w_50 _round _key_ol">3개월</button>
-                            <button class="f_btn ty_small w_50 _round _key_ol">6개월</button>
-                            <button class="f_btn ty_small w_50 _round _key_ol">1년</button>
-                        </div>
-                       
+                        <h1 class="tit1">견적관리</h1>  
+                        <a href="" class="btn_view_more ml_auto">
+                            <span class="blind">더 보기</span>
+                        </a>
                     </div>
                     <div class="main_sec_cont">
                         <ul class="main_count_list">
                             <li class="main_count_item">
                                 <div class="ico_box">
-                                    <img src="../assets/images/main/main_ico1.svg" alt="">
+                                    <img src="../assets/images/main/ico_file.svg" alt="">
                                 </div>
-                                <div class="tit">교정대기</div>
-                                <div class="txt_box">
-                                    <!--[D] data-value = 수량 -->
-                                    <strong class="count" data-value="931700">
-                                        0
-                                        <span class="sizing_box"></span>
-                                    </strong>
-                                </div>
-                            </li>
-                            <li class="main_count_item">
-                                <div class="ico_box">
-                                    <img src="../assets/images/main/main_ico2.svg" alt="">
-                                </div>
-                                <div class="tit">교정 진행중</div>
-                                <div class="txt_box">
-                                    <strong class="count" data-value="31709">
-                                        0
-                                        <span class="sizing_box"></span>
-                                    </strong>
-                                    
-                                </div>
-                            </li>
-                            <li class="main_count_item">
-                                <div class="ico_box">
-                                    <img src="../assets/images/main/main_ico3.svg" alt="">
-                                </div>
-                                <div class="tit">교정 완료</div>
-                                <div class="txt_box">
-                                    <strong class="count" data-value="15562300">
-                                        0
-                                        <span class="sizing_box"></span>
-                                    </strong>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="chart_box_wrap">
-                            <div class="txt_box">
-                                <div class="tit">교정 결과</div>
                                 <div>
-                                    <strong class="count" data-value="15562300">
-                                        0
-                                        <span class="sizing_box"></span>
-                                    </strong>
-                                    건
+                                    <div class="tit">견적 요청</div>
+                                    <div class="txt_box">
+                                        <!--[D] data-value = 수량 -->
+                                        <strong class="count" data-value="931700">
+                                            0
+                                            <span class="sizing_box"></span>
+                                        </strong>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="chart_box">
-                                <div class="chart" id="piechart"></div>
-                            </div>
-                        </div>
-                        
+                            </li>
+                            <li class="main_count_item">
+                                <div class="ico_box">
+                                    <img src="../assets/images/main/ico_file_chk.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="tit">견적 완료</div>
+                                    <div class="txt_box">
+                                        <strong class="count" data-value="31709">
+                                            0
+                                            <span class="sizing_box"></span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </li> 
+                        </ul>
                     </div>
-                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
-                    <script>
-                        google.charts.load('current', {
-                            callback: function () {
-                                drawChart();
-                                $(window).on('resize',drawChart);
-                            },
-                            packages:['corechart']
-                        });
-                        google.charts.setOnLoadCallback(drawChart);    
-                        function drawChart() {
-                            
-                            var pieData = new google.visualization.DataTable();
-                            pieData.addColumn('string', 'Topping');
-                            pieData.addColumn('number', '교정 수(건)');   
-                            pieData.addRows([
-                                ['정상', 116],
-                                ['불량', 18 ],
-                                ['결과1', 30 ],
-                                ['결과2', 51 ]
-                            ]);
-                            var pieOptions = {
-                                //legend: 'none',
-                                responsive: true,
-                                //is3D: true,
-                                pieHole: 0.3,
-                                //vAxis: {maxValue: 10},
-                                
-                                legend: {
-                                    //alignment: 'center',
-                                    position: 'labeled'
-                                },
-                                //backgroundColor: '#EFEFEF',
-                                animation:{
-                                    duration: 1000,
-                                    // easing: 'out',
-                                    startup: true
-                                },
-                                chartArea: {right:'10%', left:'10%', top:15, bottom:15},
-                                //colors: ['#63c1fc']
-                            };
-                            var piechart = new google.visualization.PieChart(document.getElementById('piechart'));
-                            piechart.draw(pieData, pieOptions);
-                        }
-                    </script>
+                </div>
+                <div class="main_sec main_sec_2">
+                    <div class="sub_tit">
+                        <h1 class="tit1">포인트 관리</h1>  
+                        <a href="" class="btn_view_more ml_auto">
+                            <span class="blind">더 보기</span>
+                        </a>
+                    </div>
+                    <div class="main_sec_cont">
+                        <ul class="main_count_list">
+                            <li class="main_count_item">
+                                <div class="ico_box">
+                                    <img src="../assets/images/main/ico_coin.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="tit">사용 가능 포인트</div>
+                                    <div class="txt_box">
+                                        <!--[D] data-value = 수량 -->
+                                        <strong class="count" data-value="931700">
+                                            0
+                                            <span class="sizing_box"></span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="main_count_item">
+                                <div class="ico_box">
+                                    <img src="../assets/images/main/ico_coin_op.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="tit">이번달 소멸 포인트</div>
+                                    <div class="txt_box">
+                                        <strong class="count" data-value="31709">
+                                            0
+                                            <span class="sizing_box"></span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="main_sec main_sec_3">
