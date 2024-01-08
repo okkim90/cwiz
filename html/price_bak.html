@@ -297,258 +297,273 @@
                 <div class="sub_tit">
                     <h1 class="tit1">교정 수수료 조회</h1>
                 </div>
-                <div class="price_search">
-                    
+                <form action="">
                     <div class="v_tbl_wrap">
                         <table class="v_tbl">
                             <colgroup>
-                                <col style="width: 100px;">
+                                <col style="width: 160px;">
                                 <col>
-                                <col style="width: 100px;">
+                                <col style="width: 160px;">
                                 <col>
-                                <col style="width: 100px;">
+                                <col style="width: 160px;">
                                 <col>
-                                <col style="width: 100px;">
-                                <col>
-                                <col style="width: 90px;">
                             </colgroup>
                             <tbody> 
                                 <tr>
-                                    <th>계측기명</th>
-                                    <td><input type="text" class="f_input input_toggle ty_small w100" disabled></td>       
-                                    <th>제조사</th>
-                                    <td><input type="text" class="f_input input_toggle ty_small w100" disabled></td>   
-                                    <th>형식</th>
-                                    <td><input type="text" class="f_input input_toggle ty_small w100" disabled></td>    
-                                    <th>분류코드</th>
-                                    <td><input type="text" class="f_input input_toggle ty_small w100" disabled></td>    
-                                    <td style="text-align: right;">
-                                        <button 
-                                            type="button" 
-                                            class="f_btn ty_mid _solidGrey w_70 btn_detail on"
-                                            onclick="toggle_search()"
-                                        >
-                                            상세
-                                        </button>
-                                    </td>
+                                    <th>교정분야</th>
+                                    <td><input type="text" class="f_input ty_small w_200 intDiv" disabled="disabled"></td>       
+                                    <th>분류번호</th>
+                                    <td><input type="text" class="f_input ty_small w_200 intCompany" disabled="disabled"></td>   
+                                    <th>측정기명</th>
+                                    <td><input type="text" class="f_input ty_small w_200 intType" disabled="disabled"></td>    
                                 </tr>
-                            </tbody> 
+                            </tbody>
                         </table> 
                     </div>
                     <div class="search_details_wrap on"><!-- [DEV] 상세검색 'on' class 로 활성화 -->
-                        <div class="search_details col4">
-                            <div class="search_details_sec">
+                        <input type="hidden">
+                        <input type="hidden">
+                        <input type="hidden">
+                        <div class="search_details">
+                            <div class="search_details_sec dep1">
                                 <strong class="tit">교정분야</strong>
                                 <div class="list_wrap">
-                                    <ul class="price_detail_list ">
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep1" >
-                                                <span class="txt_box">1. 길이 및 관련량</span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep1">
-                                                <span class="txt_box">2. 질량 및 관련량</span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep1">
-                                                <span class="txt_box">3. 시간 및 주파수</span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep1">
-                                                <span class="txt_box">4. 전기자기/전자파</span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep1">
-                                                <span class="txt_box">5. 온도 및 습도</span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep1">
-                                                <span class="txt_box">6. 음향 및 습도</span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep1">
-                                                <span class="txt_box">7. 광량</span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep1">
-                                                <span class="txt_box">8. 전리방사선</span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep1">
-                                                <span class="txt_box">9. 물질량</span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep1">
-                                                <span class="txt_box">10. 기타 분야 기타 분야 기타 분야 기타 분야 기타 분야 </span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep1">
-                                                <span class="txt_box">11. 기타 분야 기타 분야 기타 분야 기타 분야 기타 분야 </span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="search_details_sec">
-                                <strong class="tit">제조사</strong>
-                                <div class="list_wrap">
-                                    <ul class="price_detail_list ">
-                                        <!-- [D] 교정분야 선택 전 -->
+                                    <ul class="price_detail_list dep1">
                                         <li>
-                                            <div class="no_result_box" style="height: 319px;">
-                                                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                                                <p class="mt10">교정분야를 선택해주세요.</p>
-                                            </div>
-                                        </li>
-                                        <!--// [D] 교정분야 선택 전 -->
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep2" >
-                                                <span class="txt_box t_ellipsis1 fwB">전체</span>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox" checked>
+                                                <span class="txt_box">선형지수 (1,550)</span>
                                             </label>
                                         </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep2">
-                                                <span class="txt_box t_ellipsis1">제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 </span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep2">
-                                                <span class="txt_box t_ellipsis1">제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 </span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep2">
-                                                <span class="txt_box t_ellipsis1">제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 </span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep2">
-                                                <span class="txt_box t_ellipsis1">제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 </span>
-                                            </label>
-                                        </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep2">
-                                                <span class="txt_box t_ellipsis1">제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 </span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="search_details_sec">
-                                <strong class="tit">계측기명</strong>
-                                <div class="list_wrap">
-                                    <ul class="price_detail_list ">
-                                        <!-- [D] 제조사 선택 전 -->
                                         <li>
-                                            <div class="no_result_box" style="height: 319px;">
-                                                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                                                <p class="mt10">제조사를 선택해주세요.</p>
-                                            </div>
-                                        </li>
-                                        <!--// [D] 제조사 선택 전 -->
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep3" >
-                                                <span class="txt_box t_ellipsis1 fwB">전체</span>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 (1,550)</span>
                                             </label>
                                         </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep3">
-                                                <span class="txt_box t_ellipsis1">계측기 이름 계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름</span>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 및 저주파측정 (1,550)</span>
                                             </label>
                                         </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep3">
-                                                <span class="txt_box t_ellipsis1">계측기 이름 계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름</span>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox" checked>
+                                                <span class="txt_box">교류 및 교류전력 (1,550)</span>
                                             </label>
                                         </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep3">
-                                                <span class="txt_box t_ellipsis1">계측기 이름 계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름</span>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">복합형상 (1,550)</span>
                                             </label>
                                         </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="radio" name="dep3">
-                                                <span class="txt_box t_ellipsis1">계측기 이름 계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름계측기 이름</span>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox" checked>
+                                                <span class="txt_box">형상 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">질량 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">Lorem ipsum dolor sit amet consectetur adipisidf (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 및 저주파측정 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 및 저주파측정 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 및 저주파측정 (1,550)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep1_btn">
+                                                <input type="checkbox">
+                                                <span class="txt_box">직류 및 저주파측정 (1,550)</span>
                                             </label>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="search_details_sec dep2">
-                                <strong class="tit">형식</strong>
+                                <strong class="tit">분류번호(측정기명)</strong>
                                 <div class="list_wrap">
-                                    <ul class="price_detail_list ">
-                                        <!-- [D] 계측기 선택 전 -->
+                                    <ul class="price_detail_list dep2">
                                         <li>
-                                            <div class="no_result_box" style="height: 319px;">
-                                                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                                                <p class="mt10">계측기를 선택해주세요.</p>
-                                            </div>
-                                        </li>
-                                        <!--// [D] 계측기 선택 전 -->
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="checkbox" >
-                                                <span class="txt_box fwB t_ellipsis1">전체</span>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox" checked>
+                                                    <span class="txt_box">직류 전체 (1,550)</span>
+                                                </div>
                                             </label>
                                         </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="checkbox" >
-                                                <span class="txt_box t_ellipsis1">형식 내용 형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용</span>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox" checked>
+                                                    <span class="txt_box">10203 (기계/전기식 콤퍼레이터)</span>
+                                                </div>  
                                             </label>
                                         </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="checkbox">
-                                                <span class="txt_box t_ellipsis1">형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용</span>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10202 (변위계 교정기)</span>
+                                                </div>
                                             </label>
                                         </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="checkbox">
-                                                <span class="txt_box t_ellipsis1">형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용</span>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox" checked>
+                                                    <span class="txt_box">10203-2 TV 신호 레벨 측정기, 벡터 스코프, TV 신호 주파수 편이기 V 신V 신호 주파수 호 주파수 편이기</span>
+                                                </div>
                                             </label>
                                         </li>
-                                        <li class="price_detail_item">
-                                            <label class="price_detail_btn">
-                                                <input type="checkbox">
-                                                <span class="txt_box t_ellipsis1">형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용</span>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10203-2 TV 신호 레벨 측정기, 벡터 스코V 신호 주파수 프, TV 신호 주파수 편이기</span>
+                                                </div>
+                                                
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10202 (변위계 교정기)</span>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10204 (다이얼 및 실린더 게이지 시험기)</span>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10202 (변위계 교정기)</span>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10203-2 TV 신호 레벨 측정기, 벡터 스코프, TV 신호 주파수 편이기</span>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="dep2_btn">
+                                                <div class="dep2_btn_inner">
+                                                    <input type="checkbox">
+                                                    <span class="txt_box">10204 (다이얼 및 실린더 게이지 시험기)</span>
+                                                </div>
                                             </label>
                                         </li>
                                     </ul>
+                                </div>
+                            </div>
+                            <div class="search_details_sec dep3">
+                                <div class="list_wrap">
+                                    <div class="price_detail_list dep3">
+                                        <span class="tag_box">
+                                            <span class="txt">10203 (변위계 교정기)</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호 레벨 측정기,호 레벨  레벨 측정기,호 레측정기,기,호 레벨 측정기, 벡터 스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">스코프, TV 신호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203호 주파수 편이기</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                        <span class="tag_box">
+                                            <span class="txt">10203-2 TV 신호</span>
+                                            <button type="button" class="btn_del4"><span class="blind">삭제</span></button>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -563,121 +578,54 @@
                     </div>
                     <div class="btn_set taC mt30">
                         <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                        <button type="button" class="f_btn ty_mid _lightGrey w_100 btn_detail on">상세검색</button>
                         <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
                     </div>
                     <script>
-                        function toggle_search(){
-                            const price_search = document.querySelector('.price_search');
-                            const search_details_wrap = document.querySelector('.search_details_wrap');
-                            const input_toggle = price_search.querySelectorAll('.price_search .input_toggle');
-                            if(search_details_wrap.classList.contains('on')){
-                                event.target.classList.remove('on');
-                                search_details_wrap.classList.remove('on');
-                                input_toggle.forEach(e=>{
-                                    e.removeAttribute('disabled')
-                                });
-                            }else{
-                                event.target.classList.add('on')
-                                search_details_wrap.classList.add('on');
-                                input_toggle.forEach(e=>{
-                                    e.setAttribute('disabled',true);
-                                });
-                            }
-                        }
+                        $(function(){
+                            $('.btn_detail').on('click',function(){
+                                if($(this).hasClass('on')){
+                                    $(this).removeClass('on');
+                                    $('.search_details_wrap').removeClass('on');
+                                    $('.intDiv,.intCompany,.intType').attr('disabled',false);
+                                }else{
+                                    $(this).addClass('on');
+                                    $('.search_details_wrap').addClass('on');
+                                    $('.intDiv,.intCompany,.intType').val(null).attr('disabled',true);
+                                }
+                            });
+                        });
                     </script>
-                </div>
+                </form>
                 <section class="sec">
                     <form action="">    
                         <div class="sub_tit2">
                             <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
-                            <select name="" id="" class="f_select ty_small w_80 ml20">
-                                <option value="">30개</option>
-                                <option value="">50개</option>
-                                <option value="">100개</option>
-                                <option value="">200개</option>
-                                <option value="">전체</option>
-                            </select>
-                            <p class="ml_auto"><i class="fa-solid fa-circle-info fc_key fz_mid mr4"></i>표준 수수료는 시점, 장비 특성에 따라 다소 차이가 있을 수 있습니다. (표준소급료 및 부가세 제외)  </p>    
+                            <p class="ml_auto"><i class="fa-solid fa-circle-info fc_key fz_mid mr4"></i>교정단가는 시점, 교정분야, 형식에 따라 다소 차이가 있을 수 있으니 자세한 사항은 문의하시기 바랍니다. (표준소급료(10%) 및 부가세(10%) 별도)</p>    
                         </div>
                         <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
                             <table class="h_tbl">
                                 <colgroup>
-                                    <col style="width: 50px;">
-                                    <col>
-                                    <col style="width: 100px;">
                                     <col>
                                     <col>
                                     <col>
-                                    <col style="width: 100px;">
+                                    <col>
+                                    <col>
+                                    <col>
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th class="th_fixed">NO</th>
                                         <th class="th_fixed">교정분야</th>
-                                        <th class="th_fixed">분류코드</th>
+                                        <th class="th_fixed">분류번호</th>
                                         <th class="th_fixed">측정기명</th>
-                                        <th class="th_fixed">제조사</th>
-                                        <th class="th_fixed">형식</th>
-                                        <th class="th_fixed">표준 수수료</th>
+                                        <th class="th_fixed">구분</th>
+                                        <th class="th_fixed">기본 수수료 (원)</th>
+                                        <th class="th_fixed">조건</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>9,999</td>
-                                        <td>기타 직류 및 저주파측정</td>
-                                        <td>10234</td>
-                                        <td>계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                        <td>재조사명재조사명재조사명재조사명재조사명재조사명</td>
-                                        <td>형식형식형식형식형식형식형식형식형식형식형식형식</td>
-                                        <td>999,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9,999</td>
-                                        <td>기타 직류 및 저주파측정</td>
-                                        <td>10234</td>
-                                        <td>계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                        <td>재조사명재조사명재조사명재조사명재조사명재조사명</td>
-                                        <td>형식형식형식형식형식형식형식형식형식형식형식형식</td>
-                                        <td>999,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9,999</td>
-                                        <td>기타 직류 및 저주파측정</td>
-                                        <td>10234</td>
-                                        <td>계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                        <td>재조사명재조사명재조사명재조사명재조사명재조사명</td>
-                                        <td>형식형식형식형식형식형식형식형식형식형식형식형식</td>
-                                        <td>999,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9,999</td>
-                                        <td>기타 직류 및 저주파측정</td>
-                                        <td>10234</td>
-                                        <td>계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                        <td>재조사명재조사명재조사명재조사명재조사명재조사명</td>
-                                        <td>형식형식형식형식형식형식형식형식형식형식형식형식</td>
-                                        <td>999,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9,999</td>
-                                        <td>기타 직류 및 저주파측정</td>
-                                        <td>10234</td>
-                                        <td>계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                        <td>재조사명재조사명재조사명재조사명재조사명재조사명</td>
-                                        <td>형식형식형식형식형식형식형식형식형식형식형식형식</td>
-                                        <td>999,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9,999</td>
-                                        <td>기타 직류 및 저주파측정</td>
-                                        <td>10234</td>
-                                        <td>계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                        <td>재조사명재조사명재조사명재조사명재조사명재조사명</td>
-                                        <td>형식형식형식형식형식형식형식형식형식형식형식형식</td>
-                                        <td>999,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="7">
+                                        <td colspan="6">
                                             <div class="no_result_box">
                                                 <i class="fa-solid fa-magnifying-glass"></i>
                                                 <p class="mt10">계측기를 검색 해주세요.</p>
@@ -685,12 +633,52 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="7">
-                                            <div class="no_result_box">
-                                                <i class="fa-solid fa-file-circle-xmark"></i>
-                                                <p class="mt10">검색 결과가 없습니다.</p>
-                                            </div>
-                                        </td>
+                                        <td>직류 및 저주파측정</td>
+                                        <td>10204-1-3-3</td>
+                                        <td>전원 임피던스 안정화 회로망</td>
+                                        <td>흡수 클램프(Absorbing clamp)</td>
+                                        <td>15,000,000</td>
+                                        <td>Directional coupler 형</td>
+                                    </tr>
+                                    <tr>
+                                        <td>직류 및 저주파측정</td>
+                                        <td>10204-1-3-3</td>
+                                        <td>전원 임피던스 안정화 회로망</td>
+                                        <td>흡수 클램프(Absorbing clamp)</td>
+                                        <td>15,000,000</td>
+                                        <td>Directional coupler 형</td>
+                                    </tr>
+                                    <tr>
+                                        <td>직류 및 저주파측정</td>
+                                        <td>10204-1-3-3</td>
+                                        <td>전원 임피던스 안정화 회로망</td>
+                                        <td>흡수 클램프(Absorbing clamp)</td>
+                                        <td>15,000,000</td>
+                                        <td>Directional coupler 형</td>
+                                    </tr>
+                                    <tr>
+                                        <td>직류 및 저주파측정</td>
+                                        <td>10204-1-3-3</td>
+                                        <td>전원 임피던스 안정화 회로망</td>
+                                        <td>흡수 클램프(Absorbing clamp)</td>
+                                        <td>15,000,000</td>
+                                        <td>Directional coupler 형</td>
+                                    </tr>
+                                    <tr>
+                                        <td>직류 및 저주파측정</td>
+                                        <td>10204-1-3-3</td>
+                                        <td>전원 임피던스 안정화 회로망</td>
+                                        <td>흡수 클램프(Absorbing clamp)</td>
+                                        <td>15,000,000</td>
+                                        <td>Directional coupler 형</td>
+                                    </tr>
+                                    <tr>
+                                        <td>직류 및 저주파측정</td>
+                                        <td>10204-1-3-3</td>
+                                        <td>전원 임피던스 안정화 회로망</td>
+                                        <td>흡수 클램프(Absorbing clamp)</td>
+                                        <td>15,000,000</td>
+                                        <td>Directional coupler 형</td>
                                     </tr>
                                 </tbody>
                             </table>

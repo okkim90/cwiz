@@ -3816,6 +3816,9 @@
 .d_flex .self_bot {
   align-self: flex-end;
 }
+.d_flex.ty_col {
+  flex-direction: column;
+}
 
 .ml_auto {
   margin-left: auto;
@@ -3837,6 +3840,14 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.7;
+  filter: alpha(opacity=7);
+  box-shadow: none;
 }
 
 /*반응형 화면 크기*/
@@ -4347,7 +4358,7 @@ input::-webkit-search-results-decoration {
   box-sizing: border-box;
   z-index: 999;
   background-color: #fff;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4685,7 +4696,7 @@ input::-webkit-search-results-decoration {
   height: 100vh;
   width: 260px;
   z-index: 9999;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
   padding: 15px 10px 30px;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
@@ -5111,7 +5122,7 @@ input::-webkit-search-results-decoration {
 .sub_tit2 {
   display: flex;
   align-items: flex-end;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .container .contents {
@@ -5119,7 +5130,7 @@ input::-webkit-search-results-decoration {
   padding-bottom: 50px;
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   position: relative;
   min-height: calc(100vh - 320px);
 }
@@ -5415,10 +5426,19 @@ input::-webkit-search-results-decoration {
 .search_details_sec {
   display: flex;
   flex-direction: column;
-  height: 240px;
+  height: 360px;
   flex: 1;
+  flex-shrink: 0;
   border-left: 1px solid #DDDDDD;
 }
+.col3 .search_details_sec {
+  width: 33.3333333333%;
+}
+
+.col4 .search_details_sec {
+  width: 25%;
+}
+
 .search_details .tit {
   display: block;
   height: 40px;
@@ -5436,15 +5456,12 @@ input::-webkit-search-results-decoration {
   width: 10px;
 }
 .search_details .list_wrap::-webkit-scrollbar-thumb {
-  background-color: #FF7A00;
+  background-color: rgba(57, 57, 57, 0.5);
   border-radius: 5px;
   background-clip: padding-box;
   width: 100%;
   box-sizing: border-box;
   border: 2px solid transparent;
-}
-.search_details .list_wrap::-webkit-scrollbar-track {
-  background-color: #EFEFEF;
 }
 .search_details .list_wrap .item_option {
   display: block;
@@ -5551,6 +5568,48 @@ input::-webkit-search-results-decoration {
 .search_details .price_detail_list.dep3 .tag_box .btn_del4 {
   flex-shrink: 0;
   margin-left: 2px;
+}
+.search_details .price_detail_item {
+  border-bottom: 1px dotted #DDDDDD;
+}
+.search_details .price_detail_btn {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.search_details .price_detail_btn .txt_box {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 6px 15px;
+}
+.search_details .price_detail_btn .txt_box:hover {
+  background-color: #ebf5ff;
+}
+.search_details .price_detail_btn input[type=radio] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.search_details .price_detail_btn input[type=radio]:checked ~ .txt_box {
+  background-color: #cce7ff;
+}
+.search_details .price_detail_btn input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.search_details .price_detail_btn input[type=checkbox] ~ .txt_box {
+  padding-left: 36px;
+}
+.search_details .price_detail_btn input[type=checkbox]:checked ~ .txt_box {
+  background-color: #c2e2ff;
 }
 
 .no_result_box {
@@ -5884,6 +5943,80 @@ tr:last-child .status_box_date {
   right: 50%;
 }
 
+.selected_list {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  padding: 8px 5px;
+  background-color: #F9F9F9;
+  gap: 5px;
+}
+.selected_item {
+  line-height: 22px;
+  height: 22px;
+  border-radius: 11px;
+  background-color: #393939;
+  color: #fff;
+  padding: 0 10px;
+  font-size: 12px;
+  padding-right: 26px;
+  position: relative;
+}
+.selected_item .del_item {
+  position: absolute;
+  right: 2px;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-image: url(../images/common/ico_x_w.svg);
+  background-size: 17px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.list_sepBar {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list_sepBar .list_item {
+  padding-right: 11px;
+  margin-right: 10px;
+  position: relative;
+}
+.list_sepBar .list_item::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  background-color: #DDDDDD;
+  right: 0;
+  top: 50%;
+  margin-top: -5px;
+}
+.list_sepBar .list_item:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
+.list_sepBar .list_item:last-child::after {
+  display: none;
+}
+
+.list_dot .list_item {
+  padding-left: 0.8em;
+  position: relative;
+}
+.list_dot .list_item + .list_item {
+  margin-top: 4px;
+}
+.list_dot .list_item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .layer_popup {
   position: fixed;
   left: 0;
@@ -6083,6 +6216,7 @@ tr:last-child .status_box_date {
   max-width: 100%;
   border: 1px solid #DDDDDD;
   box-sizing: border-box;
+  text-overflow: ellipsis;
 }
 .f_input:-moz-read-only {
   background-color: rgba(0, 0, 0, 0.02);
@@ -6348,6 +6482,9 @@ tr:last-child .status_box_date {
 .f_ta.ty_big {
   font-size: 16px;
   padding: 15px;
+}
+.f_ta.resize_y {
+  resize: vertical;
 }
 
 .f_select {
@@ -6683,13 +6820,13 @@ tr:last-child .status_box_date {
 }
 
 .btn_detail::after {
-  content: "\f00e";
+  content: "\f078";
   font-family: "Font Awesome 6 Free";
   font-weight: bold;
   margin-left: 4px;
 }
 .btn_detail.on::after {
-  content: "\f010";
+  content: "\f077";
 }
 
 .btn_view_more {
@@ -7001,7 +7138,6 @@ tr:last-child .status_box_date {
 .h_tbl_wrap {
   border: 1px solid #DDDDDD;
   border-top: 1px solid #000;
-  max-height: 397px;
   position: relative;
 }
 .h_tbl_wrap.auto_h {
@@ -7038,6 +7174,23 @@ tr:last-child .status_box_date {
   position: sticky;
   top: 0px;
   z-index: 99;
+}
+.h_tbl tfoot th, .h_tbl tfoot td {
+  border: 1px solid #DDDDDD;
+  background-color: #ebf5ff;
+  padding: 5px;
+  height: 3em;
+  text-align: center;
+  font-weight: bold;
+}
+.h_tbl tfoot th:first-child, .h_tbl tfoot td:first-child {
+  border-left: none;
+}
+.h_tbl tfoot th:last-child, .h_tbl tfoot td:last-child {
+  border-right: none;
+}
+.h_tbl tfoot tr:last-child th, .h_tbl tfoot tr:last-child td {
+  border-bottom: none;
 }
 .h_tbl tbody tr.no_hv:hover {
   cursor: default;

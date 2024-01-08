@@ -289,8 +289,11 @@ layer_popup_cont.forEach(e=>{
 
 function open_popup(target){
     let layer_popup = document.querySelector(`.layer_popup.${target}`);
-    //console.log(layer_popup);
+    // if (target == 'popup_preview'){
+       
+    // }
     layer_popup.classList.add('on');
+    
 }
 
 function reset(target){

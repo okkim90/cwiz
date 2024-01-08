@@ -298,7 +298,10 @@
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">견적 확인</h1>
+                    <h1 class="tit1">견적 요청 조회</h1>
+                    <div class="sub_tit_btns btn_set">
+                        <a href="./estimate_write.html" class="f_btn ty_mid _key_ol w_100">+ 견적요청</a>
+                    </div>
                 </div>
                 <form action="">
                     <div class="v_tbl_wrap">
@@ -330,37 +333,34 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>교정기관</th>
-                                    <td>
-                                        <select name="" id="" class="f_select ty_small w_200">
-                                            <option value="">전체</option>
-                                            <option value="">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</option>
-                                            <option value="">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</option>
-                                            <option value="">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</option>
-                                            <option value="">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</option>
-                                        </select>
-                                    </td>
-                                    <th>교정기관</th>
-                                    <td>
-                                        <select name="" id="" class="f_select ty_small w_200">
-                                            <option value="">전체</option>
-                                            <option value="">작성중</option>
-                                            <option value="">견적 진행중</option>
-                                            <option value="">견적 완료</option>
-                                        </select>
-                                    </td>
-                                    <th>성적서 업체</th>
-                                    <td>
-                                        <input type="text" class="f_input ty_small w_200">
-                                    </td>
-                                </tr>
-                                <tr>
                                     <th>계측기명</th>
                                     <td><input type="text" class="f_input ty_small w_200"></td>       
                                     <th>제조사</th>
                                     <td><input type="text" class="f_input ty_small w_200"></td>  
                                     <th>형식</th>
                                     <td><input type="text" class="f_input ty_small w_200"></td>       
+                                </tr>
+                                <tr>
+                                    <th>견적 상태</th>
+                                    <td colspan="5">
+                                        <div class="chk_list">
+                                            <label class="chk_item">
+                                                <input type="checkbox"> <b>전체</b> 
+                                            </label>
+                                            <label class="chk_item">
+                                                <input type="checkbox"> 승인 완료
+                                            </label>
+                                            <label class="chk_item">
+                                                <input type="checkbox"> 승인 대기
+                                            </label>
+                                            <label class="chk_item">
+                                                <input type="checkbox"> 승인 보류
+                                            </label>
+                                            <label class="chk_item">
+                                                <input type="checkbox"> 작성중
+                                            </label>
+                                        </div>
+                                    </td>             
                                 </tr>
                             </tbody>
                         </table> 
@@ -373,136 +373,88 @@
                 <section class="sec">
                     <div class="sub_tit2 mb10 d_flex al_b">
                         <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2> 
-                        <select name="" id="" class="f_select ty_small w_80 ml20">
-                            <option value="">30개</option>
-                            <option value="">50개</option>
-                            <option value="">100개</option>
-                            <option value="">200개</option>
-                            <option value="">전체</option>
-                        </select>
-                        <div class="sub_tit_btns btn_set">
-                            <a href="./estimate_write.html" class="f_btn ty_mid _key_ol w_100">+ 견적요청</a>
-                        </div>
                     </div>
                     <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                        <table class="h_tbl tl_fixed">
-                            <colgroup>
-                                <col style="width: 50px;">
-                                <col style="width: 100px;">
-                                <col style="width: 80px;">
-                                <col>
-                                <col>
-                                <col style="width: 60px;">
-                                <col>
-                                <col style="width: 80px;">
-                                <col style="width: 80px;">
-                                <col style="width: 80px;">
-                                <col style="width: 60px;">
-                                <col style="width: 80px;">
-                                <col style="width: 90px;">
-                            </colgroup>
+                        <table class="h_tbl">
                             <thead>
                                 <tr>
-                                    <th class="th_fixed">No</th>
-                                    <th class="th_fixed">견적 번호</th>
-                                    <th class="th_fixed">접수일</th>
-                                    <th class="th_fixed">성적서 업체</th>
-                                    <th class="th_fixed">젼적 내역</th>
+                                    <th class="th_fixed">견적 요청일</th>
+                                    <th class="th_fixed">견적 내역</th>
                                     <th class="th_fixed">수량</th>
-                                    <th class="th_fixed">교정 기관</th>
+                                    <th class="th_fixed">교정기관</th>
                                     <th class="th_fixed">견적 상태</th>
-                                    <th class="th_fixed">견적 완료일</th>
+                                    <th class="th_fixed">견적 승인일</th>
                                     <th class="th_fixed">견적 금액</th>
                                     <th class="th_fixed">견적서</th>
-                                    <th class="th_fixed">교정 요청</th>
-                                    <th class="th_fixed">상세 내역</th>
+                                    <th class="th_fixed">상세내역</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                
-                                <tr>
-                                    <td>9999</td>
-                                    <td>EST-123123-09</td>
-                                    <td>2023-12-13</td>
-                                    <td class="t_ellipsis1" title="성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td class="t_ellipsis1" title="계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명">계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                    <td>9999</td>
-                                    <td class="t_ellipsis1" title="교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>견적 완료</td>
-                                    <td>2023-12-12</td>
-                                    <td>199,000,000</td>
-                                    <td><a href="" class="btn_down"><span class="blind">견적서 다운로드</span></a></td>
-                                    <td>미요청</td>
-                                    <td>
-                                        <div class="d_flex ty_col _gap4 ai_c">
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _key w_60"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _solidGrey w_60"><i class="fa-regular fa-copy"></i> 복사</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>9999</td>
-                                    <td>EST-123123-09</td>
-                                    <td>2023-12-13</td>
-                                    <td class="t_ellipsis1" title="성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td class="t_ellipsis1" title="계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명">계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                    <td>9999</td>
-                                    <td class="t_ellipsis1" title="교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>견적 진행중</td>
-                                    <td>2023-12-12</td>
-                                    <td>199,000,000</td>
-                                    <td><a href="" class="btn_down"><span class="blind">견적서 다운로드</span></a></td>
-                                    <td>요청 완료</td>
-                                    <td>
-                                        <div class="d_flex ty_col _gap4 ai_c">
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _key w_60"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _solidGrey w_60"><i class="fa-regular fa-copy"></i> 복사</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>9999</td>
-                                    <td>EST-123123-09</td>
-                                    <td>2023-12-13</td>
-                                    <td class="t_ellipsis1" title="성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td class="t_ellipsis1" title="계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명">계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                    <td>9999</td>
-                                    <td class="t_ellipsis1" title="교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>견적 진행중</td>
-                                    <td>2023-12-12</td>
-                                    <td>199,000,000</td>
-                                    <td><a href="" class="btn_down"><span class="blind">견적서 다운로드</span></a></td>
-                                    <td><b class="fc_red">요청 불가</b></td>
-                                    <td>
-                                        <div class="d_flex ty_col _gap4 ai_c">
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _key w_60"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _solidGrey w_60"><i class="fa-regular fa-copy"></i> 복사</a>
-                                        </div>
-                                    </td>
-                                </tr>
                                 <tr>          
-                                    <td colspan="13">
+                                    <td colspan="9">
                                         <div class="no_result_box">
                                             <i class="fa-solid fa-magnifying-glass"></i>
                                             <p class="mt10">검색 결과가 없습니다.</p>
                                         </div>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>2023-12-13</td>
+                                    <td>내·외측 캘리퍼 외</td>
+                                    <td>20</td>
+                                    <td>코리아인스트루먼트(주) 서울본사</td>
+                                    <td>승인 완료</td>
+                                    <td>2023-04-10</td>
+                                    <td>500,000</td>
+                                    <td><a href="" class="btn_down"><span class="blind">견적서 다운로드</span></a></td>
+                                    <td><a href="estimate_detail.html" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-12-13</td>
+                                    <td>내·외측 캘리퍼 외</td>
+                                    <td>20</td>
+                                    <td>코리아인스트루먼트(주) 서울본사</td>
+                                    <td>승인 완료</td>
+                                    <td>2023-04-10</td>
+                                    <td>500,000</td>
+                                    <td><a href="" class="btn_down"><span class="blind">견적서 다운로드</span></a></td>
+                                    <td><a href="estimate_edit.html" class="f_btn ty_xsmall _round _solidGrey"><i class="ico_edit"></i> 수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-12-13</td>
+                                    <td>내·외측 캘리퍼 외</td>
+                                    <td>20</td>
+                                    <td>코리아인스트루먼트(주) 서울본사</td>
+                                    <td>승인 완료</td>
+                                    <td>2023-04-10</td>
+                                    <td>500,000</td>
+                                    <td><a href="" class="btn_down"><span class="blind">견적서 다운로드</span></a></td>
+                                    <td><a href="estimate_edit.html" class="f_btn ty_xsmall _round _solidGrey"><i class="ico_edit"></i> 수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-12-13</td>
+                                    <td>내·외측 캘리퍼 외</td>
+                                    <td>20</td>
+                                    <td>코리아인스트루먼트(주) 서울본사</td>
+                                    <td>승인 완료</td>
+                                    <td>2023-04-10</td>
+                                    <td>500,000</td>
+                                    <td><a href="" class="btn_down"><span class="blind">견적서 다운로드</span></a></td>
+                                    <td><a href="estimate_detail.html" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-12-13</td>
+                                    <td>내·외측 캘리퍼 외</td>
+                                    <td>20</td>
+                                    <td>코리아인스트루먼트(주) 서울본사</td>
+                                    <td>승인 완료</td>
+                                    <td>2023-04-10</td>
+                                    <td>500,000</td>
+                                    <td><a href="" class="btn_down"><span class="blind">견적서 다운로드</span></a></td>
+                                    <td><a href="estimate_detail.html" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
+                                </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="paging_wrap">
-                        <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
-                        <ul class="paging_list">
-                            <li><span class="paging_btn current">1</span></li>
-                            <li><a href="" class="paging_btn">2</a></li>
-                            <li><a href="" class="paging_btn">3</a></li>
-                            <li><a href="" class="paging_btn">4</a></li>
-                            <li><a href="" class="paging_btn">5</a></li>
-                        </ul>
-                        <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
                     </div>
                 </section>
             </div>
